@@ -23,7 +23,15 @@ export function resolveApiBaseUrl(): string {
 
   try {
     const url = new URL(configured, window.location.origin)
-    if (isLocalNetworkHostname(url.hostname) && url.hostname !== window.location.hostname) {
+    // Yalnızca geliştirme ortamında devreye girer: site localhost ya da bir LAN
+    // adresinden açıldıysa API de aynı host üzerinden çağrılır. Gerçek bir alan
+    // adında hiçbir şey değiştirilmez — aksi halde yayındaki site kendi alan
+    // adının var olmayan :8000 portuna istek atar.
+    if (
+      isLocalNetworkHostname(window.location.hostname) &&
+      isLocalNetworkHostname(url.hostname) &&
+      url.hostname !== window.location.hostname
+    ) {
       url.hostname = window.location.hostname
     }
     return url.toString().replace(/\/+$/, '')
