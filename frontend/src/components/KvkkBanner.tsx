@@ -46,17 +46,17 @@ export function KvkkBanner() {
           transition={{ type: 'spring', stiffness: 260, damping: 28 }}
           className="fixed bottom-0 inset-x-0 z-[80] px-4 pb-4 sm:px-6"
         >
-          <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-zinc-900/95 backdrop-blur-xl shadow-2xl p-5">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-[#e3e7dd] bg-white/95 backdrop-blur-xl shadow-2xl p-5">
             {!showDetail ? (
               /* Basit görünüm */
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    <span className="font-semibold text-white">Çerez Politikası</span>{' '}
+                  <p className="text-sm text-[#3d4a3a] leading-relaxed">
+                    <span className="font-semibold text-[#202c28]">Çerez Politikası</span>{' '}
                     — Sitemizi geliştirmek ve kişiselleştirilmiş içerik sunmak için çerezler kullanıyoruz.{' '}
                     <button
                       onClick={() => setShowDetail(true)}
-                      className="text-blue-400 hover:underline text-sm"
+                      className="text-[#4d7138] hover:underline text-sm"
                     >
                       Ayrıntıları görüntüle
                     </button>
@@ -65,13 +65,13 @@ export function KvkkBanner() {
                 <div className="flex flex-wrap gap-2 flex-shrink-0">
                   <button
                     onClick={rejectOptional}
-                    className="rounded-xl border border-white/20 px-4 py-2 text-sm text-white/60 hover:bg-white/5 transition-colors"
+                    className="rounded-xl border border-[#d4ddc6] px-4 py-2 text-sm text-[#6f7a68] hover:bg-[#f6f7f3] transition-colors"
                   >
                     Yalnızca Zorunlu
                   </button>
                   <button
                     onClick={acceptAll}
-                    className="rounded-xl bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors"
+                    className="rounded-xl bg-[#244b37] px-5 py-2 text-sm font-semibold text-[#f4f8ec] hover:bg-[#2f6045] transition-colors"
                   >
                     Tümünü Kabul Et
                   </button>
@@ -81,10 +81,10 @@ export function KvkkBanner() {
               /* Detay görünüm */
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-white">Çerez Tercihleri</h3>
+                  <h3 className="font-bold text-[#202c28]">Çerez Tercihleri</h3>
                   <button
                     onClick={() => setShowDetail(false)}
-                    className="text-white/40 hover:text-white text-sm"
+                    className="text-[#98a191] hover:text-[#202c28] text-sm"
                   >
                     ← Geri
                   </button>
@@ -92,19 +92,19 @@ export function KvkkBanner() {
 
                 <div className="space-y-3 mb-5">
                   {/* Zorunlu */}
-                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3">
+                  <div className="flex items-center justify-between rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-3">
                     <div>
-                      <p className="text-sm font-medium text-white">Zorunlu Çerezler</p>
-                      <p className="text-xs text-white/40 mt-0.5">Sitenin çalışması için gereklidir, devre dışı bırakılamaz.</p>
+                      <p className="text-sm font-medium text-[#202c28]">Zorunlu Çerezler</p>
+                      <p className="text-xs text-[#98a191] mt-0.5">Sitenin çalışması için gereklidir, devre dışı bırakılamaz.</p>
                     </div>
-                    <div className="h-5 w-10 rounded-full bg-blue-600 flex-shrink-0" />
+                    <div className="h-5 w-10 rounded-full bg-[#244b37] flex-shrink-0" />
                   </div>
 
                   {/* Analitik */}
-                  <label className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3 cursor-pointer hover:bg-white/8 transition-colors">
+                  <label className="flex items-center justify-between rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-3 cursor-pointer hover:bg-[#f3f5ef] transition-colors">
                     <div>
-                      <p className="text-sm font-medium text-white">Analitik Çerezler</p>
-                      <p className="text-xs text-white/40 mt-0.5">Ziyaret istatistiklerini toplar, siteyi geliştirmemize yardımcı olur.</p>
+                      <p className="text-sm font-medium text-[#202c28]">Analitik Çerezler</p>
+                      <p className="text-xs text-[#98a191] mt-0.5">Ziyaret istatistiklerini toplar, siteyi geliştirmemize yardımcı olur.</p>
                     </div>
                     <input
                       type="checkbox"
@@ -115,10 +115,10 @@ export function KvkkBanner() {
                   </label>
 
                   {/* Pazarlama */}
-                  <label className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-3 cursor-pointer hover:bg-white/8 transition-colors">
+                  <label className="flex items-center justify-between rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-3 cursor-pointer hover:bg-[#f3f5ef] transition-colors">
                     <div>
-                      <p className="text-sm font-medium text-white">Pazarlama Çerezleri</p>
-                      <p className="text-xs text-white/40 mt-0.5">Kişiselleştirilmiş reklamlar ve kampanya takibi için kullanılır.</p>
+                      <p className="text-sm font-medium text-[#202c28]">Pazarlama Çerezleri</p>
+                      <p className="text-xs text-[#98a191] mt-0.5">Kişiselleştirilmiş reklamlar ve kampanya takibi için kullanılır.</p>
                     </div>
                     <input
                       type="checkbox"
@@ -129,28 +129,28 @@ export function KvkkBanner() {
                   </label>
                 </div>
 
-                <p className="text-xs text-white/30 mb-4">
+                <p className="text-xs text-[#a8b09f] mb-4">
                   Daha fazla bilgi için{' '}
-                  <Link href="/kvkk" className="text-blue-400 hover:underline">KVKK Aydınlatma Metni</Link> ve{' '}
-                  <Link href="/gizlilik" className="text-blue-400 hover:underline">Gizlilik Politikası</Link>mızı inceleyin.
+                  <Link href="/kvkk" className="text-[#4d7138] hover:underline">KVKK Aydınlatma Metni</Link> ve{' '}
+                  <Link href="/gizlilik" className="text-[#4d7138] hover:underline">Gizlilik Politikası</Link>mızı inceleyin.
                 </p>
 
                 <div className="flex flex-wrap gap-2 justify-end">
                   <button
                     onClick={rejectOptional}
-                    className="rounded-xl border border-white/20 px-4 py-2 text-sm text-white/60 hover:bg-white/5 transition-colors"
+                    className="rounded-xl border border-[#d4ddc6] px-4 py-2 text-sm text-[#6f7a68] hover:bg-[#f6f7f3] transition-colors"
                   >
                     Yalnızca Zorunlu
                   </button>
                   <button
                     onClick={saveCustom}
-                    className="rounded-xl border border-blue-500/50 px-4 py-2 text-sm text-blue-400 hover:bg-blue-500/10 transition-colors"
+                    className="rounded-xl border border-[#8fab6a] px-4 py-2 text-sm text-[#4d7138] hover:bg-[#eef3e2] transition-colors"
                   >
                     Seçimi Kaydet
                   </button>
                   <button
                     onClick={acceptAll}
-                    className="rounded-xl bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors"
+                    className="rounded-xl bg-[#244b37] px-5 py-2 text-sm font-semibold text-[#f4f8ec] hover:bg-[#2f6045] transition-colors"
                   >
                     Tümünü Kabul Et
                   </button>

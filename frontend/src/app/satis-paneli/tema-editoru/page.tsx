@@ -37,9 +37,9 @@ const DEFAULTS: ThemeState = {
 function ColorPicker({ label, value, onChange }: { label: string; value: string; onChange: (v: string) => void }) {
   return (
     <div className="flex items-center justify-between gap-3">
-      <span className="text-sm text-white/70">{label}</span>
+      <span className="text-sm text-[#5c6a56]">{label}</span>
       <div className="flex items-center gap-2">
-        <span className="text-xs font-mono text-white/40">{value}</span>
+        <span className="text-xs font-mono text-[#98a191]">{value}</span>
         <label className="relative cursor-pointer">
           <input
             type="color"
@@ -48,7 +48,7 @@ function ColorPicker({ label, value, onChange }: { label: string; value: string;
             className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
           />
           <div
-            className="h-8 w-10 rounded-lg border-2 border-white/20 shadow-md"
+            className="h-8 w-10 rounded-lg border-2 border-[#d4ddc6] shadow-md"
             style={{ backgroundColor: value }}
           />
         </label>
@@ -59,12 +59,12 @@ function ColorPicker({ label, value, onChange }: { label: string; value: string;
 
 function SectionCard({ icon: Icon, title, children }: { icon: React.ElementType; title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-white/8 bg-white/3 p-5">
+    <div className="rounded-2xl border border-[#e3e7dd] bg-[#f8f9f6] p-5">
       <div className="flex items-center gap-2 mb-4">
-        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-500/20">
-          <Icon className="h-3.5 w-3.5 text-blue-400" />
+        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#e4edd4]">
+          <Icon className="h-3.5 w-3.5 text-[#4d7138]" />
         </div>
-        <h3 className="text-sm font-semibold text-white">{title}</h3>
+        <h3 className="text-sm font-semibold text-[#202c28]">{title}</h3>
       </div>
       <div className="space-y-4">{children}</div>
     </div>
@@ -105,13 +105,13 @@ export default function ThemeEditorPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-xl font-black text-white">Tema Editörü</h1>
-          <p className="text-sm text-white/40 mt-0.5">Mağaza görünümünüzü kişiselleştirin</p>
+          <h1 className="text-xl font-black text-[#202c28]">Tema Editörü</h1>
+          <p className="text-sm text-[#98a191] mt-0.5">Mağaza görünümünüzü kişiselleştirin</p>
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={() => setTheme(DEFAULTS)}
-            className="flex items-center gap-2 rounded-xl border border-white/15 px-3 py-2 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-all"
+            className="flex items-center gap-2 rounded-xl border border-[#d4ddc6] px-3 py-2 text-sm text-[#8c958c] hover:text-[#202c28] hover:bg-[#f6f7f3] transition-all"
           >
             <RotateCcw className="h-3.5 w-3.5" />
             Sıfırla
@@ -120,7 +120,7 @@ export default function ThemeEditorPage() {
             whileTap={{ scale: 0.96 }}
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors disabled:opacity-60"
+            className="flex items-center gap-2 rounded-xl bg-[#244b37] px-4 py-2 text-sm font-semibold text-[#f4f8ec] hover:bg-[#2f6045] transition-colors disabled:opacity-60"
           >
             {saved ? <Check className="h-3.5 w-3.5" /> : <Save className="h-3.5 w-3.5" />}
             {saved ? 'Kaydedildi' : saving ? 'Kaydediliyor...' : 'Kaydet'}
@@ -129,13 +129,13 @@ export default function ThemeEditorPage() {
       </div>
 
       {/* Tab switcher (mobile) */}
-      <div className="flex gap-1 mb-5 rounded-xl bg-white/5 p-1 lg:hidden">
+      <div className="flex gap-1 mb-5 rounded-xl bg-[#f6f7f3] p-1 lg:hidden">
         {(['editor', 'preview'] as const).map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`flex-1 rounded-lg py-2 text-sm font-medium transition-all ${
-              activeTab === tab ? 'bg-white/10 text-white' : 'text-white/40'
+              activeTab === tab ? 'bg-[#f0f2ec] text-[#202c28]' : 'text-[#98a191]'
             }`}
           >
             {tab === 'editor' ? 'Düzenle' : 'Önizleme'}
@@ -157,11 +157,11 @@ export default function ThemeEditorPage() {
           {/* Duyuru Bandı */}
           <SectionCard icon={Megaphone} title="Duyuru Bandı">
             <label className="flex items-center justify-between cursor-pointer">
-              <span className="text-sm text-white/70">Aktif</span>
+              <span className="text-sm text-[#5c6a56]">Aktif</span>
               <div
                 onClick={() => set('announcement_active', !theme.announcement_active)}
                 className={`relative h-5 w-9 rounded-full transition-colors ${
-                  theme.announcement_active ? 'bg-blue-600' : 'bg-white/15'
+                  theme.announcement_active ? 'bg-[#244b37]' : 'bg-[#eef0ea]'
                 }`}
               >
                 <div className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
@@ -170,14 +170,14 @@ export default function ThemeEditorPage() {
               </div>
             </label>
             <div>
-              <label className="text-xs text-white/40 mb-1 block">Mesaj</label>
+              <label className="text-xs text-[#98a191] mb-1 block">Mesaj</label>
               <input
                 type="text"
                 value={theme.announcement_text}
                 onChange={e => set('announcement_text', e.target.value)}
                 placeholder="🚀 Ücretsiz kargo 500 TL ve üzeri siparişlerde!"
                 maxLength={200}
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/25 outline-none focus:border-blue-500/60"
+                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
               />
             </div>
             <ColorPicker label="Arka Plan Rengi" value={theme.announcement_bg} onChange={v => set('announcement_bg', v)} />
@@ -186,11 +186,11 @@ export default function ThemeEditorPage() {
           {/* Hoş Geldin Kuponu */}
           <SectionCard icon={Gift} title="Hoş Geldin Kuponu">
             <label className="flex items-center justify-between cursor-pointer">
-              <span className="text-sm text-white/70">Aktif</span>
+              <span className="text-sm text-[#5c6a56]">Aktif</span>
               <div
                 onClick={() => set('welcome_coupon_active', !theme.welcome_coupon_active)}
                 className={`relative h-5 w-9 rounded-full transition-colors ${
-                  theme.welcome_coupon_active ? 'bg-blue-600' : 'bg-white/15'
+                  theme.welcome_coupon_active ? 'bg-[#244b37]' : 'bg-[#eef0ea]'
                 }`}
               >
                 <div className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
@@ -199,14 +199,14 @@ export default function ThemeEditorPage() {
               </div>
             </label>
             <div>
-              <label className="text-xs text-white/40 mb-1 block">İndirim Oranı (%{theme.welcome_coupon_percent})</label>
+              <label className="text-xs text-[#98a191] mb-1 block">İndirim Oranı (%{theme.welcome_coupon_percent})</label>
               <input
                 type="range" min={1} max={50} step={1}
                 value={theme.welcome_coupon_percent}
                 onChange={e => set('welcome_coupon_percent', Number(e.target.value))}
                 className="w-full accent-blue-500"
               />
-              <div className="flex justify-between text-xs text-white/30 mt-0.5">
+              <div className="flex justify-between text-xs text-[#a8b09f] mt-0.5">
                 <span>%1</span><span>%50</span>
               </div>
             </div>
@@ -215,13 +215,13 @@ export default function ThemeEditorPage() {
           {/* WhatsApp */}
           <SectionCard icon={MessageCircle} title="WhatsApp Destek">
             <div>
-              <label className="text-xs text-white/40 mb-1 block">Telefon Numarası (uluslararası)</label>
+              <label className="text-xs text-[#98a191] mb-1 block">Telefon Numarası (uluslararası)</label>
               <input
                 type="text"
                 value={theme.whatsapp_number}
                 onChange={e => set('whatsapp_number', e.target.value)}
                 placeholder="905XXXXXXXXX"
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/25 outline-none focus:border-blue-500/60"
+                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
               />
             </div>
           </SectionCard>
@@ -229,27 +229,27 @@ export default function ThemeEditorPage() {
           {/* SEO */}
           <SectionCard icon={Search} title="SEO Bilgileri">
             <div>
-              <label className="text-xs text-white/40 mb-1 block">Sayfa Başlığı</label>
+              <label className="text-xs text-[#98a191] mb-1 block">Sayfa Başlığı</label>
               <input
                 type="text"
                 value={theme.seo_title}
                 onChange={e => set('seo_title', e.target.value)}
                 placeholder="Mağaza adı | MSO Teknoloji"
                 maxLength={200}
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/25 outline-none focus:border-blue-500/60"
+                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
               />
             </div>
             <div>
-              <label className="text-xs text-white/40 mb-1 block">Meta Açıklama</label>
+              <label className="text-xs text-[#98a191] mb-1 block">Meta Açıklama</label>
               <textarea
                 value={theme.seo_description}
                 onChange={e => set('seo_description', e.target.value)}
                 placeholder="Mağazanızın kısa açıklaması (150-160 karakter önerilir)"
                 maxLength={300}
                 rows={3}
-                className="w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-sm text-white placeholder-white/25 outline-none focus:border-blue-500/60 resize-none"
+                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55] resize-none"
               />
-              <p className="text-xs text-white/25 mt-1 text-right">{theme.seo_description.length}/300</p>
+              <p className="text-xs text-[#a8b09f] mt-1 text-right">{theme.seo_description.length}/300</p>
             </div>
           </SectionCard>
         </div>
@@ -258,10 +258,10 @@ export default function ThemeEditorPage() {
         <div className={`w-80 flex-shrink-0 ${activeTab === 'editor' ? 'hidden lg:block' : ''}`}>
           <div className="sticky top-0">
             <div className="flex items-center gap-2 mb-3">
-              <Eye className="h-4 w-4 text-white/40" />
-              <span className="text-sm text-white/40">Canlı Önizleme</span>
+              <Eye className="h-4 w-4 text-[#98a191]" />
+              <span className="text-sm text-[#98a191]">Canlı Önizleme</span>
             </div>
-            <div className="rounded-2xl border border-white/10 overflow-hidden bg-zinc-900 text-sm shadow-2xl">
+            <div className="rounded-2xl border border-[#e3e7dd] overflow-hidden bg-[#f6f7f3] text-sm shadow-2xl">
               {/* Announcement bar preview */}
               {theme.announcement_active && theme.announcement_text && (
                 <div
@@ -283,16 +283,16 @@ export default function ThemeEditorPage() {
                   M
                 </div>
                 <div>
-                  <p className="font-bold text-white text-sm">Mağaza Adı</p>
-                  <p className="text-xs text-white/40">500+ Ürün</p>
+                  <p className="font-bold text-[#202c28] text-sm">Mağaza Adı</p>
+                  <p className="text-xs text-[#98a191]">500+ Ürün</p>
                 </div>
               </div>
               {/* Product cards preview */}
               <div className="p-4 grid grid-cols-2 gap-2">
                 {[1, 2].map(i => (
-                  <div key={i} className="rounded-xl border border-white/8 bg-white/5 p-2">
+                  <div key={i} className="rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-2">
                     <div className="aspect-square rounded-lg mb-2" style={{ backgroundColor: theme.accent_color + '33' }} />
-                    <p className="text-xs text-white/70 mb-1">Ürün Adı</p>
+                    <p className="text-xs text-[#5c6a56] mb-1">Ürün Adı</p>
                     <p className="text-xs font-bold" style={{ color: theme.theme_color }}>₺1.299</p>
                   </div>
                 ))}
@@ -308,8 +308,8 @@ export default function ThemeEditorPage() {
               </div>
               {/* Coupon badge preview */}
               {theme.welcome_coupon_active && (
-                <div className="mx-4 mb-4 rounded-xl border border-dashed border-green-500/40 bg-green-500/8 p-2.5 text-center">
-                  <p className="text-xs text-green-400 font-semibold">
+                <div className="mx-4 mb-4 rounded-xl border border-dashed border-[#b9d09c] bg-[#f1f5e8] p-2.5 text-center">
+                  <p className="text-xs text-[#4d7138] font-semibold">
                     🎁 İlk Alışverişe %{theme.welcome_coupon_percent} İndirim!
                   </p>
                 </div>

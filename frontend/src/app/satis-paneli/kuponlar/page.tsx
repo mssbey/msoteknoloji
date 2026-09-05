@@ -15,8 +15,8 @@ export default function CouponsPage() {
     <div className="space-y-5 max-w-[1400px]">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-black text-white">Kuponlar</h1>
-          <p className="text-sm text-white/40 mt-0.5">Pop-up, kutu içi, yorum ödülü ve manuel kupon yönetimi</p>
+          <h1 className="text-xl font-black text-[#202c28]">Kuponlar</h1>
+          <p className="text-sm text-[#98a191] mt-0.5">Pop-up, kutu içi, yorum ödülü ve manuel kupon yönetimi</p>
         </div>
         <button className="btn-primary text-xs py-2.5 px-4 rounded-xl flex items-center gap-1.5">
           <Plus className="h-3.5 w-3.5" /> Yeni Kupon
@@ -27,27 +27,27 @@ export default function CouponsPage() {
         {COUPONS.map((c) => (
           <div key={c.code} className="glass-card p-4 relative">
             <div className="flex items-start justify-between mb-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500/10">
-                <Tag className="h-4 w-4 text-blue-400" />
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#eef3e2]">
+                <Tag className="h-4 w-4 text-[#4d7138]" />
               </div>
               {c.active ? <span className="badge badge-green text-[10px]">Aktif</span> : <span className="badge badge-amber text-[10px]">Pasif</span>}
             </div>
 
             <div className="flex items-center gap-1.5 mb-1">
-              <code className="text-lg font-black text-white">{c.code}</code>
+              <code className="text-lg font-black text-[#202c28]">{c.code}</code>
               <button onClick={() => { navigator.clipboard.writeText(c.code); toast.success('Kupon kodu kopyalandı') }}
-                className="text-white/30 hover:text-blue-400 transition-colors">
+                className="text-[#a8b09f] hover:text-[#4d7138] transition-colors">
                 <Copy className="h-3 w-3" />
               </button>
             </div>
-            {c.kaynak && <p className="text-[10px] text-white/40 mb-2">{c.kaynak}</p>}
+            {c.kaynak && <p className="text-[10px] text-[#98a191] mb-2">{c.kaynak}</p>}
 
-            <p className="text-xl font-black text-blue-400">{c.type === 'percent' ? `%${c.amount}` : `${c.amount} TL`}</p>
-            <p className="text-xs text-white/40">indirim</p>
+            <p className="text-xl font-black text-[#4d7138]">{c.type === 'percent' ? `%${c.amount}` : `${c.amount} TL`}</p>
+            <p className="text-xs text-[#98a191]">indirim</p>
 
-            <div className="mt-3 pt-3 border-t border-white/8 text-xs text-white/50 space-y-0.5">
-              <p>Kullanım: <span className="text-white">{c.used} / {c.limit}</span></p>
-              <p className="flex items-center gap-1"><Calendar className="h-3 w-3" />Bitiş: <span className="text-white">{c.expires}</span></p>
+            <div className="mt-3 pt-3 border-t border-[#e3e7dd] text-xs text-[#8c958c] space-y-0.5">
+              <p>Kullanım: <span className="text-[#202c28]">{c.used} / {c.limit}</span></p>
+              <p className="flex items-center gap-1"><Calendar className="h-3 w-3" />Bitiş: <span className="text-[#202c28]">{c.expires}</span></p>
             </div>
           </div>
         ))}

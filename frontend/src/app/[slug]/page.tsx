@@ -17,8 +17,8 @@ export default async function GenericCategoryPage({ params }: { params: Promise<
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 space-y-5">
-      <h1 className="text-2xl font-black text-white">{name}</h1>
-      <p className="text-sm text-white/50">Bu sayfa hazirlaniyor. Simdilik tum urunleri goruntuleyebilir veya ana sayfaya donebilirsiniz.</p>
+      <h1 className="text-2xl font-black text-[#202c28]">{name}</h1>
+      <p className="text-sm text-[#8c958c]">Bu sayfa hazirlaniyor. Simdilik tum urunleri goruntuleyebilir veya ana sayfaya donebilirsiniz.</p>
       <Link href="/urunler" className="btn-primary text-sm py-2.5 px-5 rounded-xl inline-flex">Tum Urunler</Link>
     </main>
   )

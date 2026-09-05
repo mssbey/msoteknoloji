@@ -15,30 +15,30 @@ export default function ReviewsPage() {
   return (
     <div className="space-y-5 max-w-[1400px]">
       <div>
-        <h1 className="text-xl font-black text-white">Yorumlar</h1>
-        <p className="text-sm text-white/40 mt-0.5">Müşteri yorumlarını yönetin ve yanıtlayın</p>
+        <h1 className="text-xl font-black text-[#202c28]">Yorumlar</h1>
+        <p className="text-sm text-[#98a191] mt-0.5">Müşteri yorumlarını yönetin ve yanıtlayın</p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <div className="glass-card p-4 bg-gradient-to-br from-amber-500/10 to-orange-500/5 border-amber-500/20">
-          <Star className="h-5 w-5 text-amber-400 mb-2 fill-amber-400" />
-          <p className="text-2xl font-black text-amber-400">4.8</p>
-          <p className="text-xs text-white/40">Ortalama Puan</p>
+        <div className="glass-card p-4 bg-gradient-to-br from-[#faf3e2] to-[#fdf7f0] border-[#ead9b0]">
+          <Star className="h-5 w-5 text-[#9c7226] mb-2 fill-amber-400" />
+          <p className="text-2xl font-black text-[#9c7226]">4.8</p>
+          <p className="text-xs text-[#98a191]">Ortalama Puan</p>
         </div>
         <div className="glass-card p-4">
-          <MessageCircle className="h-5 w-5 text-blue-400 mb-2" />
-          <p className="text-2xl font-black text-blue-400">237</p>
-          <p className="text-xs text-white/40">Toplam Yorum</p>
+          <MessageCircle className="h-5 w-5 text-[#4d7138] mb-2" />
+          <p className="text-2xl font-black text-[#4d7138]">237</p>
+          <p className="text-xs text-[#98a191]">Toplam Yorum</p>
         </div>
         <div className="glass-card p-4">
-          <AlertCircle className="h-5 w-5 text-red-400 mb-2" />
-          <p className="text-2xl font-black text-red-400">12</p>
-          <p className="text-xs text-white/40">Yanıt Bekleyen</p>
+          <AlertCircle className="h-5 w-5 text-[#b0463c] mb-2" />
+          <p className="text-2xl font-black text-[#b0463c]">12</p>
+          <p className="text-xs text-[#98a191]">Yanıt Bekleyen</p>
         </div>
         <div className="glass-card p-4">
-          <ThumbsUp className="h-5 w-5 text-green-400 mb-2" />
-          <p className="text-2xl font-black text-green-400">%92</p>
-          <p className="text-xs text-white/40">Olumlu Oranı</p>
+          <ThumbsUp className="h-5 w-5 text-[#4d7138] mb-2" />
+          <p className="text-2xl font-black text-[#4d7138]">%92</p>
+          <p className="text-xs text-[#98a191]">Olumlu Oranı</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export default function ReviewsPage() {
         <div className="flex gap-1 mb-4">
           {['all', 'pending', 'replied', '5', '4', '3'].map((f) => (
             <button key={f} onClick={() => setFilter(f)}
-              className={`text-xs py-1.5 px-3 rounded-lg transition-all ${filter === f ? 'bg-blue-500/15 text-blue-400 border border-blue-500/25' : 'text-white/50 hover:text-white hover:bg-white/5'}`}>
+              className={`text-xs py-1.5 px-3 rounded-lg transition-all ${filter === f ? 'bg-[#e9f0dd] text-[#4d7138] border border-[#c8d9ae]' : 'text-[#8c958c] hover:text-[#202c28] hover:bg-[#f6f7f3]'}`}>
               {f === 'all' ? 'Tümü' : f === 'pending' ? 'Yanıtlanmadı' : f === 'replied' ? 'Yanıtlandı' : `${f}★`}
             </button>
           ))}
@@ -54,24 +54,24 @@ export default function ReviewsPage() {
 
         <div className="space-y-3">
           {REVIEWS.map((r) => (
-            <div key={r.id} className="p-4 rounded-xl bg-white/3 border border-white/6">
+            <div key={r.id} className="p-4 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
               <div className="flex items-start justify-between gap-3 mb-2">
                 <div>
                   <div className="flex items-center gap-2">
-                    <p className="font-bold text-white text-sm">{r.customer}</p>
+                    <p className="font-bold text-[#202c28] text-sm">{r.customer}</p>
                     <div className="flex gap-0.5">
                       {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} className={`h-3 w-3 ${i <= r.rating ? 'text-amber-400 fill-amber-400' : 'text-white/15'}`} />
+                        <Star key={i} className={`h-3 w-3 ${i <= r.rating ? 'text-[#9c7226] fill-amber-400' : 'text-[#b6bdac]'}`} />
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-white/40 mt-0.5">{r.product} · {r.date}</p>
+                  <p className="text-xs text-[#98a191] mt-0.5">{r.product} · {r.date}</p>
                 </div>
                 {r.replied ? <span className="badge badge-green text-[10px]">Yanıtlandı</span> : <span className="badge badge-amber text-[10px]">Bekliyor</span>}
               </div>
-              <p className="text-sm text-white/80 leading-relaxed">{r.comment}</p>
+              <p className="text-sm text-[#3d4a3a] leading-relaxed">{r.comment}</p>
               {!r.replied && (
-                <button className="mt-3 text-xs text-blue-400 hover:text-blue-300 font-bold">+ Yanıt yaz</button>
+                <button className="mt-3 text-xs text-[#4d7138] hover:text-[#33613f] font-bold">+ Yanıt yaz</button>
               )}
             </div>
           ))}

@@ -95,7 +95,7 @@ export default function CartRecoveryPage() {
   if (status === 'loading') {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin text-blue-500" />
+        <Loader2 className="h-8 w-8 animate-spin text-[#4d7138]" />
       </div>
     )
   }
@@ -103,20 +103,20 @@ export default function CartRecoveryPage() {
   if (status === 'expired' || status === 'error') {
     return (
       <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-4 text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5">
-          <AlertCircle className="h-8 w-8 text-white/30" />
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f6f7f3]">
+          <AlertCircle className="h-8 w-8 text-[#a8b09f]" />
         </div>
-        <h1 className="text-xl font-black text-white">
+        <h1 className="text-xl font-black text-[#202c28]">
           {status === 'expired' ? 'Bu link artık geçerli değil' : 'Bir hata oluştu'}
         </h1>
-        <p className="text-sm text-white/40 max-w-sm">
+        <p className="text-sm text-[#98a191] max-w-sm">
           {status === 'expired'
             ? 'Sepet kurtarma linki zaten kullanılmış ya da süresi dolmuş.'
             : 'Bağlantı kurulamadı. Lütfen daha sonra tekrar deneyin.'}
         </p>
         <Link
           href="/urunler"
-          className="mt-2 flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500 transition-colors"
+          className="mt-2 flex items-center gap-2 rounded-xl bg-[#244b37] px-6 py-3 text-sm font-semibold text-[#f4f8ec] hover:bg-[#2f6045] transition-colors"
         >
           Alışverişe Devam Et <ArrowRight className="h-4 w-4" />
         </Link>
@@ -139,14 +139,14 @@ export default function CartRecoveryPage() {
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', delay: 0.1 }}
-            className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/15 mb-4"
+            className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#e9f0dd] mb-4"
           >
-            <ShoppingCart className="h-8 w-8 text-blue-400" />
+            <ShoppingCart className="h-8 w-8 text-[#4d7138]" />
           </motion.div>
-          <h1 className="text-2xl font-black text-white">
+          <h1 className="text-2xl font-black text-[#202c28]">
             {data.user_name ? `Hoş geldin, ${data.user_name.split(' ')[0]}!` : 'Sepetiniz sizi bekliyor!'}
           </h1>
-          <p className="text-white/50 mt-2 text-sm">
+          <p className="text-[#8c958c] mt-2 text-sm">
             {data.item_count} ürünlü sepetinizi terk ettiniz — şimdi geri dönün.
           </p>
         </div>
@@ -158,11 +158,11 @@ export default function CartRecoveryPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             onClick={copyCode}
-            className="cursor-pointer rounded-2xl border-2 border-dashed border-green-500/40 bg-green-500/8 p-4 text-center hover:border-green-400 hover:bg-green-500/12 transition-all"
+            className="cursor-pointer rounded-2xl border-2 border-dashed border-[#b9d09c] bg-[#f1f5e8] p-4 text-center hover:border-green-400 hover:bg-green-500/12 transition-all"
           >
             <p className="text-xs text-green-400/70 mb-1">Özel indirim kodunuz</p>
-            <p className="text-2xl font-black tracking-widest text-green-400">{data.coupon_code}</p>
-            <p className="text-xs text-white/30 mt-1 flex items-center justify-center gap-1">
+            <p className="text-2xl font-black tracking-widest text-[#4d7138]">{data.coupon_code}</p>
+            <p className="text-xs text-[#a8b09f] mt-1 flex items-center justify-center gap-1">
               <Tag className="h-3 w-3" />
               {copiedCoupon ? '✅ Kopyalandı!' : 'Kopyalamak için tıklayın'}
             </p>
@@ -170,7 +170,7 @@ export default function CartRecoveryPage() {
         )}
 
         {/* Cart items */}
-        <div className="rounded-2xl border border-white/8 bg-white/3 divide-y divide-white/6">
+        <div className="rounded-2xl border border-[#e3e7dd] bg-[#f8f9f6] divide-y divide-white/6">
           {data.items.map((item, i) => (
             <motion.div
               key={i}
@@ -179,14 +179,14 @@ export default function CartRecoveryPage() {
               transition={{ delay: 0.1 + i * 0.05 }}
               className="flex items-center gap-4 p-4"
             >
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-white/5">
-                <Package className="h-5 w-5 text-white/30" />
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[#f6f7f3]">
+                <Package className="h-5 w-5 text-[#a8b09f]" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-white truncate">{item.name}</p>
-                <p className="text-xs text-white/30">{item.sku} • x{item.quantity}</p>
+                <p className="text-sm font-medium text-[#202c28] truncate">{item.name}</p>
+                <p className="text-xs text-[#a8b09f]">{item.sku} • x{item.quantity}</p>
               </div>
-              <p className="text-sm font-bold text-white flex-shrink-0">
+              <p className="text-sm font-bold text-[#202c28] flex-shrink-0">
                 ₺{(item.price * item.quantity).toLocaleString('tr-TR')}
               </p>
             </motion.div>
@@ -194,8 +194,8 @@ export default function CartRecoveryPage() {
 
           {/* Subtotal */}
           <div className="flex items-center justify-between p-4">
-            <span className="text-sm text-white/50">Toplam</span>
-            <span className="text-lg font-black text-white">
+            <span className="text-sm text-[#8c958c]">Toplam</span>
+            <span className="text-lg font-black text-[#202c28]">
               ₺{data.subtotal.toLocaleString('tr-TR', { minimumFractionDigits: 2 })}
             </span>
           </div>
@@ -207,7 +207,7 @@ export default function CartRecoveryPage() {
             whileTap={{ scale: 0.97 }}
             onClick={handleRestore}
             disabled={restoring}
-            className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow disabled:opacity-60"
+            className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#244b37] to-blue-500 py-4 text-base font-bold text-[#f4f8ec] shadow-lg shadow-[#244b37]/15 hover:shadow-blue-500/50 transition-shadow disabled:opacity-60"
           >
             {restoring ? (
               <><Loader2 className="h-4 w-4 animate-spin" /> Yükleniyor...</>
@@ -217,13 +217,13 @@ export default function CartRecoveryPage() {
           </motion.button>
           <Link
             href="/urunler"
-            className="flex items-center justify-center gap-2 rounded-2xl border border-white/15 py-4 px-6 text-sm font-medium text-white/60 hover:text-white hover:bg-white/5 transition-all"
+            className="flex items-center justify-center gap-2 rounded-2xl border border-[#d4ddc6] py-4 px-6 text-sm font-medium text-[#6f7a68] hover:text-[#202c28] hover:bg-[#f6f7f3] transition-all"
           >
             Yeni Alışveriş
           </Link>
         </div>
 
-        <p className="text-xs text-center text-white/25">
+        <p className="text-xs text-center text-[#a8b09f]">
           İndirim kodu sepet ödemesinde otomatik uygulanacaktır.
         </p>
       </motion.div>

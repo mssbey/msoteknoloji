@@ -54,10 +54,10 @@ export function WhatsAppButton({
                 initial={{ opacity: 0, x: 10, scale: 0.95 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 10, scale: 0.95 }}
-                className="rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2.5 text-sm text-white shadow-xl max-w-[200px] text-right"
+                className="rounded-2xl bg-white border border-[#e3e7dd] px-4 py-2.5 text-sm text-[#202c28] shadow-lg max-w-[200px] text-right"
               >
                 <p className="font-medium">Hemen yardım edelim!</p>
-                <p className="text-white/60 text-xs mt-0.5">WhatsApp&apos;tan mesaj gönderin</p>
+                <p className="text-[#8c958c] text-xs mt-0.5">WhatsApp&apos;tan mesaj gönderin</p>
               </motion.div>
             )}
           </AnimatePresence>

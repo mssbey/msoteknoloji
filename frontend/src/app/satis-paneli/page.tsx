@@ -26,9 +26,9 @@ const SALES_DATA = [
 ]
 
 const AI_SUGGESTIONS = [
-  { type: 'warning', icon: AlertTriangle, text: '3 ürünün stoğu kritik seviyede', action: 'Stok Ekle', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
-  { type: 'tip', icon: TrendingUp, text: '"Gaming Mouse" bu hafta %240 trend', action: 'Ürün Ekle', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
-  { type: 'success', icon: CheckCircle, text: 'SEO skorunuz geçen haftaya göre +8 puan arttı', action: 'Detaylar', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
+  { type: 'warning', icon: AlertTriangle, text: '3 ürünün stoğu kritik seviyede', action: 'Stok Ekle', color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]' },
+  { type: 'tip', icon: TrendingUp, text: '"Gaming Mouse" bu hafta %240 trend', action: 'Ürün Ekle', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+  { type: 'success', icon: CheckCircle, text: 'SEO skorunuz geçen haftaya göre +8 puan arttı', action: 'Detaylar', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
 ]
 
 const RECENT_ORDERS = [
@@ -53,14 +53,14 @@ function StatCard({ icon: Icon, label, value, change, color, bg, delay = 0 }: {
           <Icon className="h-5 w-5" style={{ color: 'inherit' }} />
         </div>
         {change && (
-          <span className="flex items-center gap-1 text-xs font-bold text-green-400">
+          <span className="flex items-center gap-1 text-xs font-bold text-[#4d7138]">
             <ArrowUpRight className="h-3 w-3" />
             {change}
           </span>
         )}
       </div>
       <p className={`text-2xl font-black ${color} mb-0.5`}>{value}</p>
-      <p className="text-xs text-white/45">{label}</p>
+      <p className="text-xs text-[#8c958c]">{label}</p>
     </motion.div>
   )
 }
@@ -74,10 +74,10 @@ export default function SellerDashboardPage() {
       {/* Welcome */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-black text-white">
+          <h1 className="text-2xl font-black text-[#202c28]">
             Merhaba, {user?.name?.split(' ')[0]}! 👋
           </h1>
-          <p className="text-sm text-white/40 mt-0.5">Bugün işler nasıl gidiyor?</p>
+          <p className="text-sm text-[#98a191] mt-0.5">Bugün işler nasıl gidiyor?</p>
         </div>
         <div className="hidden md:flex items-center gap-2">
           <Link href="/satis-paneli/urunler/yeni"
@@ -90,10 +90,10 @@ export default function SellerDashboardPage() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Wallet} label="Bugünkü Ciro" value="₺8,420" change="+18%" color="text-blue-400" bg="border-blue-500/20 bg-blue-500/5" delay={0} />
-        <StatCard icon={ShoppingBag} label="Yeni Siparişler" value="24" change="+5" color="text-green-400" bg="border-green-500/20 bg-green-500/5" delay={0.06} />
-        <StatCard icon={Package} label="Toplam Ürün" value="1,247" color="text-purple-400" bg="border-purple-500/20 bg-purple-500/5" delay={0.12} />
-        <StatCard icon={Star} label="Mağaza Puanı" value="4.8 ★" color="text-amber-400" bg="border-amber-500/20 bg-amber-500/5" delay={0.18} />
+        <StatCard icon={Wallet} label="Bugünkü Ciro" value="₺8,420" change="+18%" color="text-[#4d7138]" bg="border-[#cfe0b8] bg-[#f4f7ec]" delay={0} />
+        <StatCard icon={ShoppingBag} label="Yeni Siparişler" value="24" change="+5" color="text-[#4d7138]" bg="border-[#cfe0b8] bg-[#f4f7ec]" delay={0.06} />
+        <StatCard icon={Package} label="Toplam Ürün" value="1,247" color="text-[#7c5e77]" bg="border-[#e4d5e1] bg-[#f7f1f6]" delay={0.12} />
+        <StatCard icon={Star} label="Mağaza Puanı" value="4.8 ★" color="text-[#9c7226]" bg="border-[#ead9b0] bg-[#fcf7ec]" delay={0.18} />
       </div>
 
       {/* Charts */}
@@ -107,11 +107,11 @@ export default function SellerDashboardPage() {
         >
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h3 className="font-bold text-white flex items-center gap-2">
-                <BarChart3 className="h-4 w-4 text-blue-400" />
+              <h3 className="font-bold text-[#202c28] flex items-center gap-2">
+                <BarChart3 className="h-4 w-4 text-[#4d7138]" />
                 Haftalık Satış
               </h3>
-              <p className="text-xs text-white/40 mt-0.5">Son 7 gün</p>
+              <p className="text-xs text-[#98a191] mt-0.5">Son 7 gün</p>
             </div>
             <span className="badge badge-green flex items-center gap-1">
               <TrendingUp className="h-2.5 w-2.5" />
@@ -145,11 +145,11 @@ export default function SellerDashboardPage() {
           transition={{ delay: 0.25 }}
           className="glass-card p-5"
         >
-          <h3 className="font-bold text-white flex items-center gap-2 mb-1">
-            <Users className="h-4 w-4 text-purple-400" />
+          <h3 className="font-bold text-[#202c28] flex items-center gap-2 mb-1">
+            <Users className="h-4 w-4 text-[#7c5e77]" />
             Sipariş Dağılımı
           </h3>
-          <p className="text-xs text-white/40 mb-4">Günlük sipariş sayısı</p>
+          <p className="text-xs text-[#98a191] mb-4">Günlük sipariş sayısı</p>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={SALES_DATA} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
@@ -173,26 +173,26 @@ export default function SellerDashboardPage() {
           className="glass-card p-5"
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-white flex items-center gap-2">
-              <ShoppingBag className="h-4 w-4 text-green-400" />
+            <h3 className="font-bold text-[#202c28] flex items-center gap-2">
+              <ShoppingBag className="h-4 w-4 text-[#4d7138]" />
               Son Siparişler
             </h3>
-            <Link href="/satis-paneli/siparisler" className="text-xs text-blue-400 hover:text-blue-300 transition-colors">
+            <Link href="/satis-paneli/siparisler" className="text-xs text-[#4d7138] hover:text-[#33613f] transition-colors">
               Tümünü gör →
             </Link>
           </div>
           <div className="space-y-2">
             {RECENT_ORDERS.map((order) => (
-              <div key={order.no} className="flex items-center justify-between p-3 rounded-xl bg-white/3 border border-white/6">
+              <div key={order.no} className="flex items-center justify-between p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
                 <div>
-                  <p className="text-sm font-bold text-white">{order.no}</p>
-                  <p className="text-xs text-white/40">{order.customer} · {order.time}</p>
+                  <p className="text-sm font-bold text-[#202c28]">{order.no}</p>
+                  <p className="text-xs text-[#98a191]">{order.customer} · {order.time}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold text-white">{formatPrice(order.amount)}</p>
+                  <p className="text-sm font-bold text-[#202c28]">{formatPrice(order.amount)}</p>
                   <span className={`text-xs font-medium ${
-                    order.status === 'Teslim Edildi' ? 'text-green-400' :
-                    order.status === 'Kargoda' ? 'text-blue-400' : 'text-amber-400'
+                    order.status === 'Teslim Edildi' ? 'text-[#4d7138]' :
+                    order.status === 'Kargoda' ? 'text-[#4d7138]' : 'text-[#9c7226]'
                   }`}>
                     {order.status}
                   </span>
@@ -210,27 +210,27 @@ export default function SellerDashboardPage() {
           className="glass-card p-5"
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-white flex items-center gap-2">
-              <Bot className="h-4 w-4 text-blue-400" />
+            <h3 className="font-bold text-[#202c28] flex items-center gap-2">
+              <Bot className="h-4 w-4 text-[#4d7138]" />
               AI Asistan Önerileri
             </h3>
-            <Link href="/satis-paneli/ai" className="text-xs text-blue-400 hover:text-blue-300 transition-colors">
+            <Link href="/satis-paneli/ai" className="text-xs text-[#4d7138] hover:text-[#33613f] transition-colors">
               Tümünü gör →
             </Link>
           </div>
 
           {/* Optimization Score */}
-          <div className="mb-4 p-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20">
+          <div className="mb-4 p-3 rounded-xl bg-gradient-to-r from-[#eef3e2] to-[#f7f1f6] border border-[#cfe0b8]">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-white/60">MAĞAZA OPTİMİZASYON SKORU</span>
-              <span className="text-lg font-black text-blue-400">78/100</span>
+              <span className="text-xs font-bold text-[#6f7a68]">MAĞAZA OPTİMİZASYON SKORU</span>
+              <span className="text-lg font-black text-[#4d7138]">78/100</span>
             </div>
-            <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+            <div className="h-2 rounded-full bg-[#f0f2ec] overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: '78%' }}
                 transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-                className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                className="h-full rounded-full bg-gradient-to-r from-[#2f6045] to-[#33613f]"
               />
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function SellerDashboardPage() {
               <div key={i} className={`flex items-center justify-between p-3 rounded-xl border ${s.bg}`}>
                 <div className="flex items-center gap-2.5">
                   <s.icon className={`h-4 w-4 flex-shrink-0 ${s.color}`} />
-                  <p className="text-xs text-white/70">{s.text}</p>
+                  <p className="text-xs text-[#5c6a56]">{s.text}</p>
                 </div>
                 <button className={`text-xs font-bold flex-shrink-0 ml-2 ${s.color} hover:opacity-80 transition-opacity`}>
                   {s.action}

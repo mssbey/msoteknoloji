@@ -13,8 +13,8 @@ export default function BlogPage() {
     <div className="space-y-5 max-w-[1400px]">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-black text-white">Blog Yazıları</h1>
-          <p className="text-sm text-white/40 mt-0.5">SEO için içerik üretimi ve mağaza blog yönetimi</p>
+          <h1 className="text-xl font-black text-[#202c28]">Blog Yazıları</h1>
+          <p className="text-sm text-[#98a191] mt-0.5">SEO için içerik üretimi ve mağaza blog yönetimi</p>
         </div>
         <button className="btn-primary text-xs py-2.5 px-4 rounded-xl flex items-center gap-1.5">
           <Plus className="h-3.5 w-3.5" /> Yeni Yazı
@@ -24,12 +24,12 @@ export default function BlogPage() {
       <div className="space-y-2">
         {POSTS.map((p, i) => (
           <div key={i} className="glass-card p-4 flex items-center gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 flex-shrink-0">
-              <FileText className="h-4 w-4 text-blue-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eef3e2] flex-shrink-0">
+              <FileText className="h-4 w-4 text-[#4d7138]" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-white">{p.title}</p>
-              <div className="flex items-center gap-3 text-xs text-white/40 mt-0.5">
+              <p className="font-bold text-[#202c28]">{p.title}</p>
+              <div className="flex items-center gap-3 text-xs text-[#98a191] mt-0.5">
                 <span>{p.date}</span>
                 <span className="flex items-center gap-1"><Eye className="h-3 w-3" />{p.views} okuma</span>
               </div>

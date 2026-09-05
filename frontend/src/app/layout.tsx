@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr" className={`${geist.variable} dark`}>
-      <body className="bg-[#050507] text-white antialiased min-h-screen flex flex-col">
+    <html lang="tr" className={geist.variable}>
+      <body className="bg-[#f8f9f6] text-[#202c28] antialiased min-h-screen flex flex-col">
         <Providers>
           <Header />
           <main className="flex-1">{children}</main>

@@ -31,7 +31,7 @@ export default function NotificationsPage() {
   const Toggle = ({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) => (
     <button
       onClick={() => onChange(!checked)}
-      className={`relative h-6 w-11 rounded-full transition-colors ${checked ? 'bg-blue-500' : 'bg-white/15'}`}
+      className={`relative h-6 w-11 rounded-full transition-colors ${checked ? 'bg-[#2f6045]' : 'bg-[#eef0ea]'}`}
     >
       <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white transition-all ${checked ? 'left-[22px]' : 'left-0.5'}`} />
     </button>
@@ -39,20 +39,20 @@ export default function NotificationsPage() {
 
   return (
     <div className="space-y-5">
-      <h1 className="text-xl font-black text-white">Bildirim Tercihleri</h1>
+      <h1 className="text-xl font-black text-[#202c28]">Bildirim Tercihleri</h1>
 
       <div className="glass-card p-5">
-        <h2 className="font-bold text-white mb-1">Kanallar</h2>
-        <p className="text-xs text-white/40 mb-4">Hangi kanallardan bildirim almak istiyorsunuz?</p>
+        <h2 className="font-bold text-[#202c28] mb-1">Kanallar</h2>
+        <p className="text-xs text-[#98a191] mb-4">Hangi kanallardan bildirim almak istiyorsunuz?</p>
         <div className="space-y-3">
           {[
             { icon: Mail, label: 'E-posta', state: email, set: setEmail },
             { icon: Smartphone, label: 'SMS', state: sms, set: setSms },
             { icon: MessageSquare, label: 'WhatsApp', state: whatsapp, set: setWhatsapp },
           ].map(({ icon: Icon, label, state, set }) => (
-            <div key={label} className="flex items-center gap-3 p-3 rounded-xl bg-white/3 border border-white/6">
-              <Icon className="h-4 w-4 text-blue-400" />
-              <span className="text-sm text-white flex-1">{label}</span>
+            <div key={label} className="flex items-center gap-3 p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
+              <Icon className="h-4 w-4 text-[#4d7138]" />
+              <span className="text-sm text-[#202c28] flex-1">{label}</span>
               <Toggle checked={state} onChange={set} />
             </div>
           ))}
@@ -60,14 +60,14 @@ export default function NotificationsPage() {
       </div>
 
       <div className="glass-card p-5">
-        <h2 className="font-bold text-white mb-1 flex items-center gap-2"><Bell className="h-4 w-4 text-blue-400" />Bildirim Türleri</h2>
-        <p className="text-xs text-white/40 mb-4">Hangi konularda haber almak istiyorsunuz?</p>
+        <h2 className="font-bold text-[#202c28] mb-1 flex items-center gap-2"><Bell className="h-4 w-4 text-[#4d7138]" />Bildirim Türleri</h2>
+        <p className="text-xs text-[#98a191] mb-4">Hangi konularda haber almak istiyorsunuz?</p>
         <div className="space-y-2">
           {PREFS.map((p) => (
-            <div key={p.key} className="flex items-center gap-3 p-3 rounded-xl bg-white/3 border border-white/6">
+            <div key={p.key} className="flex items-center gap-3 p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
               <div className="flex-1">
-                <p className="text-sm font-medium text-white">{p.label}</p>
-                <p className="text-xs text-white/40">{p.desc}</p>
+                <p className="text-sm font-medium text-[#202c28]">{p.label}</p>
+                <p className="text-xs text-[#98a191]">{p.desc}</p>
               </div>
               <Toggle checked={true} onChange={() => {}} />
             </div>

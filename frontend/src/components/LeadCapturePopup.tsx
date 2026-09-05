@@ -117,7 +117,7 @@ export function LeadCapturePopup() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[60] bg-[#1c2b20]/40 backdrop-blur-sm"
           />
 
           {/* Modal */}
@@ -126,15 +126,15 @@ export function LeadCapturePopup() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed inset-x-4 top-1/2 z-[70] mx-auto max-w-md -translate-y-1/2 overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl"
+            className="fixed inset-x-4 top-1/2 z-[70] mx-auto max-w-md -translate-y-1/2 overflow-hidden rounded-3xl border border-[#e3e7dd] bg-[#f6f7f3] shadow-2xl"
           >
             {/* Gradient üst şerit */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-blue-400" />
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#2f6045] via-purple-500 to-blue-400" />
 
             {/* Kapat butonu */}
             <button
               onClick={handleClose}
-              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all"
+              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#f0f2ec] text-[#6f7a68] hover:bg-[#e4edd4] hover:text-[#202c28] transition-all"
               aria-label="Kapat"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -153,16 +153,16 @@ export function LeadCapturePopup() {
                   >
                     {/* Başlık */}
                     <div className="mb-5 text-center">
-                      <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-2xl shadow-lg shadow-blue-500/30">
+                      <div className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-2xl shadow-lg shadow-[#244b37]/15">
                         🎁
                       </div>
-                      <h2 className="text-xl font-black text-white">
+                      <h2 className="text-xl font-black text-[#202c28]">
                         Hoş Geldiniz!
                         <span className="block text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                           %15 İndirim Kazanın
                         </span>
                       </h2>
-                      <p className="mt-2 text-sm text-white/50">
+                      <p className="mt-2 text-sm text-[#8c958c]">
                         Bilgilerinizi bırakın, indirim kodunuzu hemen alın
                       </p>
                     </div>
@@ -176,19 +176,19 @@ export function LeadCapturePopup() {
                           placeholder="Ad Soyad *"
                           value={form.name}
                           onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                          className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-all focus:border-blue-500/70 focus:bg-white/8 ${
-                            errors.name ? 'border-red-500/70' : 'border-white/10'
+                          className={`w-full rounded-xl border bg-[#f6f7f3] px-4 py-3 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none transition-all focus:border-blue-500/70 focus:bg-[#f3f5ef] ${
+                            errors.name ? 'border-red-500/70' : 'border-[#e3e7dd]'
                           }`}
                         />
                         {errors.name && (
-                          <p className="mt-1 text-xs text-red-400">{errors.name}</p>
+                          <p className="mt-1 text-xs text-[#b0463c]">{errors.name}</p>
                         )}
                       </div>
 
                       {/* Telefon */}
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="flex-shrink-0 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-sm text-white/60">
+                          <span className="flex-shrink-0 rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-3 text-sm text-[#6f7a68]">
                             🇹🇷 +90
                           </span>
                           <input
@@ -196,20 +196,20 @@ export function LeadCapturePopup() {
                             placeholder="05XX XXX XX XX *"
                             value={form.phone}
                             onChange={e => setForm(f => ({ ...f, phone: formatPhone(e.target.value) }))}
-                            className={`w-full rounded-xl border bg-white/5 px-4 py-3 text-sm text-white placeholder-white/30 outline-none transition-all focus:border-blue-500/70 ${
-                              errors.phone ? 'border-red-500/70' : 'border-white/10'
+                            className={`w-full rounded-xl border bg-[#f6f7f3] px-4 py-3 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none transition-all focus:border-blue-500/70 ${
+                              errors.phone ? 'border-red-500/70' : 'border-[#e3e7dd]'
                             }`}
                           />
                         </div>
                         {errors.phone && (
-                          <p className="mt-1 text-xs text-red-400">{errors.phone}</p>
+                          <p className="mt-1 text-xs text-[#b0463c]">{errors.phone}</p>
                         )}
                       </div>
 
                       {/* KVKK */}
                       <div className="space-y-2">
                         <label className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3 transition-all ${
-                          errors.kvkk ? 'border-red-500/40 bg-red-500/5' : 'border-white/10 bg-white/5 hover:bg-white/8'
+                          errors.kvkk ? 'border-[#e5aca6] bg-[#fdf3f2]' : 'border-[#e3e7dd] bg-[#f6f7f3] hover:bg-[#f3f5ef]'
                         }`}>
                           <input
                             type="checkbox"
@@ -217,23 +217,23 @@ export function LeadCapturePopup() {
                             onChange={e => setForm(f => ({ ...f, kvkk: e.target.checked }))}
                             className="mt-0.5 h-4 w-4 flex-shrink-0 accent-blue-500"
                           />
-                          <span className="text-xs text-white/60 leading-relaxed">
-                            <a href="#" className="text-blue-400 hover:underline">KVKK Aydınlatma Metni</a>ni okudum,
-                            kişisel verilerimin işlenmesini kabul ediyorum. <span className="text-red-400">*</span>
+                          <span className="text-xs text-[#6f7a68] leading-relaxed">
+                            <a href="#" className="text-[#4d7138] hover:underline">KVKK Aydınlatma Metni</a>ni okudum,
+                            kişisel verilerimin işlenmesini kabul ediyorum. <span className="text-[#b0463c]">*</span>
                           </span>
                         </label>
                         {errors.kvkk && (
-                          <p className="text-xs text-red-400 px-1">{errors.kvkk}</p>
+                          <p className="text-xs text-[#b0463c] px-1">{errors.kvkk}</p>
                         )}
 
-                        <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/8 transition-all">
+                        <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-3 hover:bg-[#f3f5ef] transition-all">
                           <input
                             type="checkbox"
                             checked={form.commercial}
                             onChange={e => setForm(f => ({ ...f, commercial: e.target.checked }))}
                             className="mt-0.5 h-4 w-4 flex-shrink-0 accent-blue-500"
                           />
-                          <span className="text-xs text-white/60 leading-relaxed">
+                          <span className="text-xs text-[#6f7a68] leading-relaxed">
                             Kampanya ve fırsatlardan SMS/WhatsApp ile haberdar olmak istiyorum (isteğe bağlı)
                           </span>
                         </label>
@@ -244,7 +244,7 @@ export function LeadCapturePopup() {
                         type="submit"
                         disabled={loading}
                         whileTap={{ scale: 0.97 }}
-                        className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 py-3.5 font-bold text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow disabled:opacity-60"
+                        className="w-full rounded-2xl bg-gradient-to-r from-[#244b37] to-blue-500 py-3.5 font-bold text-[#f4f8ec] shadow-lg shadow-[#244b37]/15 hover:shadow-blue-500/50 transition-shadow disabled:opacity-60"
                       >
                         {loading ? (
                           <span className="flex items-center justify-center gap-2">
@@ -275,8 +275,8 @@ export function LeadCapturePopup() {
                     >
                       🎉
                     </motion.div>
-                    <h2 className="text-xl font-black text-white mb-1">Tebrikler!</h2>
-                    <p className="text-white/50 text-sm mb-5">
+                    <h2 className="text-xl font-black text-[#202c28] mb-1">Tebrikler!</h2>
+                    <p className="text-[#8c958c] text-sm mb-5">
                       İşte %15 indirim kodunuz:
                     </p>
 
@@ -286,24 +286,24 @@ export function LeadCapturePopup() {
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.2 }}
                       onClick={handleCopy}
-                      className="group relative mx-auto mb-4 max-w-xs cursor-pointer rounded-2xl border-2 border-dashed border-blue-500/50 bg-blue-500/10 p-4 hover:border-blue-400 hover:bg-blue-500/15 transition-all"
+                      className="group relative mx-auto mb-4 max-w-xs cursor-pointer rounded-2xl border-2 border-dashed border-[#8fab6a] bg-[#eef3e2] p-4 hover:border-blue-400 hover:bg-[#e9f0dd] transition-all"
                     >
-                      <p className="text-2xl font-black tracking-widest text-blue-400">
+                      <p className="text-2xl font-black tracking-widest text-[#4d7138]">
                         {coupon}
                       </p>
-                      <p className="mt-1 text-xs text-white/40">
+                      <p className="mt-1 text-xs text-[#98a191]">
                         {copied ? '✅ Kopyalandı!' : '👆 Kopyalamak için tıklayın'}
                       </p>
                     </motion.div>
 
-                    <p className="text-xs text-white/40 mb-5">
+                    <p className="text-xs text-[#98a191] mb-5">
                       Kod 30 gün geçerlidir. İlk alışverişinizde sepette kullanabilirsiniz.
                     </p>
 
                     <motion.button
                       whileTap={{ scale: 0.97 }}
                       onClick={() => setShow(false)}
-                      className="w-full rounded-2xl bg-gradient-to-r from-blue-600 to-blue-500 py-3 font-bold text-white"
+                      className="w-full rounded-2xl bg-gradient-to-r from-[#244b37] to-blue-500 py-3 font-bold text-[#f4f8ec]"
                     >
                       Alışverişe Başla →
                     </motion.button>

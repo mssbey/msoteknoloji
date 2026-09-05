@@ -9,14 +9,14 @@ const CAMPAIGNS = [
 export default function CampaignsPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-10 space-y-5">
-      <h1 className="text-2xl font-black text-white">Kampanyalar</h1>
+      <h1 className="text-2xl font-black text-[#202c28]">Kampanyalar</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {CAMPAIGNS.map((c) => (
           <article key={c.code} className="glass-card p-5">
-            <p className="font-bold text-white">{c.title}</p>
-            <p className="text-sm text-white/50 mt-1">{c.desc}</p>
-            <p className="text-xs text-blue-400 mt-2">Kod: {c.code}</p>
-            <Link href="/urunler" className="inline-flex mt-3 text-sm text-blue-400 hover:text-blue-300">Alisverise git</Link>
+            <p className="font-bold text-[#202c28]">{c.title}</p>
+            <p className="text-sm text-[#8c958c] mt-1">{c.desc}</p>
+            <p className="text-xs text-[#4d7138] mt-2">Kod: {c.code}</p>
+            <Link href="/urunler" className="inline-flex mt-3 text-sm text-[#4d7138] hover:text-[#33613f]">Alisverise git</Link>
           </article>
         ))}
       </div>

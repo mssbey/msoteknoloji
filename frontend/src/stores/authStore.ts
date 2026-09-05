@@ -12,6 +12,20 @@ interface User {
   seller?: { id: number; package: string; status: string; company_name: string }
 }
 
+/**
+ * API rolleri `[{ id, name: 'seller', ... }]` biçiminde döndürüyor; arayüzün
+ * tamamı ise düz isim dizisi bekliyor. Kaydetmeden önce tek biçime indiriyoruz.
+ */
+type RawRole = string | { name?: string }
+
+function normalizeRoles(user: (Omit<User, 'roles'> & { roles?: RawRole[] }) | null): User | null {
+  if (!user) return null
+  const roles = (user.roles ?? [])
+    .map((role) => (typeof role === 'string' ? role : role?.name))
+    .filter((name): name is string => !!name)
+  return { ...user, roles }
+}
+
 interface AuthStore {
   user: User | null
   token: string | null
@@ -38,7 +52,7 @@ export const useAuthStore = create<AuthStore>()(
           const res = await authAPI.login(email, password)
           const { user, token } = res.data.data
           localStorage.setItem('mso_token', token)
-          set({ user, token, isAuthenticated: true, isLoading: false })
+          set({ user: normalizeRoles(user), token, isAuthenticated: true, isLoading: false })
         } finally {
           set({ isLoading: false })
         }
@@ -50,7 +64,7 @@ export const useAuthStore = create<AuthStore>()(
           const res = await authAPI.register(data)
           const { user, token } = res.data.data
           localStorage.setItem('mso_token', token)
-          set({ user, token, isAuthenticated: true, isLoading: false })
+          set({ user: normalizeRoles(user), token, isAuthenticated: true, isLoading: false })
         } finally {
           set({ isLoading: false })
         }
@@ -69,14 +83,14 @@ export const useAuthStore = create<AuthStore>()(
         if (!token) return
         try {
           const res = await authAPI.me()
-          set({ user: res.data.data, isAuthenticated: true })
+          set({ user: normalizeRoles(res.data.data), isAuthenticated: true })
         } catch {
           set({ user: null, token: null, isAuthenticated: false })
           localStorage.removeItem('mso_token')
         }
       },
 
-      setUser: (user) => set({ user }),
+      setUser: (user) => set({ user: normalizeRoles(user) }),
     }),
     {
       name: 'mso-auth',

@@ -6,18 +6,18 @@ import { Bot, Sparkles, TrendingUp, Search, Tag, MessageSquare, Zap, RefreshCw, 
 import { cn } from '@/lib/utils'
 
 const AI_MODULES = [
-  { icon: Search, label: 'SEO Asistan', desc: 'Ürün başlık ve açıklamalarını SEO\'ya göre optimize et', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20', badge: 'Aktif' },
-  { icon: Sparkles, label: 'Ürün Yazarı', desc: 'AI ile profesyonel ürün açıklamaları oluştur', color: 'text-purple-400', bg: 'bg-purple-500/10 border-purple-500/20', badge: 'Aktif' },
-  { icon: TrendingUp, label: 'Fiyat Asistan', desc: 'Rakip fiyatlarını analiz et, optimal fiyat öner', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20', badge: 'Pro' },
-  { icon: Tag, label: 'Kampanya Üretici', desc: 'Satışları artıracak kampanya fikirleri', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20', badge: 'Aktif' },
-  { icon: MessageSquare, label: 'WhatsApp Botu', desc: 'Müşteri sorularını otomatik yanıtla', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20', badge: 'Enterprise' },
+  { icon: Search, label: 'SEO Asistan', desc: 'Ürün başlık ve açıklamalarını SEO\'ya göre optimize et', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]', badge: 'Aktif' },
+  { icon: Sparkles, label: 'Ürün Yazarı', desc: 'AI ile profesyonel ürün açıklamaları oluştur', color: 'text-[#7c5e77]', bg: 'bg-[#f2eaf0] border-[#e4d5e1]', badge: 'Aktif' },
+  { icon: TrendingUp, label: 'Fiyat Asistan', desc: 'Rakip fiyatlarını analiz et, optimal fiyat öner', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]', badge: 'Pro' },
+  { icon: Tag, label: 'Kampanya Üretici', desc: 'Satışları artıracak kampanya fikirleri', color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]', badge: 'Aktif' },
+  { icon: MessageSquare, label: 'WhatsApp Botu', desc: 'Müşteri sorularını otomatik yanıtla', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]', badge: 'Enterprise' },
 ]
 
 const INSIGHTS = [
-  { type: 'warning', icon: AlertTriangle, text: '18 ürünün SEO skoru 60\'ın altında — optimize et', action: 'Toplu Optimize', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
-  { type: 'trend', icon: TrendingUp, text: '"Gaming Mouse" bu hafta %240 trend! Stok ekle', action: 'Ürün Ekle', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
-  { type: 'price', icon: Tag, text: 'Samsung Şarj Cihazı — rakipten %12 pahalısın', action: 'Fiyatı Güncelle', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
-  { type: 'success', icon: CheckCircle, text: 'iPhone Kılıf ürününüz bu hafta en çok beğenilen', action: 'Detaylar', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
+  { type: 'warning', icon: AlertTriangle, text: '18 ürünün SEO skoru 60\'ın altında — optimize et', action: 'Toplu Optimize', color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]' },
+  { type: 'trend', icon: TrendingUp, text: '"Gaming Mouse" bu hafta %240 trend! Stok ekle', action: 'Ürün Ekle', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+  { type: 'price', icon: Tag, text: 'Samsung Şarj Cihazı — rakipten %12 pahalısın', action: 'Fiyatı Güncelle', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+  { type: 'success', icon: CheckCircle, text: 'iPhone Kılıf ürününüz bu hafta en çok beğenilen', action: 'Detaylar', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
 ]
 
 export default function SellerAIPage() {
@@ -38,12 +38,12 @@ export default function SellerAIPage() {
     <div className="space-y-6 max-w-[1200px]">
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/25">
-          <Bot className="h-5 w-5 text-white" />
+        <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6045] to-[#33613f] shadow-lg shadow-[#244b37]/12">
+          <Bot className="h-5 w-5 text-[#202c28]" />
         </div>
         <div>
-          <h1 className="text-xl font-black text-white">AI Asistan</h1>
-          <p className="text-sm text-white/40">Yapay zeka destekli mağaza optimizasyonu</p>
+          <h1 className="text-xl font-black text-[#202c28]">AI Asistan</h1>
+          <p className="text-sm text-[#98a191]">Yapay zeka destekli mağaza optimizasyonu</p>
         </div>
       </div>
 
@@ -51,10 +51,10 @@ export default function SellerAIPage() {
       <div className="glass-card p-6">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <p className="text-xs font-bold text-white/50 mb-1">MAĞAZA OPTİMİZASYON SKORU</p>
+            <p className="text-xs font-bold text-[#8c958c] mb-1">MAĞAZA OPTİMİZASYON SKORU</p>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-black text-blue-400">78</span>
-              <span className="text-xl text-white/30">/100</span>
+              <span className="text-4xl font-black text-[#4d7138]">78</span>
+              <span className="text-xl text-[#a8b09f]">/100</span>
             </div>
           </div>
           <span className="badge badge-blue">İyi Seviye</span>
@@ -68,7 +68,7 @@ export default function SellerAIPage() {
             { label: 'Müşteri', score: 91, color: '#7C3AED' },
             { label: 'Stok', score: 62, color: '#EF4444' },
           ].map((metric) => (
-            <div key={metric.label} className="text-center p-3 rounded-xl bg-white/4 border border-white/6">
+            <div key={metric.label} className="text-center p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
               <div className="relative h-12 w-12 mx-auto mb-2">
                 <svg className="h-full w-full -rotate-90" viewBox="0 0 36 36">
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="2" />
@@ -83,7 +83,7 @@ export default function SellerAIPage() {
                   {metric.score}
                 </span>
               </div>
-              <p className="text-[10px] text-white/50">{metric.label}</p>
+              <p className="text-[10px] text-[#8c958c]">{metric.label}</p>
             </div>
           ))}
         </div>
@@ -92,8 +92,8 @@ export default function SellerAIPage() {
       {/* AI Generator */}
       <div className="glass-card p-5">
         <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="h-4 w-4 text-blue-400" />
-          <h3 className="font-bold text-white">AI İçerik Üretici</h3>
+          <Sparkles className="h-4 w-4 text-[#4d7138]" />
+          <h3 className="font-bold text-[#202c28]">AI İçerik Üretici</h3>
         </div>
 
         <div className="flex gap-3 mb-4">
@@ -122,9 +122,9 @@ export default function SellerAIPage() {
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-4 rounded-xl bg-blue-500/8 border border-blue-500/20"
+            className="p-4 rounded-xl bg-[#f1f5e8] border border-[#cfe0b8]"
           >
-            <p className="text-sm text-white/80 whitespace-pre-line">{generatedContent}</p>
+            <p className="text-sm text-[#3d4a3a] whitespace-pre-line">{generatedContent}</p>
             <div className="flex gap-2 mt-3">
               <button className="btn-primary py-2 px-4 text-xs rounded-xl flex items-center gap-1.5">
                 <CheckCircle className="h-3.5 w-3.5" />
@@ -138,8 +138,8 @@ export default function SellerAIPage() {
 
       {/* AI Insights */}
       <div className="glass-card p-5">
-        <h3 className="font-bold text-white flex items-center gap-2 mb-4">
-          <TrendingUp className="h-4 w-4 text-blue-400" />
+        <h3 className="font-bold text-[#202c28] flex items-center gap-2 mb-4">
+          <TrendingUp className="h-4 w-4 text-[#4d7138]" />
           AI Önerileri
         </h3>
         <div className="space-y-2.5">
@@ -153,7 +153,7 @@ export default function SellerAIPage() {
             >
               <div className="flex items-center gap-3">
                 <insight.icon className={`h-4.5 w-4.5 flex-shrink-0 ${insight.color}`} />
-                <p className="text-sm text-white/75">{insight.text}</p>
+                <p className="text-sm text-[#4a563f]">{insight.text}</p>
               </div>
               <button className={`flex items-center gap-1 text-xs font-bold flex-shrink-0 ml-3 ${insight.color} hover:opacity-75 transition-opacity`}>
                 {insight.action}
@@ -166,8 +166,8 @@ export default function SellerAIPage() {
 
       {/* AI Modules */}
       <div>
-        <h3 className="font-bold text-white mb-4 flex items-center gap-2">
-          <Bot className="h-4 w-4 text-purple-400" />
+        <h3 className="font-bold text-[#202c28] mb-4 flex items-center gap-2">
+          <Bot className="h-4 w-4 text-[#7c5e77]" />
           AI Modülleri
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -187,8 +187,8 @@ export default function SellerAIPage() {
                   {module.badge}
                 </span>
               </div>
-              <h4 className="font-semibold text-white text-sm mb-1">{module.label}</h4>
-              <p className="text-xs text-white/45 leading-relaxed">{module.desc}</p>
+              <h4 className="font-semibold text-[#202c28] text-sm mb-1">{module.label}</h4>
+              <p className="text-xs text-[#8c958c] leading-relaxed">{module.desc}</p>
             </motion.div>
           ))}
         </div>

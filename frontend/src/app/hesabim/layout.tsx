@@ -31,7 +31,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
   if (!isAuthenticated) return null
 
   return (
-    <div className="min-h-screen bg-[#050507]">
+    <div className="min-h-screen bg-[#f8f9f6]">
       <div className="mx-auto max-w-[1400px] px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
@@ -40,12 +40,12 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
             {/* User Card */}
             <div className="glass-card p-5 mb-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white font-black text-lg shadow-lg shadow-blue-500/20">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-[#f4f8ec] font-black text-lg shadow-lg shadow-[#244b37]/10">
                   {user?.name?.[0]?.toUpperCase()}
                 </div>
                 <div>
-                  <p className="font-bold text-white">{user?.name}</p>
-                  <p className="text-xs text-white/40">{user?.email}</p>
+                  <p className="font-bold text-[#202c28]">{user?.name}</p>
+                  <p className="text-xs text-[#98a191]">{user?.email}</p>
                 </div>
               </div>
             </div>
@@ -59,8 +59,8 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                     className={cn(
                       'flex items-center gap-3 px-4 py-3 text-sm transition-all border-l-2',
                       pathname === href
-                        ? 'bg-blue-500/10 text-blue-400 border-l-blue-500'
-                        : 'text-white/60 hover:text-white hover:bg-white/5 border-l-transparent'
+                        ? 'bg-[#eef3e2] text-[#4d7138] border-l-blue-500'
+                        : 'text-[#6f7a68] hover:text-[#202c28] hover:bg-[#f6f7f3] border-l-transparent'
                     )}
                   >
                     <Icon className="h-4 w-4" />
@@ -70,7 +70,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
               ))}
               <button
                 onClick={logout}
-                className="flex w-full items-center gap-3 px-4 py-3 text-sm text-red-400 hover:bg-red-500/8 transition-all border-l-2 border-l-transparent hover:border-l-red-500"
+                className="flex w-full items-center gap-3 px-4 py-3 text-sm text-[#b0463c] hover:bg-[#fceeed] transition-all border-l-2 border-l-transparent hover:border-l-red-500"
               >
                 <LogOut className="h-4 w-4" />
                 Çıkış Yap
