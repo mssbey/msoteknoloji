@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { resolveApiBaseUrl } from '@/lib/apiBase'
 
 const COOKIE_KEY = 'mso_lead_captured'
 const DISCOUNT_CODE_PREFIX = 'MSO15'
@@ -66,7 +67,7 @@ export function LeadCapturePopup() {
       const code = generateCouponCode()
 
       // Backend'e lead gönder
-      await fetch('http://localhost:8000/api/leads', {
+      await fetch(`${resolveApiBaseUrl()}/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

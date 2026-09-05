@@ -4,8 +4,7 @@ import { useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { Paintbrush, Megaphone, Gift, MessageCircle, Search, Eye, Save, RotateCcw, Check } from 'lucide-react'
 import { useAuthStore } from '@/stores/authStore'
-
-const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000/api'
+import { resolveApiBaseUrl } from '@/lib/apiBase'
 
 interface ThemeState {
   theme_color: string
@@ -87,7 +86,7 @@ export default function ThemeEditorPage() {
   const handleSave = async () => {
     setSaving(true)
     try {
-      await fetch(`${API}/seller/store`, {
+      await fetch(`${resolveApiBaseUrl()}/seller/store`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(theme),

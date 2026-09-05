@@ -6,8 +6,7 @@ import { motion } from 'framer-motion'
 import { ShoppingCart, Tag, ArrowRight, Package, Loader2, AlertCircle } from 'lucide-react'
 import Link from 'next/link'
 import { useCartStore, type CartItem } from '@/stores/cartStore'
-
-const API = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000/api'
+import { resolveApiBaseUrl } from '@/lib/apiBase'
 
 interface RecoveryItem {
   product_id: number
@@ -41,7 +40,7 @@ export default function CartRecoveryPage() {
   const [restoring, setRestoring] = useState(false)
 
   useEffect(() => {
-    fetch(`${API}/cart/recover/${token}`)
+    fetch(`${resolveApiBaseUrl()}/cart/recover/${token}`)
       .then(async res => {
         if (res.status === 404) { setStatus('expired'); return }
         if (!res.ok) throw new Error()
@@ -75,7 +74,7 @@ export default function CartRecoveryPage() {
       }
       if (data.coupon_code) applyCoupon(data.coupon_code, 0)
       // Backend'de recovery işaretle (auth varsa)
-      await fetch(`${API}/cart/recover/${token}/restore`, {
+      await fetch(`${resolveApiBaseUrl()}/cart/recover/${token}/restore`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${typeof window !== 'undefined' ? localStorage.getItem('mso_token') ?? '' : ''}` },
       }).catch(() => {/* ok to fail if unauthenticated */})

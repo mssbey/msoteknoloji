@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { toast } from 'sonner'
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'
+import { resolveApiBaseUrl } from './apiBase'
 
 export const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL: resolveApiBaseUrl(),
   headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
   withCredentials: false,
 })
@@ -12,6 +11,8 @@ export const api = axios.create({
 // Request interceptor — attach token
 api.interceptors.request.use((config) => {
   if (typeof window !== 'undefined') {
+    // Adres tarayıcıda çözülür: site hangi host üzerinden açıldıysa API de oradan.
+    config.baseURL = resolveApiBaseUrl()
     const token = localStorage.getItem('mso_token')
     if (token) config.headers.Authorization = `Bearer ${token}`
   }
