@@ -95,6 +95,16 @@ class SentosImport extends Command
                     if ($this->option('variants')) {
                         $varCount += $this->syncVariants($product, $remote['variants'] ?? []);
                     }
+                    // Sentos'ta stok varyantlarda tutulur; urunun kendi stogu genelde bos gelir.
+                    // Magaza "stokta yok" gostermesin diye varyant toplamini urune yaz.
+                    $variantStock = array_sum(array_map(
+                        fn ($v) => $this->sumStock($v['stocks'] ?? []),
+                        $remote['variants'] ?? []
+                    ));
+                    if ($product->stock < $variantStock) {
+                        $product->stock = $variantStock;
+                        $product->save();
+                    }
                 } catch (\Throwable $e) {
                     $errors[] = ($remote['sku'] ?? $remote['id'] ?? '?') . ': ' . $e->getMessage();
                 }
