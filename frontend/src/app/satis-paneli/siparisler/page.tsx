@@ -10,9 +10,9 @@ import { cn } from '@/lib/utils'
 
 const STATUS_CONFIG = {
   pending: { label: 'Bekliyor', icon: Clock, color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]' },
-  processing: { label: 'Hazırlanıyor', icon: Package, color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+  processing: { label: 'Hazırlanıyor', icon: Package, color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
   shipped: { label: 'Kargoda', icon: Truck, color: 'text-[#7c5e77]', bg: 'bg-[#f2eaf0] border-[#e4d5e1]' },
-  delivered: { label: 'Teslim Edildi', icon: CheckCircle, color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+  delivered: { label: 'Teslim Edildi', icon: CheckCircle, color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
   cancelled: { label: 'İptal', icon: XCircle, color: 'text-[#b0463c]', bg: 'bg-[#fbeceb] border-[#eec9c5]' },
 }
 
@@ -42,8 +42,8 @@ export default function SellerOrdersPage() {
     <div className="space-y-5 max-w-[1400px]">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-black text-[#202c28]">Siparişler</h1>
-          <p className="text-sm text-[#98a191]">{total.toLocaleString()} sipariş</p>
+          <h1 className="text-xl font-black text-[#23262b]">Siparişler</h1>
+          <p className="text-sm text-[#8e909b]">{total.toLocaleString()} sipariş</p>
         </div>
         <button className="btn-ghost py-2 px-3.5 text-sm rounded-xl flex items-center gap-2">
           <Download className="h-4 w-4" />
@@ -60,12 +60,12 @@ export default function SellerOrdersPage() {
             className={cn(
               'flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all border',
               statusFilter === s.value
-                ? 'bg-[#e9f0dd] text-[#4d7138] border-[#b8cb9c]'
-                : 'text-[#8c958c] border-[#e3e7dd] hover:text-[#3d4a3a] hover:bg-[#f6f7f3]'
+                ? 'bg-[#e9e7f5] text-[#373071] border-[#a19bcc]'
+                : 'text-[#7c7f8a] border-[#e6e4f0] hover:text-[#3d404b] hover:bg-[#f4f3f9]'
             )}
           >
             {s.label}
-            <span className={cn('text-xs px-1.5 py-0.5 rounded-full', statusFilter === s.value ? 'bg-[#dfe9cc]' : 'bg-[#f3f5ef]')}>
+            <span className={cn('text-xs px-1.5 py-0.5 rounded-full', statusFilter === s.value ? 'bg-[#cfcbea]' : 'bg-[#f3f2f8]')}>
               {s.count}
             </span>
           </button>
@@ -73,15 +73,15 @@ export default function SellerOrdersPage() {
       </div>
 
       {/* Search */}
-      <div className="flex items-center gap-2 p-3 rounded-2xl border border-[#e3e7dd] bg-[#f8f9f6]">
-        <div className="flex flex-1 items-center gap-2 rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2">
-          <Search className="h-4 w-4 text-[#a8b09f]" />
+      <div className="flex items-center gap-2 p-3 rounded-2xl border border-[#e6e4f0] bg-[#f6f5fb]">
+        <div className="flex flex-1 items-center gap-2 rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] px-3 py-2">
+          <Search className="h-4 w-4 text-[#a3a5b0]" />
           <input
             type="text"
             value={searchQ}
             onChange={(e) => setSearchQ(e.target.value)}
             placeholder="Sipariş no veya müşteri ara..."
-            className="flex-1 bg-transparent text-sm text-[#202c28] placeholder-[#a8b09f] outline-none"
+            className="flex-1 bg-transparent text-sm text-[#23262b] placeholder-[#a3a5b0] outline-none"
           />
         </div>
       </div>
@@ -93,21 +93,21 @@ export default function SellerOrdersPage() {
         </div>
       ) : orders.length === 0 ? (
         <div className="glass-card p-12 text-center">
-          <Package className="h-12 w-12 mx-auto mb-3 text-[#b6bdac]" />
-          <h3 className="text-lg font-bold text-[#202c28] mb-2">Sipariş bulunamadı</h3>
-          <p className="text-sm text-[#98a191]">Henüz bu kriterde sipariş yok</p>
+          <Package className="h-12 w-12 mx-auto mb-3 text-[#b4b6c1]" />
+          <h3 className="text-lg font-bold text-[#23262b] mb-2">Sipariş bulunamadı</h3>
+          <p className="text-sm text-[#8e909b]">Henüz bu kriterde sipariş yok</p>
         </div>
       ) : (
         <div className="glass-card overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-[#e3e7dd]">
-                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase">Sipariş</th>
-                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase hidden md:table-cell">Müşteri</th>
-                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase">Tutar</th>
-                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase">Durum</th>
-                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase hidden lg:table-cell">Tarih</th>
-                <th className="text-right py-3.5 px-4 text-xs font-bold text-[#98a191] uppercase">İşlem</th>
+              <tr className="border-b border-[#e6e4f0]">
+                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase">Sipariş</th>
+                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase hidden md:table-cell">Müşteri</th>
+                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase">Tutar</th>
+                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase">Durum</th>
+                <th className="text-left py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase hidden lg:table-cell">Tarih</th>
+                <th className="text-right py-3.5 px-4 text-xs font-bold text-[#8e909b] uppercase">İşlem</th>
               </tr>
             </thead>
             <tbody>
@@ -120,16 +120,16 @@ export default function SellerOrdersPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: i * 0.04 }}
-                    className="border-b border-[#eef0ea] hover:bg-[#f8f9f6] transition-colors"
+                    className="border-b border-[#eeedf5] hover:bg-[#f6f5fb] transition-colors"
                   >
                     <td className="py-3 px-4">
-                      <p className="text-sm font-bold text-[#202c28]">#{order.order_number}</p>
+                      <p className="text-sm font-bold text-[#23262b]">#{order.order_number}</p>
                     </td>
                     <td className="py-3 px-4 hidden md:table-cell">
-                      <p className="text-sm text-[#5c6a56]">{order.user?.name || 'Misafir'}</p>
+                      <p className="text-sm text-[#585c68]">{order.user?.name || 'Misafir'}</p>
                     </td>
                     <td className="py-3 px-4">
-                      <p className="text-sm font-bold text-[#202c28]">{formatPrice(parseFloat(order.total))}</p>
+                      <p className="text-sm font-bold text-[#23262b]">{formatPrice(parseFloat(order.total))}</p>
                     </td>
                     <td className="py-3 px-4">
                       <span className={cn('inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border', statusCfg.bg, statusCfg.color)}>
@@ -138,10 +138,10 @@ export default function SellerOrdersPage() {
                       </span>
                     </td>
                     <td className="py-3 px-4 hidden lg:table-cell">
-                      <p className="text-xs text-[#98a191]">{formatDate(order.created_at)}</p>
+                      <p className="text-xs text-[#8e909b]">{formatDate(order.created_at)}</p>
                     </td>
                     <td className="py-3 px-4 text-right">
-                      <button className="text-xs text-[#4d7138] hover:text-[#33613f] transition-colors">İncele</button>
+                      <button className="text-xs text-[#373071] hover:text-[#2e2862] transition-colors">İncele</button>
                     </td>
                   </motion.tr>
                 )

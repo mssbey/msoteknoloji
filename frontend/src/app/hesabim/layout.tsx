@@ -31,7 +31,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
   if (!isAuthenticated) return null
 
   return (
-    <div className="min-h-screen bg-[#f8f9f6]">
+    <div className="min-h-screen bg-[#f6f5fb]">
       <div className="mx-auto max-w-[1400px] px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
@@ -40,12 +40,12 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
             {/* User Card */}
             <div className="glass-card p-5 mb-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-[#f4f8ec] font-black text-lg shadow-lg shadow-[#244b37]/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#373071] to-[#2e2862] text-[#ffffff] font-black text-lg shadow-lg shadow-[#373071]/10">
                   {user?.name?.[0]?.toUpperCase()}
                 </div>
                 <div>
-                  <p className="font-bold text-[#202c28]">{user?.name}</p>
-                  <p className="text-xs text-[#98a191]">{user?.email}</p>
+                  <p className="font-bold text-[#23262b]">{user?.name}</p>
+                  <p className="text-xs text-[#8e909b]">{user?.email}</p>
                 </div>
               </div>
             </div>
@@ -59,8 +59,8 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                     className={cn(
                       'flex items-center gap-3 px-4 py-3 text-sm transition-all border-l-2',
                       pathname === href
-                        ? 'bg-[#eef3e2] text-[#4d7138] border-l-blue-500'
-                        : 'text-[#6f7a68] hover:text-[#202c28] hover:bg-[#f6f7f3] border-l-transparent'
+                        ? 'bg-[#edebf7] text-[#373071] border-l-blue-500'
+                        : 'text-[#646773] hover:text-[#23262b] hover:bg-[#f4f3f9] border-l-transparent'
                     )}
                   >
                     <Icon className="h-4 w-4" />

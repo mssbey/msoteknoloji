@@ -58,10 +58,10 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-[#f8f9f6]">
+    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-[#f6f5fb]">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-[#f2eaf0] blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-[#eef3e2] blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-[#edebf7] blur-3xl" />
       </div>
 
       <motion.div
@@ -72,13 +72,13 @@ export default function RegisterPage() {
       >
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2.5 mb-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#2f6045] to-[#1c3c2c] shadow-lg shadow-[#244b37]/15">
-              <Zap className="h-6 w-6 text-[#202c28] fill-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#373071] to-[#241e52] shadow-lg shadow-[#373071]/15">
+              <Zap className="h-6 w-6 text-[#23262b] fill-white" />
             </div>
-            <span className="text-xl font-black text-[#202c28]">MSO<span className="text-[#4d7138]"> Teknoloji</span></span>
+            <span className="text-xl font-black text-[#23262b]">MSO<span className="text-[#373071]"> Teknoloji</span></span>
           </Link>
-          <h1 className="text-2xl font-black text-[#202c28]">Hesap Oluşturun</h1>
-          <p className="text-sm text-[#98a191] mt-1">Ücretsiz üye olun, avantajlardan yararlanın</p>
+          <h1 className="text-2xl font-black text-[#23262b]">Hesap Oluşturun</h1>
+          <p className="text-sm text-[#8e909b] mt-1">Ücretsiz üye olun, avantajlardan yararlanın</p>
         </div>
 
         {error && (
@@ -95,9 +95,9 @@ export default function RegisterPage() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-3.5">
           {/* Name */}
           <div>
-            <label className="text-xs font-bold text-[#8c958c] mb-1.5 block">AD SOYAD</label>
+            <label className="text-xs font-bold text-[#7c7f8a] mb-1.5 block">AD SOYAD</label>
             <div className="relative">
-              <User className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <User className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('name')}
                 type="text"
@@ -110,9 +110,9 @@ export default function RegisterPage() {
 
           {/* Email */}
           <div>
-            <label className="text-xs font-bold text-[#8c958c] mb-1.5 block">E-POSTA</label>
+            <label className="text-xs font-bold text-[#7c7f8a] mb-1.5 block">E-POSTA</label>
             <div className="relative">
-              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('email')}
                 type="email"
@@ -125,9 +125,9 @@ export default function RegisterPage() {
 
           {/* Password */}
           <div>
-            <label className="text-xs font-bold text-[#8c958c] mb-1.5 block">ŞİFRE</label>
+            <label className="text-xs font-bold text-[#7c7f8a] mb-1.5 block">ŞİFRE</label>
             <div className="relative">
-              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('password')}
                 type={showPass ? 'text' : 'password'}
@@ -135,7 +135,7 @@ export default function RegisterPage() {
                 className={cn('input-glass pl-10 pr-10', errors.password && 'border-[#d98e86]')}
               />
               <button type="button" onClick={() => setShowPass(!showPass)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#a8b09f] hover:text-[#6f7a68] transition-colors">
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#a3a5b0] hover:text-[#646773] transition-colors">
                 {showPass ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
               </button>
             </div>
@@ -144,9 +144,9 @@ export default function RegisterPage() {
 
           {/* Confirm */}
           <div>
-            <label className="text-xs font-bold text-[#8c958c] mb-1.5 block">ŞİFRE TEKRAR</label>
+            <label className="text-xs font-bold text-[#7c7f8a] mb-1.5 block">ŞİFRE TEKRAR</label>
             <div className="relative">
-              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('password_confirmation')}
                 type={showPass ? 'text' : 'password'}
@@ -160,12 +160,12 @@ export default function RegisterPage() {
           {/* KVKK */}
           <label className={cn(
             'flex cursor-pointer items-start gap-3 rounded-xl border p-3 transition-all',
-            errors.kvkk ? 'border-[#e5aca6] bg-[#fdf3f2]' : 'border-[#e3e7dd] bg-[#f8f9f6] hover:bg-[#f6f7f3]'
+            errors.kvkk ? 'border-[#e5aca6] bg-[#fdf3f2]' : 'border-[#e6e4f0] bg-[#f6f5fb] hover:bg-[#f4f3f9]'
           )}>
             <input type="checkbox" {...register('kvkk')} className="mt-0.5 h-4 w-4 accent-blue-500" />
-            <span className="text-xs text-[#8c958c] leading-relaxed">
-              <Link href="/kvkk" className="text-[#4d7138] hover:underline">KVKK Aydınlatma Metni</Link>ni ve{' '}
-              <Link href="/kullanim-kosullari" className="text-[#4d7138] hover:underline">Kullanım Koşulları</Link>nı
+            <span className="text-xs text-[#7c7f8a] leading-relaxed">
+              <Link href="/kvkk" className="text-[#373071] hover:underline">KVKK Aydınlatma Metni</Link>ni ve{' '}
+              <Link href="/kullanim-kosullari" className="text-[#373071] hover:underline">Kullanım Koşulları</Link>nı
               okudum, kabul ediyorum. <span className="text-[#b0463c]">*</span>
             </span>
           </label>
@@ -185,9 +185,9 @@ export default function RegisterPage() {
           </motion.button>
         </form>
 
-        <p className="text-center text-sm text-[#98a191] mt-5">
+        <p className="text-center text-sm text-[#8e909b] mt-5">
           Zaten hesabınız var mı?{' '}
-          <Link href="/giris" className="text-[#4d7138] hover:text-[#33613f] font-semibold transition-colors">
+          <Link href="/giris" className="text-[#373071] hover:text-[#2e2862] font-semibold transition-colors">
             Giriş Yapın
           </Link>
         </p>

@@ -27,7 +27,7 @@ export function CartDrawer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeCart}
-            className="fixed inset-0 z-[60] bg-[#1c2b20]/45 backdrop-blur-sm"
+            className="fixed inset-0 z-[60] bg-[#1d1f24]/45 backdrop-blur-sm"
           />
 
           {/* Drawer */}
@@ -36,22 +36,22 @@ export function CartDrawer() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 32 }}
-            className="fixed right-0 top-0 bottom-0 z-[70] w-full max-w-md flex flex-col bg-white border-l border-[#e3e7dd] shadow-2xl"
+            className="fixed right-0 top-0 bottom-0 z-[70] w-full max-w-md flex flex-col bg-white border-l border-[#e6e4f0] shadow-2xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-[#e3e7dd]">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-[#e6e4f0]">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#e9f0dd] border border-[#c8d9ae]">
-                  <ShoppingBag className="h-4 w-4 text-[#4d7138]" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#e9e7f5] border border-[#cdc9ea]">
+                  <ShoppingBag className="h-4 w-4 text-[#373071]" />
                 </div>
                 <div>
-                  <h2 className="text-base font-bold text-[#202c28]">Sepetim</h2>
-                  <p className="text-xs text-[#98a191]">{count} ürün</p>
+                  <h2 className="text-base font-bold text-[#23262b]">Sepetim</h2>
+                  <p className="text-xs text-[#8e909b]">{count} ürün</p>
                 </div>
               </div>
               <button
                 onClick={closeCart}
-                className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#f6f7f3] hover:bg-[#f0f2ec] text-[#6f7a68] hover:text-[#202c28] transition-all"
+                className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#f4f3f9] hover:bg-[#f0eff6] text-[#646773] hover:text-[#23262b] transition-all"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -61,12 +61,12 @@ export function CartDrawer() {
             <div className="flex-1 overflow-y-auto">
               {items.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full gap-4 text-center px-8">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#f6f7f3] border border-[#e3e7dd]">
-                    <Package className="h-10 w-10 text-[#b6bdac]" />
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[#f4f3f9] border border-[#e6e4f0]">
+                    <Package className="h-10 w-10 text-[#b4b6c1]" />
                   </div>
                   <div>
-                    <p className="text-[#6f7a68] font-medium">Sepetiniz boş</p>
-                    <p className="text-sm text-[#a8b09f] mt-1">Ürün eklemek için alışverişe başlayın</p>
+                    <p className="text-[#646773] font-medium">Sepetiniz boş</p>
+                    <p className="text-sm text-[#a3a5b0] mt-1">Ürün eklemek için alışverişe başlayın</p>
                   </div>
                   <button
                     onClick={closeCart}
@@ -85,14 +85,14 @@ export function CartDrawer() {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 20, height: 0 }}
-                        className="flex gap-3 p-3 rounded-2xl bg-[#f8f9f6] border border-[#e3e7dd] group"
+                        className="flex gap-3 p-3 rounded-2xl bg-[#f6f5fb] border border-[#e6e4f0] group"
                       >
                         {/* Image */}
-                        <div className="relative h-16 w-16 flex-shrink-0 rounded-xl overflow-hidden bg-[#f3f5ef]">
+                        <div className="relative h-16 w-16 flex-shrink-0 rounded-xl overflow-hidden bg-[#f3f2f8]">
                           {item.image && /^(https?:\/\/|\/)/.test(item.image) ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={item.image} alt={item.name} className="h-full w-full object-contain bg-white p-1" />
-                          ) : <div className="flex h-full w-full items-center justify-center"><Package className="h-7 w-7 text-[#98a191]" /></div>}
+                          ) : <div className="flex h-full w-full items-center justify-center"><Package className="h-7 w-7 text-[#8e909b]" /></div>}
                         </div>
 
                         {/* Info */}
@@ -100,29 +100,29 @@ export function CartDrawer() {
                           <Link
                             href={`/urun/${item.slug}`}
                             onClick={closeCart}
-                            className="text-sm font-medium text-[#233226] hover:text-[#202c28] line-clamp-2 leading-snug"
+                            className="text-sm font-medium text-[#23262b] hover:text-[#23262b] line-clamp-2 leading-snug"
                           >
                             {item.name}
                           </Link>
                           {item.variantLabel && (
-                            <p className="text-xs text-[#98a191] mt-0.5">{item.variantLabel}</p>
+                            <p className="text-xs text-[#8e909b] mt-0.5">{item.variantLabel}</p>
                           )}
-                          <p className="text-xs text-[#98a191] mt-0.5">{item.storeName}</p>
+                          <p className="text-xs text-[#8e909b] mt-0.5">{item.storeName}</p>
 
                           <div className="mt-2 flex items-center justify-between">
                             {/* Qty control */}
                             <div className="flex items-center gap-1">
                               <button
                                 onClick={() => updateQty(item.productId, item.variantId, item.quantity - 1)}
-                                className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#f3f5ef] hover:bg-[#eef0ea] text-[#5c6a56] hover:text-[#202c28] transition-all"
+                                className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#f3f2f8] hover:bg-[#eeedf5] text-[#585c68] hover:text-[#23262b] transition-all"
                               >
                                 <Minus className="h-3 w-3" />
                               </button>
-                              <span className="w-8 text-center text-sm font-bold text-[#202c28]">{item.quantity}</span>
+                              <span className="w-8 text-center text-sm font-bold text-[#23262b]">{item.quantity}</span>
                               <button
                                 onClick={() => updateQty(item.productId, item.variantId, item.quantity + 1)}
                                 disabled={item.quantity >= item.stock}
-                                className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#f3f5ef] hover:bg-[#eef0ea] text-[#5c6a56] hover:text-[#202c28] transition-all disabled:opacity-30"
+                                className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#f3f2f8] hover:bg-[#eeedf5] text-[#585c68] hover:text-[#23262b] transition-all disabled:opacity-30"
                               >
                                 <Plus className="h-3 w-3" />
                               </button>
@@ -130,11 +130,11 @@ export function CartDrawer() {
 
                             {/* Price */}
                             <div className="text-right">
-                              <p className="text-sm font-bold text-[#202c28]">
+                              <p className="text-sm font-bold text-[#23262b]">
                                 {formatPrice((item.salePrice ?? item.price) * item.quantity)}
                               </p>
                               {item.salePrice && (
-                                <p className="text-xs text-[#a8b09f] line-through">
+                                <p className="text-xs text-[#a3a5b0] line-through">
                                   {formatPrice(item.price * item.quantity)}
                                 </p>
                               )}
@@ -158,15 +158,15 @@ export function CartDrawer() {
 
             {/* Footer */}
             {items.length > 0 && (
-              <div className="border-t border-[#e3e7dd] p-4 space-y-3">
+              <div className="border-t border-[#e6e4f0] p-4 space-y-3">
                 {/* Coupon */}
                 {couponCode ? (
-                  <div className="flex items-center justify-between rounded-xl bg-[#eef3e2] border border-[#cfe0b8] px-3 py-2.5">
+                  <div className="flex items-center justify-between rounded-xl bg-[#edebf7] border border-[#d6d3ee] px-3 py-2.5">
                     <div className="flex items-center gap-2">
-                      <Tag className="h-4 w-4 text-[#4d7138]" />
-                      <span className="text-sm font-bold text-[#4d7138]">{couponCode}</span>
+                      <Tag className="h-4 w-4 text-[#373071]" />
+                      <span className="text-sm font-bold text-[#373071]">{couponCode}</span>
                     </div>
-                    <button onClick={removeCoupon} className="text-[#98a191] hover:text-[#5c6a56] text-xs">
+                    <button onClick={removeCoupon} className="text-[#8e909b] hover:text-[#585c68] text-xs">
                       Kaldır
                     </button>
                   </div>
@@ -174,13 +174,13 @@ export function CartDrawer() {
 
                 {/* Summary */}
                 <div className="space-y-1.5 text-sm">
-                  <div className="flex justify-between text-[#6f7a68]">
+                  <div className="flex justify-between text-[#646773]">
                     <span>Ara Toplam</span>
                     <span>{formatPrice(sub)}</span>
                   </div>
-                  <div className="flex justify-between text-[#6f7a68]">
+                  <div className="flex justify-between text-[#646773]">
                     <span>Kargo</span>
-                    <span className={ship === 0 ? 'text-[#4d7138] font-medium' : ''}>
+                    <span className={ship === 0 ? 'text-[#373071] font-medium' : ''}>
                       {ship === 0 ? 'Ücretsiz 🎉' : formatPrice(ship)}
                     </span>
                   </div>
@@ -191,8 +191,8 @@ export function CartDrawer() {
                   )}
                   <div className="divider my-2" />
                   <div className="flex justify-between font-bold text-base">
-                    <span className="text-[#202c28]">Toplam</span>
-                    <span className="text-[#202c28]">{formatPrice(tot)}</span>
+                    <span className="text-[#23262b]">Toplam</span>
+                    <span className="text-[#23262b]">{formatPrice(tot)}</span>
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@ export function CartDrawer() {
 
                 <button
                   onClick={closeCart}
-                  className="w-full text-center text-sm text-[#98a191] hover:text-[#5c6a56] transition-colors py-1"
+                  className="w-full text-center text-sm text-[#8e909b] hover:text-[#585c68] transition-colors py-1"
                 >
                   Alışverişe devam et
                 </button>

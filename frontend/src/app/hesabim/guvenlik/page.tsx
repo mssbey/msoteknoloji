@@ -24,18 +24,18 @@ export default function SecurityPage() {
 
   return (
     <div className="space-y-5">
-      <h1 className="text-xl font-black text-[#202c28]">Güvenlik</h1>
+      <h1 className="text-xl font-black text-[#23262b]">Güvenlik</h1>
 
       <div className="glass-card p-5">
-        <h2 className="font-bold text-[#202c28] mb-1 flex items-center gap-2"><Lock className="h-4 w-4 text-[#4d7138]" />Şifre Değiştir</h2>
-        <p className="text-xs text-[#98a191] mb-4">En az 8 karakter, büyük/küçük harf ve rakam içermeli.</p>
+        <h2 className="font-bold text-[#23262b] mb-1 flex items-center gap-2"><Lock className="h-4 w-4 text-[#373071]" />Şifre Değiştir</h2>
+        <p className="text-xs text-[#8e909b] mb-4">En az 8 karakter, büyük/küçük harf ve rakam içermeli.</p>
         <form onSubmit={change} className="space-y-3 max-w-md">
           <input type="password" value={current} onChange={(e) => setCurrent(e.target.value)} required placeholder="Mevcut şifre"
-            className="w-full bg-[#f6f7f3] border border-[#e3e7dd] rounded-xl px-3 py-2 text-sm text-[#202c28] placeholder:text-[#a8b09f] focus:outline-none focus:border-[#8fab6a]" />
+            className="w-full bg-[#f4f3f9] border border-[#e6e4f0] rounded-xl px-3 py-2 text-sm text-[#23262b] placeholder:text-[#a3a5b0] focus:outline-none focus:border-[#7d77c4]" />
           <input type="password" value={next} onChange={(e) => setNext(e.target.value)} required placeholder="Yeni şifre"
-            className="w-full bg-[#f6f7f3] border border-[#e3e7dd] rounded-xl px-3 py-2 text-sm text-[#202c28] placeholder:text-[#a8b09f] focus:outline-none focus:border-[#8fab6a]" />
+            className="w-full bg-[#f4f3f9] border border-[#e6e4f0] rounded-xl px-3 py-2 text-sm text-[#23262b] placeholder:text-[#a3a5b0] focus:outline-none focus:border-[#7d77c4]" />
           <input type="password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required placeholder="Yeni şifre (tekrar)"
-            className="w-full bg-[#f6f7f3] border border-[#e3e7dd] rounded-xl px-3 py-2 text-sm text-[#202c28] placeholder:text-[#a8b09f] focus:outline-none focus:border-[#8fab6a]" />
+            className="w-full bg-[#f4f3f9] border border-[#e6e4f0] rounded-xl px-3 py-2 text-sm text-[#23262b] placeholder:text-[#a3a5b0] focus:outline-none focus:border-[#7d77c4]" />
           <button type="submit" disabled={loading} className="btn-primary text-sm py-2 px-5 rounded-xl">
             {loading ? 'Güncelleniyor...' : 'Şifreyi Güncelle'}
           </button>
@@ -43,18 +43,18 @@ export default function SecurityPage() {
       </div>
 
       <div className="glass-card p-5">
-        <h2 className="font-bold text-[#202c28] mb-1 flex items-center gap-2"><Smartphone className="h-4 w-4 text-[#7c5e77]" />2 Adımlı Doğrulama</h2>
-        <p className="text-xs text-[#98a191] mb-4">SMS ile her girişte ek güvenlik kodu doğrulaması.</p>
+        <h2 className="font-bold text-[#23262b] mb-1 flex items-center gap-2"><Smartphone className="h-4 w-4 text-[#7c5e77]" />2 Adımlı Doğrulama</h2>
+        <p className="text-xs text-[#8e909b] mb-4">SMS ile her girişte ek güvenlik kodu doğrulaması.</p>
         <button className="btn-ghost text-sm py-2 px-5 rounded-xl">Aktifleştir</button>
       </div>
 
       <div className="glass-card p-5">
-        <h2 className="font-bold text-[#202c28] mb-1 flex items-center gap-2"><Shield className="h-4 w-4 text-[#4d7138]" />Aktif Oturumlar</h2>
-        <p className="text-xs text-[#98a191] mb-4">Hesabınıza giriş yapılmış cihazlar.</p>
-        <div className="flex items-center justify-between p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea]">
+        <h2 className="font-bold text-[#23262b] mb-1 flex items-center gap-2"><Shield className="h-4 w-4 text-[#373071]" />Aktif Oturumlar</h2>
+        <p className="text-xs text-[#8e909b] mb-4">Hesabınıza giriş yapılmış cihazlar.</p>
+        <div className="flex items-center justify-between p-3 rounded-xl bg-[#f6f5fb] border border-[#eeedf5]">
           <div>
-            <p className="text-sm font-semibold text-[#202c28]">Bu Cihaz</p>
-            <p className="text-xs text-[#98a191]">Aktif şu an</p>
+            <p className="text-sm font-semibold text-[#23262b]">Bu Cihaz</p>
+            <p className="text-xs text-[#8e909b]">Aktif şu an</p>
           </div>
           <span className="badge badge-green text-[10px]">Mevcut</span>
         </div>

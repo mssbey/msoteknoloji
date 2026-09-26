@@ -58,21 +58,21 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
   const sidebarContent = (
     <div className="flex flex-col h-full">
       {/* Logo */}
-      <div className={cn('flex items-center gap-3 p-4 border-b border-[#e3e7dd] flex-shrink-0', collapsed && 'justify-center')}>
+      <div className={cn('flex items-center gap-3 p-4 border-b border-[#e6e4f0] flex-shrink-0', collapsed && 'justify-center')}>
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#2f6045] to-[#1c3c2c] shadow-lg shadow-[#244b37]/10 flex-shrink-0">
-            <Zap className="h-4.5 w-4.5 text-[#202c28] fill-white" />
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#373071] to-[#241e52] shadow-lg shadow-[#373071]/10 flex-shrink-0">
+            <Zap className="h-4.5 w-4.5 text-[#23262b] fill-white" />
           </div>
           {!collapsed && (
             <div className="leading-none">
-              <span className="text-sm font-black text-[#202c28]">MSO</span>
-              <span className="text-sm font-black text-[#4d7138]"> Satıcı</span>
+              <span className="text-sm font-black text-[#23262b]">MSO</span>
+              <span className="text-sm font-black text-[#373071]"> Satıcı</span>
             </div>
           )}
         </Link>
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="ml-auto hidden lg:flex h-6 w-6 items-center justify-center rounded-lg text-[#a8b09f] hover:text-[#5c6a56] hover:bg-[#f3f5ef] transition-all"
+          className="ml-auto hidden lg:flex h-6 w-6 items-center justify-center rounded-lg text-[#a3a5b0] hover:text-[#585c68] hover:bg-[#f3f2f8] transition-all"
         >
           <ChevronLeft className={cn('h-4 w-4 transition-transform', collapsed && 'rotate-180')} />
         </button>
@@ -84,7 +84,7 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
           if ('section' in item) {
             if (collapsed) return null
             return (
-              <p key={i} className="text-[10px] font-bold tracking-widest text-[#a8b09f] px-3 pt-4 pb-1">
+              <p key={i} className="text-[10px] font-bold tracking-widest text-[#a3a5b0] px-3 pt-4 pb-1">
                 {item.section}
               </p>
             )
@@ -98,12 +98,12 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
                   'flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all',
                   collapsed && 'justify-center px-2',
                   isActive
-                    ? 'bg-[#e9f0dd] text-[#4d7138] border border-[#c8d9ae] shadow-[0_0_12px_rgba(59,130,246,0.1)]'
-                    : 'text-[#8c958c] hover:text-[#233226] hover:bg-[#f3f5ef]'
+                    ? 'bg-[#e9e7f5] text-[#373071] border border-[#cdc9ea] shadow-[0_0_12px_rgba(59,130,246,0.1)]'
+                    : 'text-[#7c7f8a] hover:text-[#23262b] hover:bg-[#f3f2f8]'
                 )}
                 title={collapsed ? item.label : undefined}
               >
-                <item.icon className={cn('h-4.5 w-4.5 flex-shrink-0', isActive && 'text-[#4d7138]')} />
+                <item.icon className={cn('h-4.5 w-4.5 flex-shrink-0', isActive && 'text-[#373071]')} />
                 {!collapsed && <span>{item.label}</span>}
               </motion.div>
             </Link>
@@ -112,24 +112,24 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
       </nav>
 
       {/* User footer */}
-      <div className={cn('p-3 border-t border-[#e3e7dd] flex-shrink-0', collapsed && 'flex justify-center')}>
+      <div className={cn('p-3 border-t border-[#e6e4f0] flex-shrink-0', collapsed && 'flex justify-center')}>
         {collapsed ? (
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-[#f4f8ec] font-bold text-sm cursor-pointer"
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#373071] to-[#2e2862] text-[#ffffff] font-bold text-sm cursor-pointer"
             title={user?.name}>
             {user?.name?.[0]}
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-[#f4f8ec] font-bold text-sm flex-shrink-0">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#373071] to-[#2e2862] text-[#ffffff] font-bold text-sm flex-shrink-0">
               {user?.name?.[0]}
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-semibold text-[#202c28] truncate">{user?.name}</p>
-              <p className="text-[10px] text-[#98a191] truncate">{user?.email}</p>
+              <p className="text-xs font-semibold text-[#23262b] truncate">{user?.name}</p>
+              <p className="text-[10px] text-[#8e909b] truncate">{user?.email}</p>
             </div>
             <button
               onClick={logout}
-              className="flex h-7 w-7 items-center justify-center rounded-lg text-[#a8b09f] hover:text-[#b0463c] hover:bg-[#fbeceb] transition-all"
+              className="flex h-7 w-7 items-center justify-center rounded-lg text-[#a3a5b0] hover:text-[#b0463c] hover:bg-[#fbeceb] transition-all"
               title="Çıkış"
             >
               <LogOut className="h-3.5 w-3.5" />
@@ -141,10 +141,10 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
   )
 
   return (
-    <div className="flex h-screen bg-[#f8f9f6] overflow-hidden">
+    <div className="flex h-screen bg-[#f6f5fb] overflow-hidden">
       {/* Desktop Sidebar */}
       <aside className={cn(
-        'hidden lg:flex flex-col flex-shrink-0 border-r border-[#e3e7dd] bg-white transition-all duration-300',
+        'hidden lg:flex flex-col flex-shrink-0 border-r border-[#e6e4f0] bg-white transition-all duration-300',
         collapsed ? 'w-16' : 'w-56'
       )}>
         {sidebarContent}
@@ -159,14 +159,14 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 z-40 bg-[#1c2b20]/45 lg:hidden"
+              className="fixed inset-0 z-40 bg-[#1d1f24]/45 lg:hidden"
             />
             <motion.aside
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', stiffness: 300, damping: 32 }}
-              className="fixed left-0 top-0 bottom-0 z-50 w-56 bg-white border-r border-[#e3e7dd] lg:hidden"
+              className="fixed left-0 top-0 bottom-0 z-50 w-56 bg-white border-r border-[#e6e4f0] lg:hidden"
             >
               {sidebarContent}
             </motion.aside>
@@ -177,10 +177,10 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Top Bar */}
-        <header className="flex h-14 items-center gap-4 px-4 border-b border-[#e3e7dd] bg-white flex-shrink-0">
+        <header className="flex h-14 items-center gap-4 px-4 border-b border-[#e6e4f0] bg-white flex-shrink-0">
           <button
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden flex h-8 w-8 items-center justify-center rounded-xl text-[#8c958c] hover:text-[#202c28] hover:bg-[#f3f5ef]"
+            className="lg:hidden flex h-8 w-8 items-center justify-center rounded-xl text-[#7c7f8a] hover:text-[#23262b] hover:bg-[#f3f2f8]"
           >
             <Menu className="h-4.5 w-4.5" />
           </button>
@@ -190,12 +190,12 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
           {/* Quick links */}
           <div className="flex items-center gap-2">
             <Link href="/" target="_blank"
-              className="hidden md:block text-xs text-[#98a191] hover:text-[#5c6a56] transition-colors">
+              className="hidden md:block text-xs text-[#8e909b] hover:text-[#585c68] transition-colors">
               Mağazaya Git →
             </Link>
-            <button className="relative flex h-8 w-8 items-center justify-center rounded-xl bg-[#f3f5ef] hover:bg-[#f0f2ec] text-[#6f7a68] hover:text-[#202c28] transition-all">
+            <button className="relative flex h-8 w-8 items-center justify-center rounded-xl bg-[#f3f2f8] hover:bg-[#f0eff6] text-[#646773] hover:text-[#23262b] transition-all">
               <Bell className="h-4 w-4" />
-              <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#b0463c] text-[9px] font-bold text-[#f4f8ec]">
+              <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#b0463c] text-[9px] font-bold text-[#ffffff]">
                 3
               </span>
             </button>

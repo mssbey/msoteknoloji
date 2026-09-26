@@ -41,10 +41,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-[#f8f9f6]">
+    <div className="min-h-screen flex items-center justify-center px-4 py-16 bg-[#f6f5fb]">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-[#eef3e2] blur-3xl" />
+        <div className="absolute top-0 left-1/4 h-96 w-96 rounded-full bg-[#edebf7] blur-3xl" />
         <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-[#f2eaf0] blur-3xl" />
       </div>
 
@@ -57,13 +57,13 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2.5 mb-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#2f6045] to-[#1c3c2c] shadow-lg shadow-[#244b37]/15">
-              <Zap className="h-6 w-6 text-[#202c28] fill-white" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#373071] to-[#241e52] shadow-lg shadow-[#373071]/15">
+              <Zap className="h-6 w-6 text-[#23262b] fill-white" />
             </div>
-            <span className="text-xl font-black text-[#202c28]">MSO<span className="text-[#4d7138]"> Teknoloji</span></span>
+            <span className="text-xl font-black text-[#23262b]">MSO<span className="text-[#373071]"> Teknoloji</span></span>
           </Link>
-          <h1 className="text-2xl font-black text-[#202c28]">Hesabınıza Giriş</h1>
-          <p className="text-sm text-[#98a191] mt-1">Alışverişe devam etmek için giriş yapın</p>
+          <h1 className="text-2xl font-black text-[#23262b]">Hesabınıza Giriş</h1>
+          <p className="text-sm text-[#8e909b] mt-1">Alışverişe devam etmek için giriş yapın</p>
         </div>
 
         {/* Error */}
@@ -81,9 +81,9 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {/* Email */}
           <div>
-            <label className="text-xs font-bold text-[#8c958c] mb-1.5 block">E-POSTA</label>
+            <label className="text-xs font-bold text-[#7c7f8a] mb-1.5 block">E-POSTA</label>
             <div className="relative">
-              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('email')}
                 type="email"
@@ -97,13 +97,13 @@ export default function LoginPage() {
           {/* Password */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="text-xs font-bold text-[#8c958c]">ŞİFRE</label>
-              <Link href="/sifremi-unuttum" className="text-xs text-[#4d7138] hover:text-[#33613f] transition-colors">
+              <label className="text-xs font-bold text-[#7c7f8a]">ŞİFRE</label>
+              <Link href="/sifremi-unuttum" className="text-xs text-[#373071] hover:text-[#2e2862] transition-colors">
                 Şifremi unuttum
               </Link>
             </div>
             <div className="relative">
-              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a8b09f]" />
+              <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-[#a3a5b0]" />
               <input
                 {...register('password')}
                 type={showPass ? 'text' : 'password'}
@@ -113,7 +113,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setShowPass(!showPass)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#a8b09f] hover:text-[#6f7a68] transition-colors"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#a3a5b0] hover:text-[#646773] transition-colors"
               >
                 {showPass ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
               </button>
@@ -142,21 +142,21 @@ export default function LoginPage() {
           </motion.button>
         </form>
 
-        <p className="text-center text-sm text-[#98a191] mt-6">
+        <p className="text-center text-sm text-[#8e909b] mt-6">
           Hesabınız yok mu?{' '}
-          <Link href="/kayit" className="text-[#4d7138] hover:text-[#33613f] font-semibold transition-colors">
+          <Link href="/kayit" className="text-[#373071] hover:text-[#2e2862] font-semibold transition-colors">
             Üye Ol
           </Link>
         </p>
 
         {/* Demo accounts */}
-        <div className="mt-6 p-4 rounded-2xl bg-[#f8f9f6] border border-[#eef0ea]">
-          <p className="text-xs font-bold text-[#98a191] mb-3">DEMO HESAPLARI</p>
+        <div className="mt-6 p-4 rounded-2xl bg-[#f6f5fb] border border-[#eeedf5]">
+          <p className="text-xs font-bold text-[#8e909b] mb-3">DEMO HESAPLARI</p>
           <div className="space-y-1.5">
             {[
               { label: 'Admin', email: 'admin@msocommerce.com', pass: 'Admin@12345', color: 'text-[#7c5e77]' },
-              { label: 'Satıcı', email: 'seller@msocommerce.com', pass: 'Seller@12345', color: 'text-[#4d7138]' },
-              { label: 'Müşteri', email: 'musteri@msocommerce.com', pass: 'Musteri@12345', color: 'text-[#4d7138]' },
+              { label: 'Satıcı', email: 'seller@msocommerce.com', pass: 'Seller@12345', color: 'text-[#373071]' },
+              { label: 'Müşteri', email: 'musteri@msocommerce.com', pass: 'Musteri@12345', color: 'text-[#373071]' },
             ].map((acc) => (
               <button
                 key={acc.email}
@@ -168,10 +168,10 @@ export default function LoginPage() {
                   if (passEl) passEl.value = acc.pass
                   login(acc.email, acc.pass).then(() => { toast.success('Hoşgeldiniz!'); router.push('/') })
                 }}
-                className="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-[#f3f5ef] transition-colors"
+                className="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-[#f3f2f8] transition-colors"
               >
                 <span className={`text-xs font-bold ${acc.color}`}>{acc.label}</span>
-                <span className="text-xs text-[#a8b09f]">{acc.email}</span>
+                <span className="text-xs text-[#a3a5b0]">{acc.email}</span>
               </button>
             ))}
           </div>

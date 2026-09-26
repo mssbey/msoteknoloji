@@ -18,10 +18,10 @@ export default function AccountPage() {
   })
 
   const stats = [
-    { icon: ShoppingBag, label: 'Toplam Sipariş', value: orders?.length ?? 0, color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+    { icon: ShoppingBag, label: 'Toplam Sipariş', value: orders?.length ?? 0, color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
     { icon: Star, label: 'Toplam Puan', value: '250', color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]' },
     { icon: Heart, label: 'Favoriler', value: '0', color: 'text-[#b0463c]', bg: 'bg-[#fbeceb] border-[#eec9c5]' },
-    { icon: TrendingUp, label: 'Toplam Harcama', value: formatPrice(orders?.reduce((s: number, o: { total: string }) => s + parseFloat(o.total || '0'), 0) ?? 0), color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+    { icon: TrendingUp, label: 'Toplam Harcama', value: formatPrice(orders?.reduce((s: number, o: { total: string }) => s + parseFloat(o.total || '0'), 0) ?? 0), color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
   ]
 
   return (
@@ -29,12 +29,12 @@ export default function AccountPage() {
       {/* Welcome */}
       <div className="glass-card p-6">
         <div className="flex items-center gap-4">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6045] to-[#33613f] text-[#f4f8ec] font-black text-2xl shadow-xl shadow-[#244b37]/10">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#373071] to-[#2e2862] text-[#ffffff] font-black text-2xl shadow-xl shadow-[#373071]/10">
             {user?.name?.[0]?.toUpperCase()}
           </div>
           <div>
-            <h1 className="text-xl font-black text-[#202c28]">Merhaba, {user?.name}! 👋</h1>
-            <p className="text-sm text-[#98a191]">{user?.email}</p>
+            <h1 className="text-xl font-black text-[#23262b]">Merhaba, {user?.name}! 👋</h1>
+            <p className="text-sm text-[#8e909b]">{user?.email}</p>
           </div>
           <div className="ml-auto">
             <span className="badge badge-blue flex items-center gap-1.5">
@@ -57,7 +57,7 @@ export default function AccountPage() {
           >
             <stat.icon className={`h-5 w-5 ${stat.color} mx-auto mb-2`} />
             <p className={`text-lg font-black ${stat.color}`}>{stat.value}</p>
-            <p className="text-xs text-[#98a191] mt-0.5">{stat.label}</p>
+            <p className="text-xs text-[#8e909b] mt-0.5">{stat.label}</p>
           </motion.div>
         ))}
       </div>
@@ -65,19 +65,19 @@ export default function AccountPage() {
       {/* Recent Orders */}
       <div className="glass-card p-5">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-bold text-[#202c28] flex items-center gap-2">
-            <Package className="h-4 w-4 text-[#4d7138]" />
+          <h2 className="font-bold text-[#23262b] flex items-center gap-2">
+            <Package className="h-4 w-4 text-[#373071]" />
             Son Siparişler
           </h2>
-          <Link href="/hesabim/siparislerim" className="text-xs text-[#4d7138] hover:text-[#33613f] transition-colors">
+          <Link href="/hesabim/siparislerim" className="text-xs text-[#373071] hover:text-[#2e2862] transition-colors">
             Tümünü gör →
           </Link>
         </div>
 
         {!orders || orders.length === 0 ? (
           <div className="text-center py-8">
-            <Package className="h-10 w-10 mx-auto mb-3 text-[#b6bdac]" />
-            <p className="text-sm text-[#98a191]">Henüz sipariş vermediniz</p>
+            <Package className="h-10 w-10 mx-auto mb-3 text-[#b4b6c1]" />
+            <p className="text-sm text-[#8e909b]">Henüz sipariş vermediniz</p>
             <Link href="/urunler" className="btn-primary text-xs py-2 px-4 rounded-xl mt-3 inline-flex">
               Alışverişe Başla
             </Link>
@@ -88,17 +88,17 @@ export default function AccountPage() {
               <Link
                 key={order.order_number}
                 href={`/hesabim/siparislerim/${order.order_number}`}
-                className="flex items-center justify-between p-3 rounded-xl bg-[#f8f9f6] border border-[#eef0ea] hover:bg-[#f3f5ef] hover:border-[#e3e7dd] transition-all"
+                className="flex items-center justify-between p-3 rounded-xl bg-[#f6f5fb] border border-[#eeedf5] hover:bg-[#f3f2f8] hover:border-[#e6e4f0] transition-all"
               >
                 <div>
-                  <p className="text-sm font-bold text-[#202c28]">#{order.order_number}</p>
-                  <p className="text-xs text-[#98a191]">{formatDate(order.created_at)}</p>
+                  <p className="text-sm font-bold text-[#23262b]">#{order.order_number}</p>
+                  <p className="text-xs text-[#8e909b]">{formatDate(order.created_at)}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-bold text-[#202c28]">{formatPrice(parseFloat(order.total))}</p>
+                  <p className="text-sm font-bold text-[#23262b]">{formatPrice(parseFloat(order.total))}</p>
                   <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                    order.status === 'delivered' ? 'text-[#4d7138] bg-[#eef3e2]' :
-                    order.status === 'shipped' ? 'text-[#4d7138] bg-[#eef3e2]' :
+                    order.status === 'delivered' ? 'text-[#373071] bg-[#edebf7]' :
+                    order.status === 'shipped' ? 'text-[#373071] bg-[#edebf7]' :
                     order.status === 'cancelled' ? 'text-[#b0463c] bg-[#fbeceb]' :
                     'text-[#9c7226] bg-[#faf3e2]'
                   }`}>

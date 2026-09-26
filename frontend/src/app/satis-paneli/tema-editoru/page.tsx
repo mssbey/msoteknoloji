@@ -37,9 +37,9 @@ const DEFAULTS: ThemeState = {
 function ColorPicker({ label, value, onChange }: { label: string; value: string; onChange: (v: string) => void }) {
   return (
     <div className="flex items-center justify-between gap-3">
-      <span className="text-sm text-[#5c6a56]">{label}</span>
+      <span className="text-sm text-[#585c68]">{label}</span>
       <div className="flex items-center gap-2">
-        <span className="text-xs font-mono text-[#98a191]">{value}</span>
+        <span className="text-xs font-mono text-[#8e909b]">{value}</span>
         <label className="relative cursor-pointer">
           <input
             type="color"
@@ -48,7 +48,7 @@ function ColorPicker({ label, value, onChange }: { label: string; value: string;
             className="absolute inset-0 opacity-0 w-full h-full cursor-pointer"
           />
           <div
-            className="h-8 w-10 rounded-lg border-2 border-[#d4ddc6] shadow-md"
+            className="h-8 w-10 rounded-lg border-2 border-[#d6d3e8] shadow-md"
             style={{ backgroundColor: value }}
           />
         </label>
@@ -59,12 +59,12 @@ function ColorPicker({ label, value, onChange }: { label: string; value: string;
 
 function SectionCard({ icon: Icon, title, children }: { icon: React.ElementType; title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-2xl border border-[#e3e7dd] bg-[#f8f9f6] p-5">
+    <div className="rounded-2xl border border-[#e6e4f0] bg-[#f6f5fb] p-5">
       <div className="flex items-center gap-2 mb-4">
-        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#e4edd4]">
-          <Icon className="h-3.5 w-3.5 text-[#4d7138]" />
+        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#d6d3ee]">
+          <Icon className="h-3.5 w-3.5 text-[#373071]" />
         </div>
-        <h3 className="text-sm font-semibold text-[#202c28]">{title}</h3>
+        <h3 className="text-sm font-semibold text-[#23262b]">{title}</h3>
       </div>
       <div className="space-y-4">{children}</div>
     </div>
@@ -105,13 +105,13 @@ export default function ThemeEditorPage() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-xl font-black text-[#202c28]">Tema Editörü</h1>
-          <p className="text-sm text-[#98a191] mt-0.5">Mağaza görünümünüzü kişiselleştirin</p>
+          <h1 className="text-xl font-black text-[#23262b]">Tema Editörü</h1>
+          <p className="text-sm text-[#8e909b] mt-0.5">Mağaza görünümünüzü kişiselleştirin</p>
         </div>
         <div className="flex items-center gap-2">
           <button
             onClick={() => setTheme(DEFAULTS)}
-            className="flex items-center gap-2 rounded-xl border border-[#d4ddc6] px-3 py-2 text-sm text-[#8c958c] hover:text-[#202c28] hover:bg-[#f6f7f3] transition-all"
+            className="flex items-center gap-2 rounded-xl border border-[#d6d3e8] px-3 py-2 text-sm text-[#7c7f8a] hover:text-[#23262b] hover:bg-[#f4f3f9] transition-all"
           >
             <RotateCcw className="h-3.5 w-3.5" />
             Sıfırla
@@ -120,7 +120,7 @@ export default function ThemeEditorPage() {
             whileTap={{ scale: 0.96 }}
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 rounded-xl bg-[#244b37] px-4 py-2 text-sm font-semibold text-[#f4f8ec] hover:bg-[#2f6045] transition-colors disabled:opacity-60"
+            className="flex items-center gap-2 rounded-xl bg-[#373071] px-4 py-2 text-sm font-semibold text-[#ffffff] hover:bg-[#373071] transition-colors disabled:opacity-60"
           >
             {saved ? <Check className="h-3.5 w-3.5" /> : <Save className="h-3.5 w-3.5" />}
             {saved ? 'Kaydedildi' : saving ? 'Kaydediliyor...' : 'Kaydet'}
@@ -129,13 +129,13 @@ export default function ThemeEditorPage() {
       </div>
 
       {/* Tab switcher (mobile) */}
-      <div className="flex gap-1 mb-5 rounded-xl bg-[#f6f7f3] p-1 lg:hidden">
+      <div className="flex gap-1 mb-5 rounded-xl bg-[#f4f3f9] p-1 lg:hidden">
         {(['editor', 'preview'] as const).map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`flex-1 rounded-lg py-2 text-sm font-medium transition-all ${
-              activeTab === tab ? 'bg-[#f0f2ec] text-[#202c28]' : 'text-[#98a191]'
+              activeTab === tab ? 'bg-[#f0eff6] text-[#23262b]' : 'text-[#8e909b]'
             }`}
           >
             {tab === 'editor' ? 'Düzenle' : 'Önizleme'}
@@ -157,11 +157,11 @@ export default function ThemeEditorPage() {
           {/* Duyuru Bandı */}
           <SectionCard icon={Megaphone} title="Duyuru Bandı">
             <label className="flex items-center justify-between cursor-pointer">
-              <span className="text-sm text-[#5c6a56]">Aktif</span>
+              <span className="text-sm text-[#585c68]">Aktif</span>
               <div
                 onClick={() => set('announcement_active', !theme.announcement_active)}
                 className={`relative h-5 w-9 rounded-full transition-colors ${
-                  theme.announcement_active ? 'bg-[#244b37]' : 'bg-[#eef0ea]'
+                  theme.announcement_active ? 'bg-[#373071]' : 'bg-[#eeedf5]'
                 }`}
               >
                 <div className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
@@ -170,14 +170,14 @@ export default function ThemeEditorPage() {
               </div>
             </label>
             <div>
-              <label className="text-xs text-[#98a191] mb-1 block">Mesaj</label>
+              <label className="text-xs text-[#8e909b] mb-1 block">Mesaj</label>
               <input
                 type="text"
                 value={theme.announcement_text}
                 onChange={e => set('announcement_text', e.target.value)}
                 placeholder="🚀 Ücretsiz kargo 500 TL ve üzeri siparişlerde!"
                 maxLength={200}
-                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
+                className="w-full rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] px-3 py-2.5 text-sm text-[#23262b] placeholder-[#a3a5b0] outline-none focus:border-[#5a54a8]"
               />
             </div>
             <ColorPicker label="Arka Plan Rengi" value={theme.announcement_bg} onChange={v => set('announcement_bg', v)} />
@@ -186,11 +186,11 @@ export default function ThemeEditorPage() {
           {/* Hoş Geldin Kuponu */}
           <SectionCard icon={Gift} title="Hoş Geldin Kuponu">
             <label className="flex items-center justify-between cursor-pointer">
-              <span className="text-sm text-[#5c6a56]">Aktif</span>
+              <span className="text-sm text-[#585c68]">Aktif</span>
               <div
                 onClick={() => set('welcome_coupon_active', !theme.welcome_coupon_active)}
                 className={`relative h-5 w-9 rounded-full transition-colors ${
-                  theme.welcome_coupon_active ? 'bg-[#244b37]' : 'bg-[#eef0ea]'
+                  theme.welcome_coupon_active ? 'bg-[#373071]' : 'bg-[#eeedf5]'
                 }`}
               >
                 <div className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
@@ -199,14 +199,14 @@ export default function ThemeEditorPage() {
               </div>
             </label>
             <div>
-              <label className="text-xs text-[#98a191] mb-1 block">İndirim Oranı (%{theme.welcome_coupon_percent})</label>
+              <label className="text-xs text-[#8e909b] mb-1 block">İndirim Oranı (%{theme.welcome_coupon_percent})</label>
               <input
                 type="range" min={1} max={50} step={1}
                 value={theme.welcome_coupon_percent}
                 onChange={e => set('welcome_coupon_percent', Number(e.target.value))}
                 className="w-full accent-blue-500"
               />
-              <div className="flex justify-between text-xs text-[#a8b09f] mt-0.5">
+              <div className="flex justify-between text-xs text-[#a3a5b0] mt-0.5">
                 <span>%1</span><span>%50</span>
               </div>
             </div>
@@ -215,13 +215,13 @@ export default function ThemeEditorPage() {
           {/* WhatsApp */}
           <SectionCard icon={MessageCircle} title="WhatsApp Destek">
             <div>
-              <label className="text-xs text-[#98a191] mb-1 block">Telefon Numarası (uluslararası)</label>
+              <label className="text-xs text-[#8e909b] mb-1 block">Telefon Numarası (uluslararası)</label>
               <input
                 type="text"
                 value={theme.whatsapp_number}
                 onChange={e => set('whatsapp_number', e.target.value)}
                 placeholder="905XXXXXXXXX"
-                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
+                className="w-full rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] px-3 py-2.5 text-sm text-[#23262b] placeholder-[#a3a5b0] outline-none focus:border-[#5a54a8]"
               />
             </div>
           </SectionCard>
@@ -229,27 +229,27 @@ export default function ThemeEditorPage() {
           {/* SEO */}
           <SectionCard icon={Search} title="SEO Bilgileri">
             <div>
-              <label className="text-xs text-[#98a191] mb-1 block">Sayfa Başlığı</label>
+              <label className="text-xs text-[#8e909b] mb-1 block">Sayfa Başlığı</label>
               <input
                 type="text"
                 value={theme.seo_title}
                 onChange={e => set('seo_title', e.target.value)}
                 placeholder="Mağaza adı | MSO Teknoloji"
                 maxLength={200}
-                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55]"
+                className="w-full rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] px-3 py-2.5 text-sm text-[#23262b] placeholder-[#a3a5b0] outline-none focus:border-[#5a54a8]"
               />
             </div>
             <div>
-              <label className="text-xs text-[#98a191] mb-1 block">Meta Açıklama</label>
+              <label className="text-xs text-[#8e909b] mb-1 block">Meta Açıklama</label>
               <textarea
                 value={theme.seo_description}
                 onChange={e => set('seo_description', e.target.value)}
                 placeholder="Mağazanızın kısa açıklaması (150-160 karakter önerilir)"
                 maxLength={300}
                 rows={3}
-                className="w-full rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] px-3 py-2.5 text-sm text-[#202c28] placeholder-[#a8b09f] outline-none focus:border-[#7a9a55] resize-none"
+                className="w-full rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] px-3 py-2.5 text-sm text-[#23262b] placeholder-[#a3a5b0] outline-none focus:border-[#5a54a8] resize-none"
               />
-              <p className="text-xs text-[#a8b09f] mt-1 text-right">{theme.seo_description.length}/300</p>
+              <p className="text-xs text-[#a3a5b0] mt-1 text-right">{theme.seo_description.length}/300</p>
             </div>
           </SectionCard>
         </div>
@@ -258,10 +258,10 @@ export default function ThemeEditorPage() {
         <div className={`w-80 flex-shrink-0 ${activeTab === 'editor' ? 'hidden lg:block' : ''}`}>
           <div className="sticky top-0">
             <div className="flex items-center gap-2 mb-3">
-              <Eye className="h-4 w-4 text-[#98a191]" />
-              <span className="text-sm text-[#98a191]">Canlı Önizleme</span>
+              <Eye className="h-4 w-4 text-[#8e909b]" />
+              <span className="text-sm text-[#8e909b]">Canlı Önizleme</span>
             </div>
-            <div className="rounded-2xl border border-[#e3e7dd] overflow-hidden bg-[#f6f7f3] text-sm shadow-2xl">
+            <div className="rounded-2xl border border-[#e6e4f0] overflow-hidden bg-[#f4f3f9] text-sm shadow-2xl">
               {/* Announcement bar preview */}
               {theme.announcement_active && theme.announcement_text && (
                 <div
@@ -283,16 +283,16 @@ export default function ThemeEditorPage() {
                   M
                 </div>
                 <div>
-                  <p className="font-bold text-[#202c28] text-sm">Mağaza Adı</p>
-                  <p className="text-xs text-[#98a191]">500+ Ürün</p>
+                  <p className="font-bold text-[#23262b] text-sm">Mağaza Adı</p>
+                  <p className="text-xs text-[#8e909b]">500+ Ürün</p>
                 </div>
               </div>
               {/* Product cards preview */}
               <div className="p-4 grid grid-cols-2 gap-2">
                 {[1, 2].map(i => (
-                  <div key={i} className="rounded-xl border border-[#e3e7dd] bg-[#f6f7f3] p-2">
+                  <div key={i} className="rounded-xl border border-[#e6e4f0] bg-[#f4f3f9] p-2">
                     <div className="aspect-square rounded-lg mb-2" style={{ backgroundColor: theme.accent_color + '33' }} />
-                    <p className="text-xs text-[#5c6a56] mb-1">Ürün Adı</p>
+                    <p className="text-xs text-[#585c68] mb-1">Ürün Adı</p>
                     <p className="text-xs font-bold" style={{ color: theme.theme_color }}>₺1.299</p>
                   </div>
                 ))}
@@ -308,8 +308,8 @@ export default function ThemeEditorPage() {
               </div>
               {/* Coupon badge preview */}
               {theme.welcome_coupon_active && (
-                <div className="mx-4 mb-4 rounded-xl border border-dashed border-[#b9d09c] bg-[#f1f5e8] p-2.5 text-center">
-                  <p className="text-xs text-[#4d7138] font-semibold">
+                <div className="mx-4 mb-4 rounded-xl border border-dashed border-[#a19bd1] bg-[#f1f0f9] p-2.5 text-center">
+                  <p className="text-xs text-[#373071] font-semibold">
                     🎁 İlk Alışverişe %{theme.welcome_coupon_percent} İndirim!
                   </p>
                 </div>

@@ -25,15 +25,15 @@ export default function AnalyticsPage() {
   return (
     <div className="space-y-5 max-w-[1400px]">
       <div>
-        <h1 className="text-xl font-black text-[#202c28]">Analizler</h1>
-        <p className="text-sm text-[#98a191] mt-0.5">Mağaza performans raporu — Son 7 gün</p>
+        <h1 className="text-xl font-black text-[#23262b]">Analizler</h1>
+        <p className="text-sm text-[#8e909b] mt-0.5">Mağaza performans raporu — Son 7 gün</p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[
-          { icon: Eye, label: 'Sayfa Görüntüleme', value: '14.6K', change: '+18%', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+          { icon: Eye, label: 'Sayfa Görüntüleme', value: '14.6K', change: '+18%', color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
           { icon: Users, label: 'Tekil Ziyaretçi', value: '8.2K', change: '+12%', color: 'text-[#7c5e77]', bg: 'bg-[#f2eaf0] border-[#e4d5e1]' },
-          { icon: MousePointerClick, label: 'Dönüşüm Oranı', value: '%3.2', change: '+0.4', color: 'text-[#4d7138]', bg: 'bg-[#eef3e2] border-[#cfe0b8]' },
+          { icon: MousePointerClick, label: 'Dönüşüm Oranı', value: '%3.2', change: '+0.4', color: 'text-[#373071]', bg: 'bg-[#edebf7] border-[#d6d3ee]' },
           { icon: ShoppingBag, label: 'Toplam Sipariş', value: '422', change: '+89', color: 'text-[#9c7226]', bg: 'bg-[#faf3e2] border-[#ead9b0]' },
         ].map((s, i) => (
           <motion.div key={s.label} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}
@@ -41,8 +41,8 @@ export default function AnalyticsPage() {
             <s.icon className={`h-5 w-5 ${s.color} mb-2`} />
             <p className={`text-xl font-black ${s.color}`}>{s.value}</p>
             <div className="flex items-center justify-between mt-1">
-              <p className="text-xs text-[#98a191]">{s.label}</p>
-              <span className="text-[10px] font-bold text-[#4d7138]">{s.change}</span>
+              <p className="text-xs text-[#8e909b]">{s.label}</p>
+              <span className="text-[10px] font-bold text-[#373071]">{s.change}</span>
             </div>
           </motion.div>
         ))}
@@ -50,7 +50,7 @@ export default function AnalyticsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2 glass-card p-5">
-          <h2 className="font-bold text-[#202c28] flex items-center gap-2 mb-4"><BarChart3 className="h-4 w-4 text-[#4d7138]" />Trafik & Dönüşüm</h2>
+          <h2 className="font-bold text-[#23262b] flex items-center gap-2 mb-4"><BarChart3 className="h-4 w-4 text-[#373071]" />Trafik & Dönüşüm</h2>
           <ResponsiveContainer width="100%" height={260}>
             <AreaChart data={TRAFFIC} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
               <defs>
@@ -69,7 +69,7 @@ export default function AnalyticsPage() {
           </ResponsiveContainer>
         </div>
         <div className="glass-card p-5">
-          <h2 className="font-bold text-[#202c28] flex items-center gap-2 mb-4"><TrendingUp className="h-4 w-4 text-[#7c5e77]" />Trafik Kaynakları</h2>
+          <h2 className="font-bold text-[#23262b] flex items-center gap-2 mb-4"><TrendingUp className="h-4 w-4 text-[#7c5e77]" />Trafik Kaynakları</h2>
           <ResponsiveContainer width="100%" height={200}>
             <PieChart>
               <Pie data={SOURCES} innerRadius={45} outerRadius={75} dataKey="value">
@@ -80,8 +80,8 @@ export default function AnalyticsPage() {
           <div className="space-y-1.5 mt-2">
             {SOURCES.map((s) => (
               <div key={s.name} className="flex items-center justify-between text-xs">
-                <span className="flex items-center gap-2 text-[#5c6a56]"><span className="h-2 w-2 rounded-full" style={{ background: s.color }} />{s.name}</span>
-                <span className="font-bold text-[#202c28]">%{s.value}</span>
+                <span className="flex items-center gap-2 text-[#585c68]"><span className="h-2 w-2 rounded-full" style={{ background: s.color }} />{s.name}</span>
+                <span className="font-bold text-[#23262b]">%{s.value}</span>
               </div>
             ))}
           </div>

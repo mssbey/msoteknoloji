@@ -18,22 +18,22 @@ export function ProductListContent() {
   })
 
   return (
-    <div className="min-h-screen bg-[#f8f9f6] px-4 py-10">
+    <div className="min-h-screen bg-[#f6f5fb] px-4 py-10">
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-1">
-            <Search className="h-5 w-5 text-[#4d7138]" />
-            <h1 className="text-2xl font-black text-[#202c28]">
+            <Search className="h-5 w-5 text-[#373071]" />
+            <h1 className="text-2xl font-black text-[#23262b]">
               {q ? `\"${q}\" için arama sonuçları` : 'Arama'}
             </h1>
           </div>
-          {data && <p className="text-[#98a191] text-sm">{data.length} ürün bulundu</p>}
+          {data && <p className="text-[#8e909b] text-sm">{data.length} ürün bulundu</p>}
         </div>
 
         {isLoading ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
             {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="rounded-2xl border border-[#eef0ea] bg-white overflow-hidden">
+              <div key={i} className="rounded-2xl border border-[#eeedf5] bg-white overflow-hidden">
                 <div className="aspect-square skeleton" />
                 <div className="p-3 space-y-2">
                   <div className="skeleton h-3 w-4/5 rounded" />
@@ -45,8 +45,8 @@ export function ProductListContent() {
         ) : !data || data.length === 0 ? (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
-            <h2 className="text-xl font-bold text-[#202c28] mb-2">Sonuç bulunamadı</h2>
-            <p className="text-[#98a191]">&quot;{q}&quot; için ürün bulunamadı. Farklı anahtar kelime deneyin.</p>
+            <h2 className="text-xl font-bold text-[#23262b] mb-2">Sonuç bulunamadı</h2>
+            <p className="text-[#8e909b]">&quot;{q}&quot; için ürün bulunamadı. Farklı anahtar kelime deneyin.</p>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">

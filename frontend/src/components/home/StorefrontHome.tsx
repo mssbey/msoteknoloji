@@ -1,29 +1,60 @@
-﻿'use client'
+'use client'
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, Compass, PackageCheck, Search, Headphones, Fish, Flashlight } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight, Compass, PackageCheck, Search, Headphones } from 'lucide-react'
 import { CategoryGrid } from './CategoryGrid'
 import { FeaturedProducts } from './FeaturedProducts'
 import { collectionHref, useCatalog } from '@/lib/catalog'
 export function StorefrontHome() {
   const { data } = useCatalog()
+  const count = (slug: string) => data?.groups.find(g => g.slug === slug)?.products_count
+  const fishing = count('balikcilik')
   return <div className="storefront"><div className="store-container">
-    <div className="store-breadcrumb">MSO TEKNOLOJİ <span>/</span> DOĞAYA VE HAYATA HAZIR</div>
-    <section className="discovery-hero">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="hero-landscape" src="/images/storefront/fishing-hero.png" alt="Dağ gölü kıyısındaki iskelede olta ve balıkçılık ekipmanları" fetchPriority="high" />
-      <div className="hero-shade" />
-      <div className="hero-copy"><span className="hero-kicker"><span /> HER KEŞİF İYİ BİR EKİPMANLA BAŞLAR</span><h1>Rotan doğa.<br />Ekipmanın <em>MSO.</em></h1><p>İlk atışın heyecanından kampın sessizliğine.<br className="hidden sm:block" /> Tutkunuza eşlik eden ekipmanları keşfedin.</p><div className="hero-actions"><Link href={collectionHref('balikcilik')} className="store-button">Balıkçılığı keşfet <ArrowUpRight size={19} /></Link><Link href="/urunler" className="hero-secondary">Tüm ürünler <ArrowRight size={17} /></Link></div></div>
-      <div className="hero-bottom"><span><Compass size={17} /> DIŞARIDA KEŞFEDECEK ÇOK ŞEY VAR.</span><span>01 <i /> BALIKÇILIK KOLEKSİYONU</span></div>
-      <Link href={collectionHref('balikcilik')} className="hero-note"><Fish size={22} /><div><small>DOĞRU EKİPMAN, GÜZEL BİR BAŞLANGIÇ</small><strong>Bir sonraki atışa hazır mısın?</strong></div><ArrowUpRight size={22} /></Link>
+    <section className="home-hero">
+      <div className="hero-main">
+        <Image className="hero-image" src="/images/storefront/fishing-campaign.webp" alt="" fill sizes="(max-width: 900px) 100vw, 60vw" preload />
+        <span className="hero-kicker">Yeni sezon balıkçılık</span>
+        <div className="hero-copy">
+          <h1>Rastgele değil, doğru ekipmanla.</h1>
+          <p>Kamıştan iğneye, yemden fırdöndüye{fishing ? ` — ${fishing} balıkçılık ürünü tek yerde.` : ' — balıkçılık ekipmanları tek yerde.'}</p>
+        </div>
+        <div className="hero-actions">
+          <Link href={collectionHref('balikcilik')} className="store-button light">Balıkçılığı keşfet <ArrowRight size={18} /></Link>
+          <Link href="/urunler" className="store-button outline">Tüm ürünler</Link>
+        </div>
+      </div>
+      <div className="hero-side">
+        <Link href={collectionHref('fener-aydinlatma')} className="hero-card hero-card-lighting">
+          <Image className="hero-image" src="/images/storefront/lighting-campaign.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
+          <span className="eyebrow">Fener &amp; Aydınlatma</span>
+          <strong>Karanlıkta da<br />yolunu bul.</strong>
+          <span className="hero-card-link">{count('fener-aydinlatma') ?? ''} ürün <ArrowRight size={16} /></span>
+        </Link>
+        <Link href={collectionHref('ev-mutfak')} className="hero-card tinted">
+          <Image className="hero-image" src="/images/storefront/kitchen-campaign.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
+          <span className="eyebrow">Ev &amp; Mutfak</span>
+          <strong>Paslanmaz çelik,<br />uzun ömürlü.</strong>
+          <span className="hero-card-link">{count('ev-mutfak') ?? ''} ürün <ArrowRight size={16} /></span>
+        </Link>
+      </div>
     </section>
-    <div className="store-benefits">{[{icon: Compass, title:'Tutkunuza uygun ekipman', text:'Balıkçılıktan günlük yaşama'}, {icon: Search, title:'Aradığınızı kolayca bulun', text:'İhtiyaca göre düzenlenen kategoriler'}, {icon: PackageCheck, title:'Güncel ürün kataloğu', text:data ? `${data.total} ürün, tek bir keşif noktası` : 'Yeni keşiflere açık bir koleksiyon'}, {icon: Headphones, title:'Alışverişte yanınızdayız', text:'Sorularınız için bize ulaşın'}].map(({icon: Icon, title, text}) => <div key={title}><Icon size={25} strokeWidth={1.5} /><div><strong>{title}</strong><span>{text}</span></div></div>)}</div>
-    <CategoryGrid /><FeaturedProducts />
-    <section className="editorial-grid"><Link href={collectionHref('kamp-outdoor')} className="editorial-card outdoor-card">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/storefront/camp-editorial.png" alt="Ormanda kamp ekipmanları ve yanan bir fener" loading="lazy" />
-      <div><span className="eyebrow">ŞEHRİN DIŞINDA, KENDİ RİTMİNDE</span><h2>Biraz doğa.<br />Bolca özgürlük.</h2><p>Kamp ve outdoor koleksiyonunu keşfet.</p><span className="editorial-link">Keşfe çık <ArrowUpRight size={19} /></span></div>
-    </Link><Link href={collectionHref('fener-aydinlatma')} className="editorial-card light-card"><div className="editorial-icon"><Flashlight size={110} strokeWidth={0.7} /></div><div><span className="eyebrow">KARANLIĞIN ÖTESİNİ GÖR</span><h2>Gücünü<br />ışığa dönüştür.</h2><p>LED & UV fenerler ve enerji çözümleri.</p><span className="editorial-link">Fenerleri incele <ArrowUpRight size={19} /></span></div></Link></section>
+    <CategoryGrid />
+    <FeaturedProducts />
+    <section className="editorial-grid">
+      <Link href={collectionHref('kamp-outdoor')} className="editorial-card">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/storefront/camp-editorial.png" alt="Ormanda kamp ekipmanları ve yanan bir fener" loading="lazy" />
+        <div><span className="eyebrow">Şehrin dışında, kendi ritminde</span><h2>Biraz doğa.<br />Bolca özgürlük.</h2><span className="editorial-link">Kamp &amp; outdoor <ArrowRight size={17} /></span></div>
+      </Link>
+      <Link href={collectionHref('balikcilik')} className="editorial-card">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/storefront/fishing-hero.png" alt="Dağ gölü kıyısındaki iskelede olta ve balıkçılık ekipmanları" loading="lazy" />
+        <div><span className="eyebrow">İlk atıştan son ışığa</span><h2>Göl kıyısına<br />hazır ol.</h2><span className="editorial-link">Balıkçılık <ArrowRight size={17} /></span></div>
+      </Link>
+    </section>
     <FeaturedProducts newest />
-    <section className="store-closing"><div className="closing-mark"><Compass size={46} strokeWidth={1} /></div><div><span className="eyebrow">MSO İLE HER GÜNE HAZIR</span><h2>Küçük ihtiyaçlar.<br className="sm:hidden" /> Büyük kolaylıklar.</h2><p>Bahçenizden mutfağınıza, hayatı kolaylaştıran ürünler bir arada.</p></div><Link className="store-button" href="/kategoriler">Koleksiyonu keşfet <ArrowUpRight size={18} /></Link></section>
+    <section className="store-benefits" aria-label="Neden MSO">
+      {[{ icon: Compass, title: 'Tutkunuza uygun ekipman', text: 'Balıkçılıktan günlük yaşama' }, { icon: Search, title: 'Aradığınızı kolayca bulun', text: 'İhtiyaca göre düzenlenen kategoriler' }, { icon: PackageCheck, title: 'Güncel ürün kataloğu', text: data ? `${data.total} ürün, ${data.groups.length} kategori` : 'Yeni keşiflere açık bir koleksiyon' }, { icon: Headphones, title: 'Alışverişte yanınızdayız', text: 'Sorularınız için bize ulaşın' }].map(({ icon: Icon, title, text }) => <div key={title}><span><Icon size={22} strokeWidth={1.7} /></span><div><strong>{title}</strong><small>{text}</small></div></div>)}
+    </section>
   </div></div>
 }
