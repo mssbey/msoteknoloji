@@ -20,7 +20,9 @@ class SentosImport extends Command
         {--limit=0 : En fazla kac urun (0 = tumu)}
         {--images : Urun gorsellerini de iceri al}
         {--variants : Varyantlari da iceri al}
-        {--test : Sadece baglantiyi test et}';
+        {--test : Sadece baglantiyi test et}
+        {--ensure-store : MSO satici/magaza kaydi yoksa olustur ve urunleri ona ata (bos production DB icin)}
+        {--approve : Yeni urunleri onayli ekle ki magazada hemen gorunsun}';
 
     protected $description = 'Sentos API uzerinden tum urunleri yerel veritabanina aktarir.';
 
@@ -56,7 +58,11 @@ class SentosImport extends Command
 
         $sellerId = (int) $this->option('seller');
         $storeId  = (int) $this->option('store');
-        $size     = max(1, (int) $this->option('size'));
+        if ($this->option('ensure-store')) {
+            [$sellerId, $storeId] = $this->ensureStore();
+            $this->info("Magaza hazir (seller #{$sellerId}, store #{$storeId}).");
+        }
+        $size    = max(1, (int) $this->option('size'));
         $limit    = (int) $this->option('limit');
 
         // -- Kategori haritasi (remote id -> local id) -----------------------
@@ -162,6 +168,52 @@ class SentosImport extends Command
         ]);
     }
 
+    /**
+     * Urunlerin baglanacagi MSO satici + magazayi bulur, yoksa olusturur.
+     * Kullanicinin sifresi rastgele: bu hesap giris icin degil, sadece sahiplik icin.
+     *
+     * @return array{0: int, 1: int}
+     */
+    private function ensureStore(): array
+    {
+        $email = 'magaza@msoteknoloji.com';
+
+        $user = \App\Models\User::firstOrCreate(
+            ['email' => $email],
+            ['name' => 'MSO Teknoloji', 'password' => bcrypt(Str::random(40))],
+        );
+        \Spatie\Permission\Models\Role::firstOrCreate(['name' => 'seller']);
+        if (!$user->hasRole('seller')) {
+            $user->assignRole('seller');
+        }
+
+        $seller = \App\Models\Seller::firstOrCreate(
+            ['user_id' => $user->id],
+            [
+                'uuid' => (string) Str::uuid(),
+                'company_name' => 'MSO Teknoloji',
+                'tax_number' => 'MSO-' . Str::upper(Str::random(8)),
+                'tax_office' => '-',
+                'phone' => '-',
+                'email' => $email,
+                'status' => 'approved',
+                'approved_at' => now(),
+            ],
+        );
+
+        $store = \App\Models\Store::firstOrCreate(
+            ['slug' => 'mso-teknoloji'],
+            [
+                'seller_id' => $seller->id,
+                'uuid' => (string) Str::uuid(),
+                'name' => 'MSO Teknoloji',
+                'is_active' => true,
+            ],
+        );
+
+        return [$seller->id, $store->id];
+    }
+
     /** @return array{0: Product, 1: bool} */
     private function upsertProduct(array $r, int $sellerId, int $storeId, array $catMap, int $fallbackCat): array
     {
@@ -208,7 +260,7 @@ class SentosImport extends Command
             $data['uuid']      = (string) Str::uuid();
             $data['sku']       = $sku;
             $data['slug']      = $this->uniqueSlug($name, $sku);
-            $data['status']    = 'pending';
+            $data['status']    = $this->option('approve') ? 'approved' : 'pending';
             $data['is_active'] = true;
             $product = Product::create($data);
         } else {
