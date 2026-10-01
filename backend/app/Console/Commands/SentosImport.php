@@ -90,7 +90,16 @@ class SentosImport extends Command
                     $wasCreated ? $created++ : $updated++;
 
                     if ($this->option('images')) {
-                        $imgCount += $this->syncImages($product, $remote['images'] ?? []);
+                        $images = $remote['images'] ?? [];
+                        // Gorsel sadece varyantlara yuklendiyse urun seviyesi bos gelir; varyant gorsellerini kullan.
+                        if (empty($images)) {
+                            $images = array_merge(...array_map(
+                                fn ($v) => array_values($v['images'] ?? []),
+                                array_values($remote['variants'] ?? [])
+                            ) ?: [[]]);
+                            $images = array_values(array_unique($images, SORT_REGULAR));
+                        }
+                        $imgCount += $this->syncImages($product, $images);
                     }
                     if ($this->option('variants')) {
                         $varCount += $this->syncVariants($product, $remote['variants'] ?? []);
