@@ -25,7 +25,7 @@ class ProductController extends Controller
             ->when($request->featured, fn($q) => $q->where('is_featured', true))
             ->when($request->boolean('has_image'), fn($q) => $q->whereNotNull('og_image')->where('og_image', '<>', ''))
             ->when($request->collection, fn($q) => $q->whereIn('id', $catalog->items()->filter(fn($p) => $catalog->group($p) === $request->collection)->pluck('id')))
-            ->when($request->q, fn($q) => $q->where('name', 'like', '%' . $request->q . '%'))
+            ->when($request->q, fn($q) => $q->whereIn('id', $catalog->searchIds($request->q)))
             ->orderBy(match($request->sort ?? 'newest') {
                 'price_asc' => 'price',
                 'price_desc' => 'price',

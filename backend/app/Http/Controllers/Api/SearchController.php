@@ -10,13 +10,12 @@ class SearchController extends Controller
     public function search(Request $request)
     {
         $q = $request->get('q', '');
-        if (strlen($q) < 2) {
+        if (mb_strlen(trim($q)) < 2) {
             return response()->json(['success' => true, 'data' => ['results' => [], 'total' => 0]]);
         }
 
         $products = \App\Models\Product::active()
-            ->where('name', 'like', "%{$q}%")
-            ->orWhere('sku', 'like', "%{$q}%")
+            ->whereIn('id', app(\App\Services\StorefrontCatalog::class)->searchIds($q))
             ->with(['store:id,name,slug', 'category:id,name,slug'])
             ->limit(40)
             ->get();
@@ -34,12 +33,12 @@ class SearchController extends Controller
     public function suggestions(Request $request)
     {
         $q = $request->get('q', '');
-        if (strlen($q) < 2) {
+        if (mb_strlen(trim($q)) < 2) {
             return response()->json(['success' => true, 'data' => []]);
         }
 
         $suggestions = \App\Models\Product::active()
-            ->where('name', 'like', "%{$q}%")
+            ->whereIn('id', app(\App\Services\StorefrontCatalog::class)->searchIds($q))
             ->select('name', 'slug')
             ->limit(8)
             ->get()

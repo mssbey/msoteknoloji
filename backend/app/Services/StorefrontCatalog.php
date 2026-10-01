@@ -23,6 +23,32 @@ class StorefrontCatalog
             ->get(['id', 'name', 'category_id', 'og_image', 'sale_count']);
     }
 
+    /**
+     * Arama: DB'den bagimsiz (Postgres LIKE harf duyarli), Turkce harf duyarsiz,
+     * her kelime ad/SKU/barkod/kategori/marka icinde gecmeli.
+     */
+    public function searchIds(string $query): array
+    {
+        $terms = array_filter(preg_split('/\s+/', $this->fold($query)));
+        if (!$terms) return [];
+
+        return Product::active()->with(['category:id,name', 'brand:id,name'])
+            ->get(['id', 'name', 'sku', 'barcode', 'category_id', 'brand_id'])
+            ->filter(function ($p) use ($terms) {
+                $text = $this->fold("{$p->name} {$p->sku} {$p->barcode} {$p->category?->name} {$p->brand?->name}");
+                foreach ($terms as $term) {
+                    if (!str_contains($text, $term)) return false;
+                }
+                return true;
+            })
+            ->pluck('id')->all();
+    }
+
+    private function fold(string $text): string
+    {
+        return Str::lower(Str::ascii($text, 'tr'));
+    }
+
     public function group(Product $product): string
     {
         $text = Str::lower(Str::ascii($product->name . ' ' . $product->category?->name, 'tr'));
