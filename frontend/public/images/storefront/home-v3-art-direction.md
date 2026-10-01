@@ -1,0 +1,7 @@
+# Home collection revision
+
+Generated with the built-in image_gen tool. Final asset: home-collection-v3.webp. Replaces kitchen-collection-v2.webp on the homepage at the user's request to remove cookware. Heading: Evin için, güzel detaylar.
+
+## Final edit prompt
+
+Use case: precise-object-edit. Edit target: the supplied existing home-category website background. Keep its wide 2.2:1 aspect ratio, soft pale lilac and cream palette, architectural travertine steps, elegant sunlight, shadows, and LEFT 50 percent completely empty for live website copy. Replace ALL cookware and kitchenware with a tasteful diverse home accessories collection: one sculptural ivory ceramic vase with a small airy olive branch, a short amber glass reed diffuser, a neatly folded pair of linen hand towels, and a small natural woven rectangular organizer basket. Arrange these four different objects across the RIGHT half on the existing stone steps with balanced negative space, photorealistic tactile materials and premium home editorial styling. Absolutely NO cooking pots, NO frying pans, NO kettles, NO saucepans, NO bowls, NO plates, NO cutlery, NO whisk, NO spatula, NO cooking utensils, NO metal cookware of any kind. The vase must clearly look like a narrow-neck decorative vase, not a cooking pot. Multiple distinct home objects, not a single hero object. Keep sophisticated full-bleed photography, realistic scale and grounded contact shadows. No text, no typography, no logos, no watermark, no UI.

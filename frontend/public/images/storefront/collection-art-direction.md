@@ -1,0 +1,21 @@
+# Homepage collection campaign images
+
+Generated with the built-in image_gen tool (October 2026). The three collection-v2 WebP assets are used by StorefrontHome.tsx. Each composition showcases multiple product types, with text-safe space on the left. Original campaign assets are retained.
+
+## fishing
+
+Asset: fishing-collection-v2.webp
+
+Use case: ads-marketing. Asset type: premium ecommerce homepage background, landscape 3:2, 1536x1024. Create a sophisticated editorial product collection photograph, NOT a single hero object and NOT an outdoor lake scene. A beautifully art-directed assortment of fishing equipment on layered sculptural dark aubergine and slate surfaces, viewed from a high three-quarter overhead angle. Show a compact graphite rod and silver spinning reel, open compartment tackle box containing neatly organized colorful lures, two realistic red-white fishing floats, spool of fishing line, three separate metallic fishing spoons, a small folded landing net and compact fishing pliers. Varied silhouettes and balanced spacing, coherent collection with several equally interesting items, exquisite materials, precise realistic hardware. Composition: LEFT 48 percent smooth dark plum negative space for existing white website copy; diverse objects arranged across RIGHT 52 percent and along bottom-right, not one oversized reel. Product grouping has depth with objects at subtly different heights; keep entire reel and tackle box readable. Rich purple #30254e background, lavender edge highlights, subtle warm light, soft cinematic shadows and premium studio photography. Quiet, clean, expensive, contemporary. No lettering, no logos, no numbers, no watermark, no collage borders, no UI. Full bleed.
+
+## lighting
+
+Asset: lighting-collection-v2.webp
+
+Use case: ads-marketing. Asset type: premium ecommerce category card background, wide landscape 2.2:1, 1536x704. Sophisticated editorial studio photograph of a curated COLLECTION of varied portable lighting equipment, NOT one oversized lantern, NOT a forest scene. Four distinct well-designed realistic objects: a compact cream camping lantern with warm diffused illumination, a graphite aluminum flashlight laying diagonally, a small headlamp with neatly folded black strap, and a compact rectangular rechargeable work light softly glowing. Place them in a balanced sculptural still life on low matte plum stone steps at different levels in RIGHT 50 percent. Clearly separate silhouettes, precise plausible design, restrained natural light bloom, beautiful anodized metal and frosted diffusers. LEFT 50 percent is calm continuous deep plum negative space for existing white heading; background has subtle lavender gradient with no objects there. Sophisticated studio side lighting, warm ivory lights contrasting cool lavender and deep aubergine #30254e, realistic contact shadows, luxury editorial campaign aesthetic, clean and curated. All four product types recognizable at small size. No text, no logos, no labels, no watermarks, no frames, no UI. Full bleed.
+
+## kitchen
+
+Asset: kitchen-collection-v2.webp
+
+Use case: ads-marketing. Asset type: premium ecommerce category card background, wide landscape 2.2:1, 1536x704. Create a refined editorial studio product photograph showing a DIVERSE home and kitchen collection, not just one pair of pots. Five complementary objects: an elegant brushed stainless steel tea kettle, a small lidded stainless steel cooking pot, a shallow frying pan, a small ivory ceramic utensil crock holding a whisk and wooden spatula, and a neat pair of small stacked ceramic bowls. Arrange balanced and clearly distinct objects across RIGHT 51 percent on pale lavender travertine low platforms, kettle behind, saucepan and bowls foreground, pan at slight angle. Each object modest sized to allow the entire assortment to read as a collection. LEFT 49 percent is completely calm pale lavender negative space for existing dark website typography. Airy warm off-white and lilac #e9e5f2 palette, brushed silver highlights, gentle sunlight from upper right, delicate shadows and realistic metal reflections. Architectural studio backdrop, luxurious contemporary homewares catalogue photography, tactile refined materials, harmonious composition, no food or busy scenery. No text, no branding, no numbers, no watermark, no UI, no borders. Full bleed.

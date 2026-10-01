@@ -12,7 +12,7 @@ export function StorefrontHome() {
   return <div className="storefront"><div className="store-container">
     <section className="home-hero">
       <div className="hero-main">
-        <Image className="hero-image" src="/images/storefront/fishing-campaign.webp" alt="" fill sizes="(max-width: 900px) 100vw, 60vw" preload />
+        <Image className="hero-image" src="/images/storefront/fishing-collection-v2.webp" alt="" fill sizes="(max-width: 900px) 100vw, 60vw" preload />
         <span className="hero-kicker">Yeni sezon balıkçılık</span>
         <div className="hero-copy">
           <h1>Rastgele değil, doğru ekipmanla.</h1>
@@ -25,15 +25,15 @@ export function StorefrontHome() {
       </div>
       <div className="hero-side">
         <Link href={collectionHref('fener-aydinlatma')} className="hero-card hero-card-lighting">
-          <Image className="hero-image" src="/images/storefront/lighting-campaign.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
+          <Image className="hero-image" src="/images/storefront/lighting-collection-v2.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
           <span className="eyebrow">Fener &amp; Aydınlatma</span>
           <strong>Karanlıkta da<br />yolunu bul.</strong>
           <span className="hero-card-link">{count('fener-aydinlatma') ?? ''} ürün <ArrowRight size={16} /></span>
         </Link>
         <Link href={collectionHref('ev-mutfak')} className="hero-card tinted">
-          <Image className="hero-image" src="/images/storefront/kitchen-campaign.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
+          <Image className="hero-image" src="/images/storefront/home-collection-v3.webp" alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 40vw" />
           <span className="eyebrow">Ev &amp; Mutfak</span>
-          <strong>Paslanmaz çelik,<br />uzun ömürlü.</strong>
+          <strong>Evin için,<br />güzel detaylar.</strong>
           <span className="hero-card-link">{count('ev-mutfak') ?? ''} ürün <ArrowRight size={16} /></span>
         </Link>
       </div>
