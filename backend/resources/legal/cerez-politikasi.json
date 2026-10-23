@@ -1,0 +1,656 @@
+{
+ "version": "v2026.10.22",
+ "title": "ÇEREZ POLİTİKASI",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "ÇEREZ POLİTİKASI"
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 1 – AMAÇ VE KAPSAM"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Çerez Politikası, MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ (\"ŞİRKET\") tarafından işletilen https://msoteknoloji.com.tr internet sitesinde kullanılan çerezler ve benzeri teknolojiler hakkında ziyaretçileri bilgilendirmek amacıyla hazırlanmıştır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu politika kapsamında çerezlerin ne olduğu, hangi amaçlarla kullanıldığı, çerez türleri, kişisel verilerin işlenmesine ilişkin hukuki sebepler, çerez tercihlerinin nasıl yönetilebileceği ve ziyaretçilerin hakları açıklanmaktadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, çerezler aracılığıyla elde edilen kişisel verileri 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ilgili mevzuat hükümlerine uygun olarak işlemeyi esas alır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 2 – VERİ SORUMLUSUNUN KİMLİĞİ"
+  },
+  {
+   "type": "field",
+   "label": "Ticaret Unvanı",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Dairesi",
+   "text": "KADIKÖY VERGİ DAİRESİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Kimlik Numarası",
+   "text": "5280614124"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta Adresi",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 3 – ÇEREZ NEDİR?"
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler (cookies), ziyaret edilen internet siteleri tarafından kullanıcıların tarayıcılarına veya cihazlarına yerleştirilebilen küçük veri dosyalarıdır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler, internet sitesinin düzgün çalışmasını sağlamak, kullanıcı tercihlerini hatırlamak, alışveriş sepetini yönetmek, oturum güvenliğini sağlamak ve uygun hukuki şartlarla kullanım istatistiklerini analiz etmek gibi amaçlarla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler aracılığıyla elde edilen bilgiler, diğer verilerle ilişkilendirildiğinde bir kişiyi doğrudan veya dolaylı olarak belirlenebilir kılıyorsa kişisel veri niteliği taşıyabilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 4 – ÇEREZLERİN KULLANIM AMAÇLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemizde kullanılan çerezler, fiilen etkinleştirilen özelliklere bağlı olarak aşağıdaki amaçlara hizmet edebilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "4.1. İnternet sitesinin temel işlevlerinin çalışmasını sağlamak."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.2. Kullanıcı oturumlarını güvenli biçimde yönetmek."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.3. Alışveriş sepetine eklenen ürünlerin hatırlanmasını sağlamak."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.4. Sipariş ve ödeme işlemlerinin güvenliğini desteklemek."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.5. Kullanıcıların dil ve görüntüleme tercihlerini hatırlamak."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.6. İnternet sitesinin performansını ve kullanım kolaylığını değerlendirmek."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.7. Teknik hataları ve güvenlik sorunlarını tespit etmek."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.8. Gerekli izinlerin alınması halinde reklam ve pazarlama faaliyetlerinin etkinliğini ölçmek."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.9. Kullanıcıların çerez tercihlerini kaydetmek."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 5 – KULLANILABİLECEK ÇEREZ TÜRLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "5.1. Kesinlikle Gerekli Çerezler",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezler, internet sitesinin temel işlevlerinin çalışması için gereklidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Alışveriş sepetinin yönetilmesi, kullanıcı oturumlarının sürdürülmesi, ödeme süreçlerinin güvenliği ve çerez tercihlerinin kaydedilmesi gibi amaçlarla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezler, ilgili mevzuat kapsamında gerekli şartların sağlanması halinde açık rıza alınmaksızın kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.2. İşlevsel Çerezler",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "İşlevsel çerezler, kullanıcıların tercihlerini hatırlamak ve internet sitesinde kişiselleştirilmiş özellikler sunmak amacıyla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Dil, bölge veya görüntüleme tercihlerinin hatırlanması bu kapsamdadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "İlgili işlevin sunulması için zorunlu olmayan çerezler, gerekli olduğu durumlarda kullanıcının açık rızasına tabi tutulur."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.3. Performans ve Analitik Çerezleri",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezler, ziyaretçilerin internet sitesini nasıl kullandığını anlamak ve sitenin performansını değerlendirmek amacıyla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Örneğin ziyaret edilen sayfalar, sayfalarda geçirilen süreler ve teknik performans verileri analiz edilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Açık rıza gerektiren analitik çerezler, kullanıcı onayı alınmadan etkinleştirilmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.4. Reklam ve Pazarlama Çerezleri",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Reklam ve pazarlama çerezleri, reklam kampanyalarının performansını ölçmek, kullanıcıların ilgi alanlarını değerlendirmek ve kişiselleştirilmiş reklam faaliyetlerini yürütmek amacıyla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezler, ilgili mevzuat kapsamında gerekli açık rıza alınmadan kullanılmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 6 – ÇEREZLERİN SÜRELERİNE GÖRE SINIFLANDIRILMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "6.1. Oturum Çerezleri",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Oturum çerezleri, kullanıcının internet sitesindeki oturumu boyunca kullanılan ve genellikle tarayıcı oturumunun sona ermesiyle silinen çerezlerdir."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.2. Kalıcı Çerezler",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Kalıcı çerezler, belirli bir süre boyunca kullanıcının cihazında saklanabilen çerezlerdir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezlerin saklama süreleri, kullanım amaçlarına ve ilgili hizmetin teknik gerekliliklerine göre değişebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezlerin fiilî saklama süreleri, internet sitesinde kullanılan teknolojiler esas alınarak belirlenir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 7 – ÇEREZLERİN KAYNAĞINA GÖRE SINIFLANDIRILMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "7.1. Birinci Taraf Çerezler",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Birinci taraf çerezler, ziyaret edilen internet sitesi tarafından yerleştirilen çerezlerdir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu çerezler, oturum yönetimi, sepet işlemleri ve kullanıcı tercihlerinin hatırlanması gibi amaçlarla kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.2. Üçüncü Taraf Çerezler",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "Üçüncü taraf çerezler, internet sitesine entegre edilen farklı hizmet sağlayıcıların alan adları üzerinden yerleştirilebilen çerezlerdir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Analitik hizmetler, reklam platformları, ödeme sistemleri ve gömülü içerik hizmetleri kapsamında üçüncü taraf teknolojiler kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu hizmetlerin çerez kullanımı, ilgili sağlayıcının işleyişine ve veri işleme koşullarına bağlıdır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 8 – İNTERNET SİTESİNDE KULLANILAN ÇEREZLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitesinde fiilen kullanılan çerezlerin listesi, teknik inceleme sonucunda oluşturulur ve gerektiğinde güncellenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerez envanterinde aşağıdaki bilgilere yer verilir:"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Bilgi",
+     "Açıklama"
+    ],
+    [
+     "Çerez adı",
+     "{{cerez_adi}}"
+    ],
+    [
+     "Sağlayıcı",
+     "{{cerez_saglayici}}"
+    ],
+    [
+     "Kullanım amacı",
+     "{{cerez_amaci}}"
+    ],
+    [
+     "Çerez kategorisi",
+     "{{cerez_kategorisi}}"
+    ],
+    [
+     "Saklama süresi",
+     "{{cerez_suresi}}"
+    ],
+    [
+     "Hukuki sebep",
+     "{{cerez_hukuki_sebep}}"
+    ]
+   ]
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitesinde kullanılan çerezlerin tamamı, kullanım amaçları ve saklama süreleriyle birlikte güncel çerez envanterinde gösterilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 9 – KİŞİSEL VERİLERİN İŞLENMESİNİN HUKUKİ SEBEPLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler aracılığıyla elde edilen kişisel veriler, KVKK'nın 5. maddesinde belirtilen ve ilgili işleme faaliyetine uygun olan hukuki sebepler kapsamında işlenebilir."
+  },
+  {
+   "type": "field",
+   "label": "Meşru menfaat",
+   "text": "İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla internet sitesi güvenliğinin sağlanması ve bazı zorunlu teknik işlemlerin yürütülmesi."
+  },
+  {
+   "type": "field",
+   "label": "Sözleşmenin kurulması veya ifası",
+   "text": "Alışveriş sepeti, oturum yönetimi ve sipariş süreçlerinin gerçekleştirilmesi için gerekli veri işleme faaliyetleri."
+  },
+  {
+   "type": "field",
+   "label": "Hukuki yükümlülük",
+   "text": "İlgili mevzuatın zorunlu kıldığı kayıtların tutulması ve güvenlik yükümlülüklerinin yerine getirilmesi."
+  },
+  {
+   "type": "field",
+   "label": "Açık rıza",
+   "text": "Açık rıza gerektiren analitik, reklam, pazarlama ve zorunlu olmayan diğer çerezlerin kullanılması."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezlerin hukuki sebepleri, her bir çerezin amacı ve teknik işlevi dikkate alınarak ayrı ayrı değerlendirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 10 – ÇEREZ ONAYI VE TERCİHLERİN YÖNETİLMESİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemizi ziyaret ettiğinizde, zorunlu olmayan çerezlere ilişkin tercihlerinizi belirleyebilmeniz amacıyla çerez bilgilendirme ve tercih yönetimi mekanizması sunulur."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcılar;"
+  },
+  {
+   "type": "item",
+   "text": "Zorunlu olmayan çerezlerin tamamını kabul edebilir."
+  },
+  {
+   "type": "item",
+   "text": "Zorunlu olmayan çerezlerin tamamını reddedebilir."
+  },
+  {
+   "type": "item",
+   "text": "Çerez kategorileri için ayrı tercihler belirleyebilir."
+  },
+  {
+   "type": "item",
+   "text": "Daha önce verdikleri açık rızaları geri çekebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Zorunlu olmayan çerezlerin kullanımına ilişkin açık rıza, özgür iradeyle, belirli bir konuya ilişkin, bilgilendirmeye dayalı ve açık şekilde verilmelidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezleri reddetmek, internet sitesinin zorunlu işlevlerine erişimi engellememelidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcının çerez tercihleri, ilgili mevzuata uygun olarak kaydedilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerez tercihlerinin değiştirilmesi, önceki hukuka uygun veri işleme faaliyetlerini kendiliğinden geçersiz hale getirmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 11 – ÇEREZLERİN TARAYICI ÜZERİNDEN YÖNETİLMESİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcılar, kullandıkları internet tarayıcısının ayarları üzerinden çerezleri görüntüleyebilir, engelleyebilir veya silebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerez yönetimi, kullanılan tarayıcının ayarlar bölümünden gerçekleştirilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezlerin tamamen devre dışı bırakılması halinde alışveriş sepeti, oturum açma veya bazı temel internet sitesi özellikleri beklendiği gibi çalışmayabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcılar, internet sitemizde sunulan çerez tercih yönetimi alanından da izinlerini değiştirebilir."
+  },
+  {
+   "type": "field",
+   "label": "Çerez Tercihleri",
+   "text": "{{cerez_tercih_linki}}"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 12 – KİŞİSEL VERİLERİN AKTARILMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler aracılığıyla elde edilen kişisel veriler, kullanılan hizmetlerin niteliğine göre ve gerekli hukuki şartlar sağlanarak;"
+  },
+  {
+   "type": "item",
+   "text": "İnternet sitesi barındırma hizmeti sağlayıcılarına,"
+  },
+  {
+   "type": "item",
+   "text": "Teknik altyapı ve güvenlik hizmeti sağlayıcılarına,"
+  },
+  {
+   "type": "item",
+   "text": "Analitik ve performans hizmeti sağlayıcılarına,"
+  },
+  {
+   "type": "item",
+   "text": "Reklam ve pazarlama hizmeti sağlayıcılarına,"
+  },
+  {
+   "type": "item",
+   "text": "Hukuken gerekli olması halinde yetkili kamu kurum ve kuruluşlarına"
+  },
+  {
+   "type": "paragraph",
+   "text": "aktarılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin aktarılmasında KVKK'nın 8. ve 9. maddeleri uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Yurt dışına veri aktarımı söz konusu olduğunda, KVKK'nın 9. maddesinde düzenlenen aktarım şartlarının sağlanması gerekir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcının çerez onayı, tek başına bütün yurt dışı veri aktarımlarının hukuka uygun olduğu anlamına gelmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 13 – KİŞİSEL VERİLERİN SAKLANMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler aracılığıyla elde edilen kişisel veriler, işlenme amaçlarının gerektirdiği süre boyunca ve ilgili mevzuata uygun olarak saklanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Saklama süreleri belirlenirken;"
+  },
+  {
+   "type": "item",
+   "text": "Çerezin kullanım amacı,"
+  },
+  {
+   "type": "item",
+   "text": "Teknik gereklilikler,"
+  },
+  {
+   "type": "item",
+   "text": "İlgili hukuki yükümlülükler,"
+  },
+  {
+   "type": "item",
+   "text": "Veri minimizasyonu ilkesi,"
+  },
+  {
+   "type": "item",
+   "text": "Kişisel verilerin saklanmasını gerektiren hukuki sebepler"
+  },
+  {
+   "type": "paragraph",
+   "text": "dikkate alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Saklama süresi sona eren ve işlenmesini gerektiren başka bir hukuki sebep bulunmayan kişisel veriler, ilgili mevzuata uygun şekilde silinir, yok edilir veya anonim hale getirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 14 – KİŞİSEL VERİLERİN GÜVENLİĞİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, çerezler ve benzeri teknolojiler aracılığıyla işlenen kişisel verilerin güvenliğini sağlamak amacıyla uygun teknik ve idari tedbirleri alır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu kapsamda erişim kontrolleri, güvenli bağlantı teknolojileri, yetkilendirme mekanizmaları, güvenlik güncellemeleri ve gerekli diğer koruma yöntemleri uygulanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kişisel verilerin hukuka aykırı şekilde işlenmesini veya yetkisiz erişime maruz kalmasını önlemek için gerekli güvenlik tedbirlerini riskler doğrultusunda değerlendirir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 15 – İLGİLİ KİŞİNİN HAKLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "KVKK'nın 11. maddesi uyarınca ilgili kişiler;"
+  },
+  {
+   "type": "paragraph",
+   "text": "15.1. Kişisel verilerinin işlenip işlenmediğini öğrenme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.2. İşlenmişse buna ilişkin bilgi talep etme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.3. İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.4. Kişisel verilerinin aktarıldığı üçüncü kişileri bilme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.5. Eksik veya yanlış işlenen verilerin düzeltilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.6. Kanuni şartların oluşması halinde kişisel verilerin silinmesini veya yok edilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.7. Düzeltme ve silme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.8. Münhasıran otomatik sistemlerle yapılan analiz sonucunda aleyhlerine bir durum ortaya çıkmasına itiraz etme."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.9. Kanuna aykırı veri işlenmesi nedeniyle zarara uğramaları halinde zararın giderilmesini talep etme"
+  },
+  {
+   "type": "paragraph",
+   "text": "haklarına sahiptir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 16 – BAŞVURU VE İLETİŞİM"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin işlenmesine ilişkin taleplerinizi, ilgili mevzuatta belirtilen usullerle ŞİRKET'e iletebilirsiniz."
+  },
+  {
+   "type": "field",
+   "label": "Veri Sorumlusu",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, usulüne uygun başvuruları talebin niteliğine göre en kısa sürede ve en geç 30 gün içerisinde sonuçlandırır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Başvuruların değerlendirilmesinde KVKK ve ilgili başvuru usul ve esasları uygulanır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 17 – POLİTİKANIN GÜNCELLENMESİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kullanılan çerezlerin değişmesi, yeni teknolojilerin devreye alınması, hizmet kapsamının güncellenmesi veya mevzuat değişiklikleri nedeniyle işbu Çerez Politikası'nı güncelleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Politikanın güncel sürümü internet sitesinde yayımlanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Açık rızanın kapsamını etkileyen değişiklikler olması halinde, gerekli durumlarda kullanıcılardan yeniden onay alınır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 18 – YÜRÜRLÜK"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Çerez Politikası, https://msoteknoloji.com.tr internet sitesinde yayımlandığı tarihten itibaren yürürlüğe girer."
+  },
+  {
+   "type": "paragraph",
+   "text": "Politikada düzenlenmeyen hususlarda 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ilgili mevzuat hükümleri uygulanır."
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  }
+ ]
+}

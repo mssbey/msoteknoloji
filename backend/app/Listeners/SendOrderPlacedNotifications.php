@@ -3,7 +3,6 @@
 namespace App\Listeners;
 
 use App\Events\OrderPlaced;
-use App\Jobs\GenerateOrderContractJob;
 use App\Services\Notifications\SmsService;
 use App\Services\Notifications\WhatsAppService;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -44,8 +43,5 @@ class SendOrderPlacedNotifications implements ShouldQueue
                 related: $order,
             );
         }
-
-        // Mesafeli satış sözleşmesi PDF üretimi (e-posta + storage)
-        GenerateOrderContractJob::dispatch($order->id);
     }
 }

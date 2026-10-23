@@ -939,6 +939,9 @@
 .auth-consent input{width:18px;height:18px;margin-top:1px;flex-shrink:0;accent-color:#373071}
 .auth-consent a{color:#373071;font-weight:600}
 .auth-consent a:hover{text-decoration:underline}
+.auth-note{margin:-4px 2px 0;font-size:12px;line-height:1.5;color:#7C7F8A}
+.auth-note a{color:#373071;font-weight:600}
+.auth-note a:hover{text-decoration:underline}
 .auth-submit{display:flex;align-items:center;justify-content:center;gap:10px;height:54px;margin-top:6px;border-radius:14px;background:#373071;color:#fff;font-size:16px;font-weight:700;transition:background .2s,transform .2s}
 .auth-submit:hover:not(:disabled){background:#241E52;transform:translateY(-1px)}
 .auth-submit:disabled{opacity:.65;cursor:not-allowed}
@@ -973,3 +976,15 @@
   .auth-row{grid-template-columns:1fr}
   .auth-input input{font-size:16px}
 }
+
+/* Ödeme öncesi sözleşme önizlemesi (backend'de üretilen HTML) */
+.legal-preview{font-size:13px;line-height:1.6;color:#474b57}
+.legal-preview .legal-title{font-size:18px;font-weight:800;color:#23262b;margin:0 0 12px}
+.legal-preview .legal-heading{font-size:14px;font-weight:700;color:#23262b;margin:16px 0 6px}
+.legal-preview p{margin:4px 0}
+.legal-preview b{color:#23262b}
+.legal-preview ul{list-style:disc;padding-left:20px;margin:4px 0}
+.legal-preview table{width:100%;border-collapse:collapse;margin:8px 0;font-size:12px}
+.legal-preview th,.legal-preview td{border:1px solid #e6e4f0;padding:6px 8px;text-align:left;vertical-align:top}
+.legal-preview th{background:#f4f3f9}
+.legal-preview .num{text-align:right;white-space:nowrap}

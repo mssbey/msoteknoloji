@@ -67,7 +67,32 @@ services:
       - key: FILESYSTEM_DISK
         value: local
       - key: MAIL_MAILER
-        value: log
+        value: smtp
+      - key: MAIL_SCHEME
+        value: smtps
+      - key: MAIL_HOST
+        value: smtp.yandex.com.tr
+      - key: MAIL_PORT
+        value: "465"
+      - key: MAIL_USERNAME
+        value: info@msoteknoloji.com.tr
+      # Yandex uygulama şifresi; Render panelinden girilir, repoya yazılmaz.
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: MAIL_FROM_ADDRESS
+        value: info@msoteknoloji.com.tr
+      - key: MAIL_FROM_NAME
+        value: MSO Teknoloji
+      - key: FRONTEND_URL
+        value: https://msoteknoloji.com.tr
+      - key: KARGONOMI_ENABLED
+        value: "true"
+      - key: KARGONOMI_API_TOKEN
+        sync: false
+      - key: KARGONOMI_WEBHOOK_SECRET
+        sync: false
+      - key: KARGONOMI_WAREHOUSE_ID
+        sync: false
       - key: SENTOS_ENABLED
         value: "true"
       - key: SENTOS_BASE_URL

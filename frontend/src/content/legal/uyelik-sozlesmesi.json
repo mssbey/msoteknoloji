@@ -1,0 +1,542 @@
+{
+ "version": "v2026.10.22",
+ "title": "ÜYELİK SÖZLEŞMESİ",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "ÜYELİK SÖZLEŞMESİ"
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Web Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 1 – TARAFLAR"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Üyelik Sözleşmesi (\"Sözleşme\"), aşağıda bilgileri bulunan MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ ile https://msoteknoloji.com.tr internet sitesi üzerinden üyelik oluşturan gerçek veya tüzel kişi (\"ÜYE\") arasında elektronik ortamda akdedilmiştir."
+  },
+  {
+   "type": "heading",
+   "text": "1.1. HİZMET SAĞLAYICI"
+  },
+  {
+   "type": "field",
+   "label": "Ticaret Unvanı",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Dairesi",
+   "text": "KADIKÖY VERGİ DAİRESİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Numarası",
+   "text": "5280614124"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta Adresi",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "paragraph",
+   "text": "Bundan sonra \"ŞİRKET\" olarak anılacaktır."
+  },
+  {
+   "type": "heading",
+   "text": "1.2. ÜYE BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Adı Soyadı / Ticari Unvanı",
+   "text": "{{uye_adi_soyadi}}"
+  },
+  {
+   "type": "field",
+   "label": "E-posta Adresi",
+   "text": "{{uye_eposta}}"
+  },
+  {
+   "type": "field",
+   "label": "Telefon Numarası",
+   "text": "{{uye_telefon}}"
+  },
+  {
+   "type": "field",
+   "label": "Üyelik Tarihi",
+   "text": "{{uyelik_tarihi}}"
+  },
+  {
+   "type": "field",
+   "label": "Üyelik Numarası",
+   "text": "{{uye_no}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "Bundan sonra \"ÜYE\" olarak anılacaktır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 2 – SÖZLEŞMENİN KONUSU"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Sözleşme'nin konusu, ŞİRKET tarafından işletilen https://msoteknoloji.com.tr internet sitesinde sunulan üyelik hizmetlerinden yararlanılmasına ilişkin şartların, tarafların hak ve yükümlülüklerinin, hesap kullanım kurallarının ve üyeliğin sona ermesine ilişkin esasların belirlenmesidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Üyelik hizmeti, kullanıcıların hesap oluşturmasını, hesap bilgilerini yönetmesini, siparişlerini görüntülemesini ve internet sitesinde sunulan üyelik özelliklerinden yararlanmasını sağlar."
+  },
+  {
+   "type": "paragraph",
+   "text": "Üyelik oluşturulması, tek başına herhangi bir ürün satın alma veya ödeme yükümlülüğü doğurmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 3 – ÜYELİK KOŞULLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.1. ÜYE, internet sitesinde yer alan üyelik formunu doldurarak ve işbu Sözleşme'yi elektronik ortamda kabul ederek üyelik başvurusunda bulunabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.2. Üyelik oluşturacak gerçek kişilerin fiil ehliyetine sahip olması gerekir. Fiil ehliyeti bulunmayan kişilerin işlemleri, ilgili mevzuat kapsamında yasal temsilcileri aracılığıyla gerçekleştirilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.3. Tüzel kişiler adına üyelik oluşturan kişiler, ilgili tüzel kişiyi temsil etmeye yetkili olduklarını beyan eder."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.4. ÜYE, üyelik sırasında sunduğu bilgilerin doğru, güncel ve kendisine ait olduğunu kabul eder."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.5. ÜYE, başkasına ait kimlik veya iletişim bilgilerini hukuka aykırı şekilde kullanamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.6. ŞİRKET, üyelik başvurusunun güvenlik gerekçeleriyle doğrulanmasını isteyebilir. Başvurunun reddi veya sınırlandırılması, objektif ve hukuka uygun gerekçelere dayanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.7. Üyelik ücretsizdir. Üyelik için ileride ücretli bir hizmet sunulması halinde, bu hizmetin kapsamı ve bedeli kullanıcıya önceden bildirilir; açık kabulü olmadan ücret tahsil edilmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 4 – ÜYE HESABI VE HESAP GÜVENLİĞİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "4.1. ÜYE, üyelik hesabına erişmek için kullandığı şifre ve diğer giriş bilgilerinin gizliliğini korumakla yükümlüdür."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.2. ÜYE, hesap bilgilerinin üçüncü kişilerle paylaşılmaması ve yetkisiz erişime karşı korunması için makul güvenlik önlemlerini almalıdır."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.3. ÜYE, hesabında yetkisiz kullanım veya güvenlik ihlali tespit etmesi halinde ŞİRKET'i gecikmeksizin bilgilendirmelidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.4. ŞİRKET, kullanıcı hesaplarının güvenliği için teknik ve idari tedbirleri almakla yükümlüdür."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.5. ÜYE'nin hesabı üzerinden gerçekleştirilen işlemlerin sorumluluğu, somut olayın koşulları ve tarafların kusuru dikkate alınarak belirlenir. ŞİRKET'in kendi kusurundan veya yasal yükümlülüklerini yerine getirmemesinden doğan sorumluluğu ortadan kaldırılamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.6. ŞİRKET, hesap güvenliğini tehdit eden şüpheli işlemler tespit etmesi halinde gerekli ve ölçülü güvenlik önlemlerini uygulayabilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 5 – ÜYENİN HAK VE YÜKÜMLÜLÜKLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "5.1. ÜYE, internet sitesini yürürlükteki mevzuata, dürüstlük kurallarına ve işbu Sözleşme'ye uygun şekilde kullanmayı kabul eder."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.2. ÜYE, internet sitesi üzerinden gerçekleştirdiği işlemlerde üçüncü kişilerin haklarını ihlal edemez."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.3. ÜYE, internet sitesinin işleyişini bozabilecek, sistem güvenliğini tehlikeye atabilecek veya diğer kullanıcıların hizmetlerden yararlanmasını engelleyebilecek faaliyetlerde bulunamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.4. ÜYE, zararlı yazılım yükleme, yetkisiz erişim sağlama, otomatik saldırı gerçekleştirme veya sistem kaynaklarını kötüye kullanma gibi işlemler yapamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.5. ÜYE, hesap ve iletişim bilgilerindeki değişiklikleri üyelik paneli üzerinden güncelleyebilir veya ŞİRKET'e bildirebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.6. ÜYE, yürürlükteki mevzuattan doğan tüketici haklarından, kişisel veri sahibi haklarından ve diğer yasal haklarından yararlanabilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 6 – ŞİRKETİN HAK VE YÜKÜMLÜLÜKLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "6.1. ŞİRKET, üyelik hizmetlerinin güvenli ve düzenli şekilde sunulması için makul teknik ve idari önlemleri alır."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.2. ŞİRKET, internet sitesinin bakım, güncelleme, güvenlik ve geliştirme çalışmaları nedeniyle hizmetlere geçici olarak ara verebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.3. ŞİRKET, internet sitesinde sunulan üyelik özelliklerini geliştirebilir, değiştirebilir veya yeni özellikler ekleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.4. ŞİRKET, üyelik hizmetlerinde önemli değişiklikler yapılması halinde kullanıcıları uygun iletişim kanalları üzerinden bilgilendirir."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.5. ŞİRKET, üyelik hizmetlerinin yürütülmesi sırasında elde edilen kişisel verileri ilgili mevzuata uygun şekilde işler ve korur."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.6. ŞİRKET, üyelerin kanundan doğan haklarını ortadan kaldıracak veya haksız şart oluşturacak uygulamalarda bulunamaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 7 – SİPARİŞ VE ALIŞVERİŞ İŞLEMLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "7.1. ÜYE, internet sitesi üzerinden ürün satın alabilir ve sunulan sipariş takip özelliklerinden yararlanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.2. Ürün satın alma işlemleri, ilgili sipariş için geçerli olan Mesafeli Satış Sözleşmesi, Ön Bilgilendirme Formu ve yürürlükteki mevzuat hükümlerine tabidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.3. Üyelik Sözleşmesi'nin kabul edilmesi, ileride verilecek tüm siparişler için Mesafeli Satış Sözleşmesi'nin peşinen kabul edildiği anlamına gelmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.4. Ürün fiyatları, teslimat masrafları, vergiler ve ödeme koşulları, siparişin tamamlanmasından önce kullanıcıya gösterilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.5. Sipariş iptali, ürün iadesi, cayma hakkı ve garanti işlemlerinde internet sitesinde yayımlanan İptal ve İade Koşulları ile ilgili mevzuat hükümleri uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.6. Üyeliğin sona ermesi, daha önce verilmiş siparişlere ilişkin tarafların kanuni yükümlülüklerini ortadan kaldırmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 8 – KİŞİSEL VERİLERİN KORUNMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "8.1. ŞİRKET, üyelik işlemleri kapsamında elde edilen kişisel verileri 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuata uygun şekilde işler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.2. Üyelik kapsamında işlenebilecek kişisel veriler arasında ad, soyad, iletişim bilgileri, hesap bilgileri, işlem güvenliği kayıtları, sipariş geçmişi ve kullanıcı tarafından sağlanan diğer bilgiler bulunabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.3. Kişisel verilerin işlenme amaçları, hukuki sebepleri, aktarılabileceği alıcı grupları ve ilgili kişinin hakları, internet sitesinde yayımlanan KVKK Aydınlatma Metni'nde açıklanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.4. Üyelik Sözleşmesi'nin kabul edilmesi, kişisel verilerin işlenmesi için gerekli olabilecek ayrı açık rızaların verilmiş olduğu anlamına gelmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.5. ÜYE, KVKK'nın 11. maddesi kapsamındaki haklarını mevzuatta belirtilen usullerle kullanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.6. Kişisel veriler, işlenme amaçları ve ilgili yasal saklama yükümlülükleri çerçevesinde muhafaza edilir. Saklama süresi sona eren veriler mevzuata uygun şekilde silinir, yok edilir veya anonim hale getirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 9 – TİCARİ ELEKTRONİK İLETİLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "9.1. ŞİRKET, ürün tanıtımları, kampanyalar, indirimler ve pazarlama faaliyetlerine ilişkin ticari elektronik iletileri, ilgili mevzuatın izin verdiği hallerde gönderebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.2. Ticari elektronik ileti gönderimi için gerekli olduğu durumlarda ÜYE'den ayrıca onay alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.3. Üyelik Sözleşmesi'nin kabul edilmesi, ticari elektronik ileti gönderimine onay verildiği anlamına gelmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.4. ÜYE, ticari elektronik ileti tercihlerini ilgili mevzuata uygun olarak değiştirebilir ve daha önce verdiği onayı geri alabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.5. Sipariş onayı, ödeme bildirimi, teslimat bilgilendirmesi ve üyelik güvenliği gibi işlemle doğrudan ilgili zorunlu bildirimler, ticari pazarlama iletilerinden ayrı değerlendirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 10 – ÇEREZLER VE İNTERNET SİTESİ TEKNOLOJİLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "10.1. İnternet sitesinde, kullanıcı oturumlarının yönetilmesi, alışveriş sepetinin çalışması, güvenliğin sağlanması ve kullanıcı deneyiminin geliştirilmesi amacıyla çerezler kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.2. Zorunlu olmayan çerezler için gerekli olduğu durumlarda kullanıcıdan ayrıca onay alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.3. Çerezlerin kullanım amaçları, türleri, saklama süreleri ve kullanıcı tercihleri hakkında ayrıntılı bilgiler Çerez Politikası'nda açıklanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.4. Üyelik Sözleşmesi'nin kabul edilmesi, zorunlu olmayan çerezlerin kullanımına otomatik olarak onay verildiği anlamına gelmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 11 – FİKRİ MÜLKİYET HAKLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "11.1. İnternet sitesinde yer alan ve ŞİRKET'e veya ilgili hak sahiplerine ait olan marka, logo, tasarım, metin, yazılım, görsel ve diğer içerikler, ilgili fikri mülkiyet mevzuatı kapsamında korunmaktadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.2. ÜYE, internet sitesindeki içerikleri hak sahibinin izni olmaksızın hukuka aykırı şekilde çoğaltamaz, dağıtamaz, değiştiremez veya ticari amaçlarla kullanamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.3. ÜYE'nin internet sitesini kişisel alışveriş ve bilgi edinme amacıyla kullanması, fikri mülkiyet haklarının kendisine devredildiği anlamına gelmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 12 – ÜYELİĞİN ASKIYA ALINMASI VE SONA ERDİRİLMESİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "12.1. ÜYE, dilediği zaman üyeliğinin kapatılmasını talep edebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.2. Üyelik kapatma talepleri, üyelik panelinde bu imkânın sunulması halinde ilgili bölümden veya ŞİRKET'in iletişim kanalları üzerinden iletilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.3. ŞİRKET, hesap güvenliğinin tehlikeye girmesi, yetkisiz kullanım, hukuka aykırı faaliyet veya Sözleşme'nin esaslı şekilde ihlal edilmesi halinde, gerekli ve ölçülü olmak kaydıyla üyeliği geçici olarak askıya alabilir veya sona erdirebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.4. Güvenlik açısından acil müdahale gerektiren haller dışında, üyeliğin askıya alınması veya sona erdirilmesine ilişkin gerekçe ÜYE'ye uygun şekilde bildirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.5. Üyeliğin sona ermesi, daha önce gerçekleştirilen siparişlere ilişkin teslimat, garanti, iade, faturalandırma ve diğer kanuni yükümlülükleri ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.6. Üyelik kapatıldığında kişisel veriler, ilgili mevzuatta öngörülen saklama süreleri ve hukuki yükümlülükler dikkate alınarak işlenmeye devam edebilir; saklama zorunluluğu bulunmayan veriler mevzuata uygun şekilde silinir, yok edilir veya anonim hale getirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 13 – SORUMLULUK VE HİZMETİN SÜREKLİLİĞİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "13.1. ŞİRKET, internet sitesinin güvenli ve işlevsel biçimde sunulması için gerekli özeni gösterir."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.2. Teknik bakım, altyapı sorunları, internet erişim kesintileri veya ŞİRKET'in kontrolü dışındaki nedenlerle hizmetlerde geçici kesintiler yaşanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.3. ŞİRKET'in mevzuattan kaynaklanan yükümlülükleri ve kendi kusurundan doğan sorumluluğu saklıdır."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.4. ÜYE, internet sitesini kullanırken yürürlükteki mevzuata ve üçüncü kişilerin haklarına uygun davranmakla yükümlüdür."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.5. Tarafların sorumluluğu, somut olayın özellikleri ve ilgili mevzuat hükümleri çerçevesinde belirlenir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 14 – SÖZLEŞME DEĞİŞİKLİKLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "14.1. ŞİRKET, yasal düzenlemeler, güvenlik gereklilikleri, teknik gelişmeler veya hizmetlerin işleyişindeki değişiklikler nedeniyle işbu Sözleşme'yi güncelleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "14.2. Üyelerin hak ve yükümlülüklerini önemli ölçüde etkileyen değişiklikler, yürürlüğe girmeden önce uygun yöntemlerle bildirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "14.3. ÜYE'nin açık kabulünü gerektiren değişiklikler, ilgili onay alınmadan kendisi açısından bağlayıcı hale getirilmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "14.4. Yapılan değişiklikler, ÜYE'nin daha önce doğmuş haklarını ve kanuni tüketici haklarını ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "14.5. Sözleşmenin güncel metni internet sitesinde yayımlanır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 15 – BİLDİRİMLER VE İLETİŞİM"
+  },
+  {
+   "type": "paragraph",
+   "text": "15.1. Üyelik hesabı, siparişler, güvenlik ve hizmetlere ilişkin bildirimler, ÜYE'nin kayıtlı iletişim bilgileri üzerinden veya internet sitesindeki kullanıcı hesabı aracılığıyla yapılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.2. ÜYE, kayıtlı iletişim bilgilerinin güncel tutulmasından sorumludur."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.3. Kanunen özel bir bildirim yöntemi öngörülen hallerde ilgili mevzuat hükümleri uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "15.4. ÜYE, ŞİRKET ile aşağıdaki kanallardan iletişime geçebilir:"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 16 – UYUŞMAZLIKLARIN ÇÖZÜMÜ"
+  },
+  {
+   "type": "paragraph",
+   "text": "16.1. İşbu Sözleşme'den doğabilecek uyuşmazlıklarda Türkiye Cumhuriyeti hukuku uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "16.2. Tüketici işlemi niteliğindeki uyuşmazlıklarda, ilgili mevzuat ve başvuru tarihindeki parasal sınırlar çerçevesinde Tüketici Hakem Heyetleri ve Tüketici Mahkemeleri görevli ve yetkilidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "16.3. Tüketici niteliği taşımayan işlemlerde ilgili mevzuatın görev ve yetki kuralları uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "16.4. İşbu Sözleşme, ÜYE'nin kanundan doğan başvuru ve dava haklarını sınırlamaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 17 – YÜRÜRLÜK VE KABUL"
+  },
+  {
+   "type": "paragraph",
+   "text": "17.1. İşbu Üyelik Sözleşmesi, ÜYE'nin internet sitesindeki üyelik formunda Sözleşme'yi elektronik ortamda kabul etmesi ve üyelik işleminin tamamlanmasıyla yürürlüğe girer."
+  },
+  {
+   "type": "paragraph",
+   "text": "17.2. ÜYE, üyelik oluşturulmadan önce Sözleşme metnini görüntüleyebilir ve inceleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "17.3. Üyelik onayına ilişkin tarih, saat, Sözleşme versiyonu ve ilgili teknik kayıtlar, yürürlükteki mevzuat kapsamında ve gerekli sürelerle sınırlı olarak saklanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "17.4. İşbu Sözleşme 17 maddeden oluşmaktadır."
+  },
+  {
+   "type": "field",
+   "label": "ŞİRKET",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "ÜYE",
+   "text": "{{uye_adi_soyadi}}"
+  },
+  {
+   "type": "field",
+   "label": "ÜYELİK TARİHİ",
+   "text": "{{uyelik_tarihi}}"
+  },
+  {
+   "type": "field",
+   "label": "ONAY TARİHİ VE SAATİ",
+   "text": "{{onay_tarihi_saati}}"
+  },
+  {
+   "type": "field",
+   "label": "SÖZLEŞME VERSİYONU",
+   "text": "{{sozlesme_versiyonu}}"
+  }
+ ]
+}

@@ -21,6 +21,16 @@ class ProductReturn extends Model
         'refunded_at' => 'datetime',
     ];
 
+    protected static function booted(): void
+    {
+        static::created(fn (self $return) => app(\App\Services\Orders\ReturnLifecycle::class)->handle($return, null));
+        static::updated(function (self $return) {
+            if ($return->wasChanged('status')) {
+                app(\App\Services\Orders\ReturnLifecycle::class)->handle($return, $return->getOriginal('status'));
+            }
+        });
+    }
+
     public function order() { return $this->belongsTo(Order::class); }
     public function orderItem() { return $this->belongsTo(OrderItem::class); }
     public function user() { return $this->belongsTo(User::class); }

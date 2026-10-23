@@ -6,19 +6,15 @@ import { formatPrice, formatDate } from '@/lib/utils'
 import { Package, ChevronRight, Search } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useAuthStore } from '@/stores/authStore'
+import { orderStatusBadge } from '@/lib/orderStatus'
 
-const STATUS_BADGE: Record<string, { label: string; cls: string }> = {
-  pending: { label: 'Onay Bekliyor', cls: 'text-[#9c7226] bg-[#faf3e2]' },
-  paid: { label: 'Hazırlanıyor', cls: 'text-[#373071] bg-[#edebf7]' },
-  shipped: { label: 'Kargoda', cls: 'text-[#7c5e77] bg-[#f2eaf0]' },
-  delivered: { label: 'Teslim Edildi', cls: 'text-[#373071] bg-[#edebf7]' },
-  cancelled: { label: 'İptal', cls: 'text-[#b0463c] bg-[#fbeceb]' },
-}
 
 export default function OrdersPage() {
+  const userId = useAuthStore(s => s.user?.id)
   const [search, setSearch] = useState('')
   const { data: orders, isLoading } = useQuery({
-    queryKey: ['my-orders'],
+    queryKey: ['my-orders', userId],
     queryFn: () => ordersAPI.list(),
     select: (res) => res.data.data?.data || res.data.data || [],
   })
@@ -55,7 +51,7 @@ export default function OrdersPage() {
       ) : (
         <div className="space-y-2">
           {filtered.map((order: { order_number: string; created_at: string; total: string; status: string; items_count?: number }) => {
-            const badge = STATUS_BADGE[order.status] || { label: order.status, cls: 'text-[#646773] bg-[#f0eff6]' }
+            const badge = orderStatusBadge(order.status)
             return (
               <Link
                 key={order.order_number}

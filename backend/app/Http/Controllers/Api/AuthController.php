@@ -13,13 +13,20 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8|confirmed',
-        ]);
+            'membership_agreement' => 'accepted',
+        ], ['membership_agreement.accepted' => 'Üyelik Sözleşmesi’ni onaylamanız gerekiyor.']);
 
         $user = \App\Models\User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
         ]);
+        // Aydınlatma bir onay değildir; yalnızca metnin sunulduğu kayda geçer.
+        $user->forceFill([
+            'membership_accepted_at' => now(),
+            'membership_agreement_version' => app(\App\Services\Legal\LegalDocumentService::class)->version('uyelik-sozlesmesi'),
+            'kvkk_informed_at' => now(),
+        ])->save();
         $user->assignRole('customer');
 
         $token = $user->createToken('auth_token')->plainTextToken;

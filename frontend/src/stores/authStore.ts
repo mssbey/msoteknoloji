@@ -32,7 +32,7 @@ interface AuthStore {
   isLoading: boolean
   isAuthenticated: boolean
   login: (email: string, password: string) => Promise<void>
-  register: (data: { name: string; email: string; password: string; password_confirmation: string }) => Promise<void>
+  register: (data: { name: string; email: string; password: string; password_confirmation: string; membership_agreement: boolean }) => Promise<void>
   logout: () => Promise<void>
   fetchMe: () => Promise<void>
   setUser: (user: User) => void

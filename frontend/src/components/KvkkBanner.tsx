@@ -29,7 +29,7 @@ export function KvkkBanner() {
   const [dismissed, setDismissed] = useState(false)
   const show = !hasConsent && !dismissed
   const [showDetail, setShowDetail] = useState(false)
-  const [consent, setConsent] = useState<ConsentState>({ necessary: true, analytics: true, marketing: true })
+  const [consent, setConsent] = useState<ConsentState>({ necessary: true, analytics: false, marketing: false })
 
   const save = (c: ConsentState) => {
     setCookie(COOKIE_KEY, JSON.stringify(c), DAYS)
@@ -136,7 +136,7 @@ export function KvkkBanner() {
                 <p className="text-xs text-[#a3a5b0] mb-4">
                   Daha fazla bilgi için{' '}
                   <Link href="/kvkk" className="text-[#373071] hover:underline">KVKK Aydınlatma Metni</Link> ve{' '}
-                  <Link href="/gizlilik" className="text-[#373071] hover:underline">Gizlilik Politikası</Link>mızı inceleyin.
+                  <Link href="/cerezler" className="text-[#373071] hover:underline">Çerez Politikası</Link>mızı inceleyin.
                 </p>
 
                 <div className="flex flex-wrap gap-2 justify-end">

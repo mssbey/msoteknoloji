@@ -4,7 +4,10 @@
     {
       "name": "frontend",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "cwd": "frontend",
       "port": 3000,
       "autoPort": true
@@ -12,11 +15,27 @@
     {
       "name": "frontend-live-api",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "cwd": "frontend",
       "port": 3000,
       "autoPort": true,
-      "env": { "NEXT_PUBLIC_API_URL": "https://msoteknoloji.onrender.com/api" }
+      "env": {
+        "NEXT_PUBLIC_API_URL": "https://msoteknoloji.onrender.com/api"
+      }
+    },
+    {
+      "name": "backend",
+      "runtimeExecutable": "php",
+      "runtimeArgs": [
+        "artisan",
+        "serve",
+        "--port=8000"
+      ],
+      "cwd": "backend",
+      "port": 8000
     }
   ]
 }

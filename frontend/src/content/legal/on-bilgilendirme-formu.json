@@ -1,0 +1,496 @@
+{
+ "version": "v2026.10.22",
+ "title": "MESAFELİ SATIŞ ÖN BİLGİLENDİRME FORMU",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "MESAFELİ SATIŞ ÖN BİLGİLENDİRME FORMU"
+  },
+  {
+   "type": "field",
+   "label": "Satış Platformu",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Sipariş Numarası",
+   "text": "{{siparis_no}}"
+  },
+  {
+   "type": "field",
+   "label": "Sipariş Tarihi",
+   "text": "{{siparis_tarihi}}"
+  },
+  {
+   "type": "field",
+   "label": "Form Versiyonu",
+   "text": "{{form_versiyonu}}"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 1 – AMAÇ VE KAPSAM"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Ön Bilgilendirme Formu, ALICI'nın https://msoteknoloji.com.tr internet sitesi üzerinden satın almak istediği ürünlere ilişkin olarak, 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği kapsamında, mesafeli satış sözleşmesi kurulmadan önce bilgilendirilmesi amacıyla hazırlanmıştır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu formda ürünlerin temel nitelikleri, satış fiyatları, ödeme ve teslimat koşulları, cayma hakkı, iade süreçleri, satıcı bilgileri ve tüketicinin yasal hakları açıklanmaktadır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 2 – SATICI BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Ticaret Unvanı",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Dairesi",
+   "text": "KADIKÖY VERGİ DAİRESİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Kimlik Numarası",
+   "text": "5280614124"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta Adresi",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "paragraph",
+   "text": "SATICI, siparişlere ilişkin bilgilendirme, teslimat, iptal, iade ve satış sonrası destek süreçlerinde yukarıdaki iletişim kanallarından hizmet vermektedir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 3 – ALICI BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Adı Soyadı / Ticari Unvanı",
+   "text": "{{musteri_adi}}"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "{{musteri_telefon}}"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "{{musteri_eposta}}"
+  },
+  {
+   "type": "field",
+   "label": "Fatura Adresi",
+   "text": "{{fatura_adresi}}"
+  },
+  {
+   "type": "field",
+   "label": "Teslimat Adresi",
+   "text": "{{teslimat_adresi}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu bilgiler ALICI tarafından sipariş sırasında girilen bilgiler esas alınarak otomatik oluşturulur."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 4 – ÜRÜN VE SİPARİŞ BİLGİLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI tarafından satın alınmak istenen ürün veya ürünlerin temel nitelikleri, miktarları ve satış bedelleri aşağıda belirtilmiştir."
+  },
+  {
+   "type": "field",
+   "label": "Sipariş No",
+   "text": "{{siparis_no}}"
+  },
+  {
+   "type": "field",
+   "label": "Sipariş Tarihi",
+   "text": "{{siparis_tarihi}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürün Listesi:",
+   "strong": true
+  },
+  {
+   "type": "products"
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürünlerin temel teknik özellikleri ve kullanım bilgileri, ilgili ürünün internet sitesindeki açıklama bölümünde yer almaktadır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 5 – SATIŞ BEDELİ VE ÖDEME BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Ürünler Ara Toplamı",
+   "text": "{{ara_toplam}}"
+  },
+  {
+   "type": "field",
+   "label": "Uygulanan İndirim",
+   "text": "{{indirim_tutari}}"
+  },
+  {
+   "type": "field",
+   "label": "Kargo Ücreti",
+   "text": "{{kargo_ucreti}}"
+  },
+  {
+   "type": "field",
+   "label": "Vergiler",
+   "text": "{{vergi_tutari}}"
+  },
+  {
+   "type": "field",
+   "label": "Genel Toplam (KDV Dâhil)",
+   "text": "{{genel_toplam}}"
+  },
+  {
+   "type": "field",
+   "label": "Ödeme Yöntemi",
+   "text": "{{odeme_yontemi}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, siparişi onaylamadan önce ürünlerin toplam satış bedelini, varsa kargo masraflarını ve diğer ek ücretleri görüntüleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Siparişin tamamlanması, ALICI açısından belirtilen toplam tutar üzerinden ödeme yükümlülüğü doğurur."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kredi kartı veya banka kartı ile yapılan işlemlerde ödeme kuruluşlarının ve bankaların uyguladığı taksit koşulları, varsa faiz ve diğer finansman maliyetleri ödeme öncesinde ayrıca gösterilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın açık onayı olmaksızın sipariş bedeline ek ücret yansıtılmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 6 – TESLİMAT BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Teslimat Adresi",
+   "text": "{{teslimat_adresi}}"
+  },
+  {
+   "type": "field",
+   "label": "Teslim Alacak Kişi",
+   "text": "{{teslim_alacak_kisi}}"
+  },
+  {
+   "type": "field",
+   "label": "Kargo Firması",
+   "text": "{{kargo_firmasi}}"
+  },
+  {
+   "type": "field",
+   "label": "Tahmini Teslimat Tarihi",
+   "text": "{{tahmini_teslimat}}"
+  },
+  {
+   "type": "field",
+   "label": "Teslimat Ücreti",
+   "text": "{{kargo_ucreti}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "Sipariş konusu ürünler, sipariş sırasında belirtilen teslimat adresine gönderilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "SATICI, ürünleri sipariş sırasında taahhüt edilen süre içerisinde teslim etmekle yükümlüdür. Kişiye özel hazırlanan ürünler hakkındaki özel hükümler saklı kalmak üzere, mal satışlarında teslimat süresi otuz günü geçemez."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürünlerin teslimat sürecinde kaybolması veya hasar görmesi halinde, kanuni istisnalar dışında sorumluluk SATICI'ya aittir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın teslimat sırasında pakette hasar tespit etmesi durumunda, mümkünse kargo görevlisiyle tutanak düzenlemesi ve SATICI'yı bilgilendirmesi önerilir. Tutanak tutulmaması tüketicinin yasal haklarını ortadan kaldırmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 7 – CAYMA HAKKI"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın tüketici sıfatını taşıması halinde, yasal istisnalar dışında, ürünü teslim aldığı tarihten itibaren 14 (on dört) gün içerisinde, herhangi bir gerekçe göstermeden ve cezai şart ödemeden sözleşmeden cayma hakkı bulunmaktadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, ürün henüz teslim edilmeden önce de cayma hakkını kullanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma hakkının kullanılması için 14 günlük süre dolmadan SATICI'ya yazılı olarak veya kalıcı veri saklayıcısı aracılığıyla açık bir bildirim yapılması yeterlidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma Bildirimi İletişim Kanalları:",
+   "strong": true
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "{{satici_eposta}}"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "İade Talep Sayfası",
+   "text": "{{iade_talep_linki}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, cayma bildirimini gönderdiği tarihten itibaren 14 gün içerisinde ürünü SATICI'ya geri göndermelidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürünün işleyişini, özelliklerini ve kullanımını belirlemek amacıyla, niteliğine ve kullanım talimatlarına uygun şekilde incelenmesi nedeniyle oluşan değişikliklerden ALICI sorumlu tutulamaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 8 – CAYMA HAKKININ KULLANILAMAYACAĞI DURUMLAR"
+  },
+  {
+   "type": "paragraph",
+   "text": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesinde belirtilen istisnalar kapsamında, taraflarca aksi kararlaştırılmadıkça aşağıdaki işlemlerde cayma hakkı kullanılamayabilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "8.1. Tüketicinin istekleri veya kişisel ihtiyaçları doğrultusunda hazırlanan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.2. Çabuk bozulabilen veya son kullanma tarihi geçebilecek ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.3. Tesliminden sonra ambalaj, bant, mühür veya paket gibi koruyucu unsurları açılmış olan ve sağlık veya hijyen açısından iadesi uygun olmayan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.4. Tesliminden sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.5. Koruyucu unsurları açılmış olması ve diğer kanuni koşulların gerçekleşmesi halinde, maddi ortamda sunulan dijital içerikler ve bilgisayar sarf malzemeleri gibi mevzuatta belirtilen ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.6. Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.7. Cayma hakkı süresi sona ermeden önce tüketicinin onayıyla ifasına başlanan ve ilgili mevzuat kapsamında istisna oluşturan hizmetler."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürünün elektronik veya teknolojik bir ürün olması, tek başına cayma hakkını ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma hakkı istisnası bulunan ürünlerde bu durum, siparişin tamamlanmasından önce ALICI'ya ayrıca ve açıkça bildirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 9 – İADE VE GERİ ÖDEME"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın cayma hakkını usulüne uygun kullanması halinde SATICI, mevzuatta öngörülen süreler içerisinde tahsil edilen bedelleri iade eder."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürün teslim edilmeden önce cayma hakkının kullanılması halinde, geri ödeme için öngörülen 14 günlük süre cayma bildiriminin SATICI'ya ulaştığı tarihten itibaren başlar."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ürün teslim edildikten sonra cayma hakkının kullanılması halinde, geri ödeme süresi ürünün ön bilgilendirmede belirtilen taşıyıcıya teslim edildiği tarihten itibaren başlar. ALICI'nın farklı bir taşıyıcı kullanması halinde bu süre ürünün SATICI'ya ulaştığı tarihten itibaren başlar."
+  },
+  {
+   "type": "paragraph",
+   "text": "Geri ödeme, ALICI'nın satın alma sırasında kullandığı ödeme aracına uygun olarak, herhangi bir masraf yüklenmeden ve tek seferde gerçekleştirilir."
+  },
+  {
+   "type": "field",
+   "label": "İade Kargo Firması",
+   "text": "{{iade_kargo_firmasi}}"
+  },
+  {
+   "type": "field",
+   "label": "İade Adresi",
+   "text": "{{iade_adresi}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın belirtilen iade taşıyıcısını kullanması halinde iade taşıma masrafları ALICI'ya yüklenmez. Ön bilgilendirmede iade taşıyıcısı belirtilmemişse, tüketiciye iade taşıma masrafı yüklenemez."
+  },
+  {
+   "type": "paragraph",
+   "text": "İade işlemleri sırasında ALICI'dan cayma hakkının kullanılması nedeniyle cezai şart veya ek işlem bedeli talep edilmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 10 – AYIPLI ÜRÜNLER VE GARANTİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, teslim aldığı ürünün ayıplı olması halinde 6502 sayılı Kanun kapsamında sahip olduğu seçimlik haklardan yararlanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu haklar, kanuni koşullar çerçevesinde;"
+  },
+  {
+   "type": "item",
+   "text": "Sözleşmeden dönme,"
+  },
+  {
+   "type": "item",
+   "text": "Satış bedelinden indirim isteme,"
+  },
+  {
+   "type": "item",
+   "text": "Ücretsiz onarım talep etme,"
+  },
+  {
+   "type": "item",
+   "text": "Ürünün ayıpsız misli ile değiştirilmesini isteme"
+  },
+  {
+   "type": "paragraph",
+   "text": "seçeneklerini kapsamaktadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Garanti kapsamındaki ürünlerde garanti belgesi ve ilgili mevzuat hükümleri uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma hakkı süresinin sona ermiş olması, ALICI'nın ayıplı ürünlerden doğan yasal haklarını ortadan kaldırmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 11 – ŞİKÂYET VE UYUŞMAZLIKLAR"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, sipariş, teslimat, ürün ve iade işlemlerine ilişkin talep ve şikâyetlerini SATICI'nın iletişim kanalları üzerinden iletebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Tüketici işlemlerinden kaynaklanan uyuşmazlıklarda, başvuru tarihindeki parasal sınırlar ve ilgili mevzuat dikkate alınarak Tüketici Hakem Heyetlerine veya Tüketici Mahkemelerine başvurulabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Tüketici Hakem Heyeti başvuruları, uygun koşullarda e-Devlet üzerinden de gerçekleştirilebilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 12 – KİŞİSEL VERİLERİN KORUNMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Sipariş işlemleri kapsamında ALICI tarafından paylaşılan kişisel veriler, 6698 sayılı Kişisel Verilerin Korunması Kanunu ve ilgili mevzuat hükümleri çerçevesinde işlenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin işlenmesine ilişkin ayrıntılı bilgiler, internet sitesinde yayımlanan KVKK Aydınlatma Metni aracılığıyla ALICI'nın bilgisine sunulur."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ticari elektronik ileti gönderimi için gerekli olduğu durumlarda ayrıca onay alınır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 13 – ÖN BİLGİLENDİRMENİN ONAYLANMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, siparişini tamamlamadan önce işbu Ön Bilgilendirme Formu'nu elektronik ortamda inceleme ve bilgileri kontrol etme imkânına sahiptir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, siparişin onaylanması halinde ödeme yükümlülüğü doğacağını bilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu form, Mesafeli Satış Sözleşmesi'nden önce ALICI'ya sunulur ve siparişe ait bilgilerle birlikte kalıcı veri saklayıcısı aracılığıyla iletilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın ön bilgilendirmeyi edindiğine ilişkin onayı, ilgili sipariş kaydıyla ilişkilendirilerek elektronik ortamda saklanır."
+  },
+  {
+   "type": "field",
+   "label": "SATICI",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "ALICI",
+   "text": "{{musteri_adi}}"
+  },
+  {
+   "type": "field",
+   "label": "SİPARİŞ NUMARASI",
+   "text": "{{siparis_no}}"
+  },
+  {
+   "type": "field",
+   "label": "ÖN BİLGİLENDİRME TARİHİ",
+   "text": "{{siparis_tarihi}}"
+  },
+  {
+   "type": "field",
+   "label": "ONAY TARİHİ VE SAATİ",
+   "text": "{{onay_tarihi_saati}}"
+  },
+  {
+   "type": "field",
+   "label": "FORM VERSİYONU",
+   "text": "{{form_versiyonu}}"
+  }
+ ]
+}

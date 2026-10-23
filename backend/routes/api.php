@@ -64,10 +64,15 @@ Route::post('whatsapp/redirect', [WhatsAppRedirectController::class, 'build']);
 Route::get('cart/recover/{token}', [CartRecoveryController::class, 'show']);
 Route::post('cart/recover/{token}/restore', [CartRecoveryController::class, 'restore'])->middleware('auth:sanctum');
 
+// ── Kargo bildirimleri (imzalı) ───────────────────────────
+Route::post('webhooks/kargonomi', \App\Http\Controllers\Api\KargonomiWebhookController::class)->middleware('throttle:120,1');
+
 // ── Authenticated Endpoints ───────────────────────────────
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('orders', [OrderController::class, 'index']);
     Route::post('orders', [OrderController::class, 'store']);
+    Route::post('orders/legal-preview', [OrderController::class, 'legalPreview'])->middleware('throttle:30,1');
+    Route::get('orders/{orderNumber}/documents/{type}', [OrderController::class, 'document']);
     Route::get('orders/{orderNumber}', [OrderController::class, 'show']);
     Route::post('orders/{id}/cancel', [OrderController::class, 'cancel']);
 

@@ -17,7 +17,7 @@ const schema = z.object({
   email: z.string().email('Geçerli bir e-posta adresi giriniz'),
   password: z.string().min(8, 'Şifre en az 8 karakter olmalı'),
   password_confirmation: z.string(),
-  kvkk: z.boolean().refine(val => val === true, 'KVKK metnini onaylamanız gerekiyor'),
+  membership_agreement: z.boolean().refine(val => val === true, 'Üyelik Sözleşmesi’ni onaylamanız gerekiyor'),
 }).refine(data => data.password === data.password_confirmation, {
   message: 'Şifreler eşleşmiyor',
   path: ['password_confirmation'],
@@ -42,9 +42,10 @@ export default function RegisterPage() {
         email: data.email,
         password: data.password,
         password_confirmation: data.password_confirmation,
+        membership_agreement: data.membership_agreement,
       })
       toast.success('Hesabınız oluşturuldu, hoş geldiniz!')
-      router.push('/')
+      router.push(new URLSearchParams(window.location.search).get('next') === '/odeme' ? '/odeme' : '/')
     } catch (e: unknown) {
       const err = e as { response?: { data?: { message?: string; errors?: Record<string, string[]> } } }
       const validationErrors = err.response?.data?.errors
@@ -63,7 +64,7 @@ export default function RegisterPage() {
     <AuthShell
       title="Hesap oluştur"
       subtitle="Ücretsiz üye ol, siparişlerini ve favorilerini tek yerden yönet."
-      footer={<>Zaten hesabın var mı? <Link href="/giris">Giriş yap</Link></>}
+      footer={<>Zaten hesabın var mı? <Link href="/giris?next=/odeme">Giriş yap</Link></>}
     >
       <AuthError message={error} />
       <form onSubmit={handleSubmit(onSubmit)} className="auth-form" noValidate>
@@ -73,11 +74,12 @@ export default function RegisterPage() {
           <AuthField label="Şifre" icon={Lock} type={showPass ? 'text' : 'password'} autoComplete="new-password" placeholder="En az 8 karakter" error={errors.password?.message} trailing={eye} {...register('password')} />
           <AuthField label="Şifre tekrar" icon={Lock} type={showPass ? 'text' : 'password'} autoComplete="new-password" placeholder="Tekrar girin" error={errors.password_confirmation?.message} {...register('password_confirmation')} />
         </div>
-        <label className={cn('auth-consent', errors.kvkk && 'is-invalid')}>
-          <input type="checkbox" {...register('kvkk')} />
-          <span><Link href="/kvkk">KVKK Aydınlatma Metni</Link>’ni ve <Link href="/kullanim-kosullari">Kullanım Koşulları</Link>’nı okudum, kabul ediyorum.</span>
+        <label className={cn('auth-consent', errors.membership_agreement && 'is-invalid')}>
+          <input type="checkbox" {...register('membership_agreement')} />
+          <span><Link href="/uyelik-sozlesmesi" target="_blank">Üyelik Sözleşmesi</Link>’ni okudum ve kabul ediyorum.</span>
         </label>
-        {errors.kvkk && <p className="auth-field-error">{errors.kvkk.message}</p>}
+        {errors.membership_agreement && <p className="auth-field-error">{errors.membership_agreement.message}</p>}
+        <p className="auth-note">Kişisel verileriniz <Link href="/kvkk" target="_blank">KVKK Aydınlatma Metni</Link> kapsamında işlenir.</p>
         <button type="submit" disabled={isLoading} className="auth-submit">
           {isLoading ? <><span className="auth-spinner" aria-hidden /> Kaydediliyor…</> : <>Hesap oluştur <ArrowRight size={18} /></>}
         </button>

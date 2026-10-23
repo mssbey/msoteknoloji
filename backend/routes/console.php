@@ -12,8 +12,14 @@ Artisan::command('inspire', function () {
 // Sepet terk işlemi (her saat): 30 dk üzeri terk edilmiş sepetleri işaretler
 Schedule::command('carts:process-abandoned')->hourly()->withoutOverlapping();
 
-// Sentos ürün/stok senkronizasyonu (her 15 dk)
-Schedule::command('sentos:sync')->everyFifteenMinutes()->withoutOverlapping();
+// Gönderilemeyen sipariş/iade e-postaları (10 dakikada bir)
+Schedule::command('orders:retry-emails')->everyTenMinutes()->withoutOverlapping();
+
+// Kargonomi webhook'u kaçırılırsa gönderi durumları (30 dakikada bir)
+Schedule::command('kargonomi:sync')->everyThirtyMinutes()->withoutOverlapping();
+
+// Gün boyunca yerel katalog kullanılır; Sentos yalnızca gece güncellenir.
+Schedule::command('sentos:nightly')->dailyAt('00:00')->timezone('Europe/Istanbul')->withoutOverlapping(1440);
 
 // Pazar yeri yorum scraping (gece 02:00)
 Schedule::command('reviews:scrape --platform=trendyol')->dailyAt('02:00');

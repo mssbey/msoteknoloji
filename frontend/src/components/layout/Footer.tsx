@@ -15,8 +15,8 @@ export function Footer() {
       </div>
       <div><h3>Koleksiyonlar</h3><ul>{data?.groups.slice(0, 5).map(g => <li key={g.slug}><Link href={collectionHref(g.slug)}>{g.name}</Link></li>)}</ul></div>
       <div><h3>Alışveriş</h3><ul><li><Link href="/urunler">Tüm ürünler</Link></li><li><Link href="/urunler?sort=newest">Yeni gelenler</Link></li><li><Link href="/kategoriler">Kategoriler</Link></li><li><Link href="/hesabim/favoriler">Favorilerim</Link></li><li><Link href="/hesabim/siparislerim">Siparişlerim</Link></li></ul></div>
-      <div><h3>Yardım</h3><ul><li><Link href="/iletisim">İletişim <ArrowUpRight size={12} className="inline" /></Link></li><li><Link href="/sss">Sık sorulan sorular</Link></li><li><Link href="/iade">İade ve değişim</Link></li><li><Link href="/hakkimizda">MSO hakkında</Link></li></ul></div>
+      <div><h3>Yardım</h3><ul><li><Link href="/iletisim">İletişim <ArrowUpRight size={12} className="inline" /></Link></li><li><Link href="/sss">Sık sorulan sorular</Link></li><li><Link href="/iptal-iade">İptal ve iade koşulları</Link></li><li><Link href="/hakkimizda">MSO hakkında</Link></li></ul></div>
     </div>
-    <div className="footer-bottom"><span>© {new Date().getFullYear()} MSO Teknoloji. Tüm hakları saklıdır.</span><div><Link href="/gizlilik">Gizlilik politikası</Link><Link href="/kvkk">KVKK</Link><Link href="/kullanim-kosullari">Kullanım koşulları</Link></div></div>
+    <div className="footer-bottom"><span>© {new Date().getFullYear()} MSO Teknoloji. Tüm hakları saklıdır.</span><div><Link href="/kvkk">Gizlilik ve KVKK</Link><Link href="/cerezler">Çerez politikası</Link><Link href="/uyelik-sozlesmesi">Üyelik sözleşmesi</Link><Link href="/iptal-iade">İptal ve iade</Link></div></div>
   </div></footer>
 }

@@ -1,0 +1,489 @@
+{
+ "version": "v2026.10.22",
+ "title": "İPTAL VE İADE KOŞULLARI",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "İPTAL VE İADE KOŞULLARI"
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Web Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 1 – AMAÇ VE KAPSAM"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu İptal ve İade Koşulları, MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ tarafından işletilen https://msoteknoloji.com.tr internet sitesi üzerinden gerçekleştirilen ürün satışlarına ilişkin sipariş iptali, cayma hakkı, ürün iadesi, değişim, geri ödeme ve ayıplı ürün işlemlerinin esaslarını belirlemek amacıyla hazırlanmıştır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu politika, 6502 sayılı Tüketicinin Korunması Hakkında Kanun, Mesafeli Sözleşmeler Yönetmeliği ve ilgili mevzuat hükümleri esas alınarak düzenlenmiştir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu metinde MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ \"SATICI\", internet sitesi üzerinden alışveriş gerçekleştiren kişi ise \"ALICI\" olarak anılacaktır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Tüketici sıfatını taşımayan ticari alıcıların işlemlerinde ilgili ticaret ve borçlar hukuku hükümleri uygulanır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 2 – SATICI BİLGİLERİ"
+  },
+  {
+   "type": "field",
+   "label": "Ticaret Unvanı",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Dairesi",
+   "text": "KADIKÖY VERGİ DAİRESİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Kimlik Numarası",
+   "text": "5280614124"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "Web Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 3 – SİPARİŞ İPTALİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.1. ALICI, internet sitesi üzerinden oluşturduğu siparişin iptalini, ürün henüz teslim edilmemişken SATICI'ya bildirebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.2. Siparişin kargoya verilmemiş olması halinde, iptal talebi değerlendirilerek siparişin gönderimi durdurulur ve tahsil edilen bedelin iadesi başlatılır."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.3. Siparişin kargoya verilmiş olması, tüketicinin kanuni cayma hakkını ortadan kaldırmaz. Ürün teslim edilmeden önce de cayma hakkı kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.4. ALICI, sipariş iptal taleplerini aşağıdaki kanallardan iletebilir:"
+  },
+  {
+   "type": "item",
+   "text": "Müşteri hesabındaki sipariş yönetimi alanı"
+  },
+  {
+   "type": "item",
+   "text": "info@msoteknoloji.com.tr satıcı e-posta adresi"
+  },
+  {
+   "type": "item",
+   "text": "{{iptal_iade_linki}} adresindeki talep formu"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.5. Siparişin iptali veya cayma hakkının kullanılması sonucunda yapılacak geri ödemeler, ilgili mevzuatta öngörülen süre ve yöntemlere uygun olarak gerçekleştirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 4 – CAYMA HAKKI"
+  },
+  {
+   "type": "paragraph",
+   "text": "4.1. ALICI'nın tüketici olması halinde, kanuni istisnalar dışında, satın aldığı ürünü teslim aldığı tarihten itibaren 14 (on dört) gün içerisinde herhangi bir gerekçe göstermeden ve cezai şart ödemeden iade etme hakkı bulunmaktadır."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.2. Cayma hakkı süresi, tek bir ürünün satın alındığı siparişlerde ürünün ALICI'ya veya ALICI tarafından belirlenen üçüncü kişiye teslim edildiği gün esas alınarak hesaplanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.3. Birden fazla ürünün ayrı ayrı teslim edildiği siparişlerde, cayma hakkı süresi son ürünün teslim alındığı tarihten itibaren başlar. Birden fazla parçadan oluşan ürünlerde ise son parçanın teslim tarihi esas alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.4. ALICI, sözleşmenin kurulmasından ürünün teslimine kadar geçen süre içerisinde de cayma hakkını kullanabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.5. Cayma hakkının kullanılması için ALICI'nın 14 günlük süre dolmadan SATICI'ya yazılı olarak veya kalıcı veri saklayıcısı aracılığıyla açık bir bildirimde bulunması yeterlidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.6. Cayma hakkının kullanılması için herhangi bir gerekçe gösterilmesi zorunlu değildir."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.7. Cayma hakkının kullanılmasında aşağıdaki iletişim kanalları kullanılabilir:"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "İade Talep Sayfası",
+   "text": "{{iptal_iade_linki}}"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 5 – ÜRÜN İADE SÜRECİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "5.1. ALICI, cayma hakkını kullandığına ilişkin bildirimi SATICI'ya yönelttiği tarihten itibaren 14 gün içerisinde ürünü geri göndermelidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.2. İade edilecek ürünün, mümkün olduğunca orijinal ambalajı, varsa aksesuarları, kullanım kılavuzu, garanti belgesi ve diğer parçalarıyla birlikte gönderilmesi önerilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.3. Orijinal ambalajın bulunmaması veya ambalajın açılmış olması tek başına cayma hakkını ortadan kaldırmaz. Mevzuatta belirtilen cayma hakkı istisnaları saklıdır."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.4. ALICI, cayma süresi içerisinde ürünü işleyişine, teknik özelliklerine ve kullanım talimatlarına uygun şekilde incelediği takdirde meydana gelen değişikliklerden sorumlu tutulamaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.5. İade gönderiminde ürünün taşıma sırasında zarar görmemesi için uygun şekilde paketlenmesi önerilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "5.6. SATICI, iade edilen ürünün teslim alınması ve değerlendirilmesi süreçlerinde tüketicinin kanuni haklarını sınırlayan ek şartlar ileri süremez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 6 – İADE KARGO KOŞULLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "6.1. Cayma hakkının kullanılması halinde, ALICI'nın ön bilgilendirmede belirtilen iade taşıyıcısını kullanması durumunda iade taşıma masrafları ALICI'ya yüklenmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.2. Ön bilgilendirmede iade taşıyıcısının belirtilmemiş olması halinde de ALICI'dan iade taşıma masrafı talep edilemez."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.3. ALICI'nın ön bilgilendirmede belirtilen taşıyıcıdan farklı bir taşıyıcı kullanması halinde, taşıma masraflarına ilişkin sorumluluk ilgili mevzuat hükümlerine göre belirlenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "6.4. Ayıplı veya yanlış gönderilmiş ürünlere ilişkin kanuni hakların kullanılması nedeniyle oluşan zorunlu giderler ALICI'ya yüklenmez."
+  },
+  {
+   "type": "field",
+   "label": "Anlaşmalı İade Kargo Firması",
+   "text": "{{iade_kargo_firmasi}}"
+  },
+  {
+   "type": "field",
+   "label": "İade Gönderim Kodu",
+   "text": "{{iade_kargo_kodu}}"
+  },
+  {
+   "type": "field",
+   "label": "İade Adresi",
+   "text": "{{iade_adresi}}"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 7 – ÜCRET İADESİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "7.1. Cayma hakkının usulüne uygun kullanılması halinde, SATICI mevzuat kapsamında iadesi gereken tüm ödemeleri, yasal süre içerisinde ALICI'ya geri öder."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.2. Ürün teslim edilmeden önce cayma hakkının kullanılması halinde, geri ödeme süresi cayma bildiriminin SATICI'ya ulaştığı tarihten itibaren başlar."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.3. Ürün teslim edildikten sonra cayma hakkının kullanılması halinde, geri ödeme için öngörülen 14 günlük süre ürünün ön bilgilendirmede belirtilen taşıyıcıya teslim edildiği tarihten itibaren başlar. Farklı bir taşıyıcı kullanılması halinde süre, ürünün SATICI'ya ulaştığı tarihten itibaren başlar."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.4. Geri ödemeler, ALICI'nın satın alma sırasında kullandığı ödeme aracına uygun şekilde, herhangi bir masraf yüklenmeden ve tek seferde gerçekleştirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.5. Banka veya ödeme kuruluşunun geri ödeme tutarını ALICI'nın hesabına yansıtma süresi, ilgili kuruluşun işlem süreçlerine bağlı olarak değişebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.6. Cayma hakkı kapsamında yapılacak geri ödemelerde, mevzuatın öngördüğü teslimat giderleri de iade edilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 8 – CAYMA HAKKININ KULLANILAMAYACAĞI ÜRÜNLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi kapsamında, taraflarca aksi kararlaştırılmadıkça aşağıdaki ürün ve işlemlerde cayma hakkı kullanılamayabilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "8.1. ALICI'nın istekleri veya kişisel ihtiyaçları doğrultusunda özel olarak hazırlanan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.2. Çabuk bozulabilen veya son kullanma tarihi geçebilecek ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.3. Tesliminden sonra ambalaj, bant, mühür veya paket gibi koruyucu unsurları açılmış olan ve sağlık veya hijyen açısından iadesi uygun olmayan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.4. Tesliminden sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.5. Koruyucu unsurları açılmış olan ve mevzuatta belirtilen koşulları sağlayan maddi ortamda sunulan dijital içerikler ve bilgisayar sarf malzemeleri."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.6. Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar."
+  },
+  {
+   "type": "paragraph",
+   "text": "8.7. Cayma hakkı süresi sona ermeden önce tüketicinin onayıyla ifasına başlanan ve mevzuat kapsamında istisna oluşturan hizmetler."
+  },
+  {
+   "type": "field",
+   "label": "Önemli",
+   "text": "Bir ürünün elektronik cihaz, teknolojik aksesuar veya bilgisayar ekipmanı olması tek başına cayma hakkının kullanılamayacağı anlamına gelmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma hakkı istisnaları yalnızca mevzuatta belirtilen ürün ve işlemler için uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ayıplı ürünlere ilişkin kanuni haklar her durumda saklıdır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 9 – HASARLI, EKSİK VEYA YANLIŞ ÜRÜN"
+  },
+  {
+   "type": "paragraph",
+   "text": "9.1. ALICI'nın sipariş ettiği üründen farklı bir ürün teslim edilmesi, ürünün eksik gönderilmesi veya hasarlı ulaşması halinde ALICI, SATICI ile iletişime geçebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.2. Teslimat sırasında pakette gözle görülür hasar bulunması durumunda, mümkünse kargo görevlisiyle hasar tespit tutanağı düzenlenmesi önerilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.3. Kargo hasar tutanağı düzenlenmemiş olması, ALICI'nın ayıplı ürün veya eksik teslimat nedeniyle sahip olduğu kanuni hakları ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.4. Yanlış veya eksik ürün gönderimlerinde SATICI, mevzuattan doğan yükümlülükleri kapsamında gerekli düzeltmeleri gerçekleştirir."
+  },
+  {
+   "type": "paragraph",
+   "text": "9.5. Ayıplı ürünlere ilişkin iade, onarım veya değişim işlemlerinde tüketiciye kanunen yüklenemeyecek masraflar talep edilmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 10 – ÜRÜN DEĞİŞİMİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "10.1. ALICI, satın aldığı ürünün farklı bir model, renk, beden veya özellikteki ürünle değiştirilmesini talep edebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.2. Ayıplı ürünlere ilişkin kanuni değişim hakları saklı kalmak üzere, isteğe bağlı değişim talepleri ürünün stok durumu ve SATICI'nın sunduğu değişim imkânları doğrultusunda değerlendirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.3. İsteğe bağlı değişim yapılamaması, ALICI'nın yasal cayma hakkını ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "10.4. Ayıplı ürünlerde tüketicinin ayıpsız misli ile değiştirme talebi, 6502 sayılı Kanun'un ilgili hükümleri çerçevesinde değerlendirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 11 – GARANTİ VE AYIPLI ÜRÜN HAKLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "11.1. SATICI tarafından satılan ürünler, ilgili mevzuat kapsamında geçerli garanti ve tüketici koruma hükümlerine tabidir."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.2. ALICI, ayıplı bir ürün teslim alması halinde kanuni koşullara göre aşağıdaki seçimlik haklardan yararlanabilir:"
+  },
+  {
+   "type": "item",
+   "text": "Sözleşmeden dönerek bedel iadesi isteme"
+  },
+  {
+   "type": "item",
+   "text": "Satış bedelinden ayıp oranında indirim talep etme"
+  },
+  {
+   "type": "item",
+   "text": "Ürünün ücretsiz onarılmasını isteme"
+  },
+  {
+   "type": "item",
+   "text": "Ürünün ayıpsız misli ile değiştirilmesini talep etme"
+  },
+  {
+   "type": "paragraph",
+   "text": "11.3. Garanti kapsamındaki işlemlerde ilgili garanti belgesi ve yürürlükteki mevzuat esas alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.4. Cayma hakkı süresinin sona ermesi, tüketicinin ayıplı ürünlere ilişkin yasal haklarını ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.5. Ürünlerin garanti kapsamı dışında değerlendirilmesi, tüketicinin kanundan doğan diğer haklarının kendiliğinden sona erdiği anlamına gelmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 12 – İADE TALEBİNİN OLUŞTURULMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI, iptal veya iade talebini internet sitesindeki müşteri hesabı üzerinden ya da SATICI'nın iletişim kanallarını kullanarak oluşturabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "İade sürecinin hızlı yürütülmesi amacıyla aşağıdaki bilgilerin paylaşılması önerilir:"
+  },
+  {
+   "type": "field",
+   "label": "Sipariş Numarası",
+   "text": "{{siparis_no}}"
+  },
+  {
+   "type": "field",
+   "label": "Ad Soyad",
+   "text": "{{musteri_adi}}"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "{{musteri_eposta}}"
+  },
+  {
+   "type": "field",
+   "label": "İade Edilecek Ürün",
+   "text": "{{iade_urun}}"
+  },
+  {
+   "type": "field",
+   "label": "İade Nedeni",
+   "text": "{{iade_nedeni}}"
+  },
+  {
+   "type": "field",
+   "label": "Talep Tarihi",
+   "text": "{{iade_talep_tarihi}}"
+  },
+  {
+   "type": "paragraph",
+   "text": "Cayma hakkının kullanılması için gerekçe bildirilmesi zorunlu değildir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ALICI'nın yasal süre içerisinde açık bir cayma bildirimi göndermesi yeterlidir. İade talebinin geçerliliği, yalnızca internet sitesindeki formun kullanılmasına bağlı değildir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 13 – ŞİKÂYET VE UYUŞMAZLIKLAR"
+  },
+  {
+   "type": "paragraph",
+   "text": "13.1. ALICI, sipariş iptali, ürün iadesi, garanti ve geri ödeme işlemlerine ilişkin şikâyetlerini SATICI'nın iletişim kanalları üzerinden iletebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.2. Tüketici işlemlerinden doğan uyuşmazlıklarda, başvuru tarihindeki parasal sınırlar ve ilgili mevzuat çerçevesinde Tüketici Hakem Heyetlerine veya Tüketici Mahkemelerine başvurulabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "13.3. Tüketicilerin ilgili mevzuat kapsamında sahip oldukları başvuru, dava ve diğer yasal hakları saklıdır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 14 – YÜRÜRLÜK"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu İptal ve İade Koşulları, https://msoteknoloji.com.tr internet sitesinde yayımlandığı tarihten itibaren uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "SATICI, yürürlükteki mevzuata uygun olmak kaydıyla bu koşulları güncelleyebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Yapılan güncellemeler, daha önce kurulmuş sözleşmeler kapsamında tüketicilerin kazanılmış haklarını ortadan kaldırmaz."
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu metinde yer almayan hususlarda 6502 sayılı Tüketicinin Korunması Hakkında Kanun, Mesafeli Sözleşmeler Yönetmeliği ve ilgili diğer mevzuat hükümleri uygulanır."
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "https://msoteknoloji.com.tr"
+  }
+ ]
+}

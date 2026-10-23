@@ -27,8 +27,9 @@ api.interceptors.response.use(
     if (err.response?.status === 401) {
       localStorage.removeItem('mso_token')
       localStorage.removeItem('mso_user')
+      localStorage.removeItem('mso-auth')
       if (typeof window !== 'undefined' && !window.location.pathname.includes('/giris')) {
-        window.location.href = '/giris'
+        window.location.href = window.location.pathname === '/odeme' ? '/giris?next=/odeme' : '/giris'
       }
     } else if (err.response?.status >= 500) {
       toast.error('Sunucu hatası. Lütfen tekrar deneyin.')
@@ -45,7 +46,7 @@ api.interceptors.response.use(
 export const authAPI = {
   login: (email: string, password: string) =>
     api.post('/auth/login', { email, password }),
-  register: (data: { name: string; email: string; password: string; password_confirmation: string }) =>
+  register: (data: { name: string; email: string; password: string; password_confirmation: string; membership_agreement: boolean }) =>
     api.post('/auth/register', data),
   logout: () => api.post('/auth/logout'),
   me: () => api.get('/auth/me'),
@@ -82,6 +83,8 @@ export const ordersAPI = {
   list: () => api.get('/orders'),
   show: (orderNumber: string) => api.get(`/orders/${orderNumber}`),
   create: (data: Record<string, unknown>) => api.post('/orders', data),
+  legalPreview: (data: Record<string, unknown>) => api.post('/orders/legal-preview', data),
+  document: (orderNumber: string, type: string) => api.get(`/orders/${orderNumber}/documents/${type}`, { responseType: 'blob' }),
   cancel: (id: number) => api.post(`/orders/${id}/cancel`),
 }
 

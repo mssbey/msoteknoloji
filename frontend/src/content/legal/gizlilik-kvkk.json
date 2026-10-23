@@ -1,0 +1,842 @@
+{
+ "version": "v2026.10.22",
+ "title": "GİZLİLİK POLİTİKASI VE KİŞİSEL VERİLERİN KORUNMASI (KVKK) AYDINLATMA METNİ",
+ "blocks": [
+  {
+   "type": "title",
+   "text": "GİZLİLİK POLİTİKASI VE KİŞİSEL VERİLERİN KORUNMASI (KVKK) AYDINLATMA METNİ"
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 1 – AMAÇ VE KAPSAM"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Gizlilik Politikası ve Kişisel Verilerin Korunması Aydınlatma Metni, MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ tarafından işletilen https://msoteknoloji.com.tr internet sitesi üzerinden gerçekleştirilen üyelik, alışveriş, sipariş, ödeme, teslimat, müşteri hizmetleri ve diğer işlemler kapsamında kişisel verilerin işlenmesine ilişkin esasları açıklamak amacıyla hazırlanmıştır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Şirketimiz, müşterilerimizin, üyelerimizin ve internet sitesi ziyaretçilerimizin kişisel verilerinin gizliliğine ve güvenliğine önem vermektedir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), ilgili ikincil düzenlemeler ve yürürlükteki diğer mevzuata uygun olarak işlenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu metin, kişisel verilerin hangi amaçlarla işlendiğini, hangi hukuki sebeplere dayanıldığını, kimlere aktarılabileceğini, nasıl toplandığını ve ilgili kişilerin haklarını açıklamaktadır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 2 – VERİ SORUMLUSUNUN KİMLİĞİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu:"
+  },
+  {
+   "type": "field",
+   "label": "Ticaret Unvanı",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Dairesi",
+   "text": "KADIKÖY VERGİ DAİRESİ"
+  },
+  {
+   "type": "field",
+   "label": "Vergi Kimlik Numarası",
+   "text": "5280614124"
+  },
+  {
+   "type": "field",
+   "label": "Adres",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta Adresi",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "Telefon",
+   "text": "0533 222 90 66"
+  },
+  {
+   "type": "field",
+   "label": "İnternet Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "paragraph",
+   "text": "Bundan sonra \"ŞİRKET\" veya \"Veri Sorumlusu\" olarak anılacaktır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 3 – İŞLENEBİLECEK KİŞİSEL VERİLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemiz üzerinden sunulan hizmetlerin niteliğine göre aşağıdaki kişisel veri kategorileri işlenebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.1. Kimlik Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Ad ve soyad"
+  },
+  {
+   "type": "item",
+   "text": "Gerekli olması halinde T.C. kimlik numarası"
+  },
+  {
+   "type": "item",
+   "text": "Ticari işlemlerde yetkili kişi bilgileri"
+  },
+  {
+   "type": "item",
+   "text": "Vergi kimlik numarası ve vergi dairesi bilgileri"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.2. İletişim Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Telefon numarası"
+  },
+  {
+   "type": "item",
+   "text": "E-posta adresi"
+  },
+  {
+   "type": "item",
+   "text": "Fatura adresi"
+  },
+  {
+   "type": "item",
+   "text": "Teslimat adresi"
+  },
+  {
+   "type": "item",
+   "text": "İletişim formlarında paylaşılan bilgiler"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.3. Müşteri İşlem Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Üyelik ve hesap bilgileri"
+  },
+  {
+   "type": "item",
+   "text": "Sipariş numarası ve sipariş geçmişi"
+  },
+  {
+   "type": "item",
+   "text": "Satın alınan ürünlerin bilgileri"
+  },
+  {
+   "type": "item",
+   "text": "Fatura ve teslimat kayıtları"
+  },
+  {
+   "type": "item",
+   "text": "İptal, iade ve değişim talepleri"
+  },
+  {
+   "type": "item",
+   "text": "Garanti ve satış sonrası destek kayıtları"
+  },
+  {
+   "type": "item",
+   "text": "Müşteri hizmetleri yazışmaları"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.4. Finansal ve Ödeme İşlem Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Ödeme yöntemi"
+  },
+  {
+   "type": "item",
+   "text": "Ödeme tutarı"
+  },
+  {
+   "type": "item",
+   "text": "Ödeme işleminin durumu"
+  },
+  {
+   "type": "item",
+   "text": "İşlem ve ödeme referans numaraları"
+  },
+  {
+   "type": "item",
+   "text": "İade işlemlerine ilişkin bilgiler"
+  },
+  {
+   "type": "item",
+   "text": "Gerekli hallerde banka hesap veya IBAN bilgileri"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kredi kartı ve banka kartı ile gerçekleştirilen ödemeler, kullanılan ödeme hizmeti sağlayıcısının güvenli altyapısı üzerinden işlenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET'in tam kart numarası, CVV/CVC güvenlik kodu veya benzeri hassas kart doğrulama bilgilerini kendi sistemlerinde saklamaması esastır. Ödeme altyapısının fiilî işleyişi ayrıca değerlendirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "3.5. İşlem Güvenliği Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "IP adresi"
+  },
+  {
+   "type": "item",
+   "text": "Oturum ve giriş kayıtları"
+  },
+  {
+   "type": "item",
+   "text": "İşlem tarihleri ve saatleri"
+  },
+  {
+   "type": "item",
+   "text": "Cihaz ve tarayıcı bilgileri"
+  },
+  {
+   "type": "item",
+   "text": "Güvenlik ve hata kayıtları"
+  },
+  {
+   "type": "item",
+   "text": "Çerez tanımlayıcıları"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.6. Pazarlama ve Tercih Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Ticari elektronik ileti tercihleri"
+  },
+  {
+   "type": "item",
+   "text": "Kampanya ve bildirim izinleri"
+  },
+  {
+   "type": "item",
+   "text": "İzin kayıtları ve geri çekme işlemleri"
+  },
+  {
+   "type": "item",
+   "text": "Hukuka uygun şekilde elde edilen alışveriş ve ilgi alanı bilgileri"
+  },
+  {
+   "type": "paragraph",
+   "text": "3.7. Talep ve Şikâyet Bilgileri",
+   "strong": true
+  },
+  {
+   "type": "item",
+   "text": "Müşteri talepleri"
+  },
+  {
+   "type": "item",
+   "text": "İletişim formu mesajları"
+  },
+  {
+   "type": "item",
+   "text": "Ürün değerlendirmeleri ve yorumlar"
+  },
+  {
+   "type": "item",
+   "text": "Şikâyet ve destek başvuruları"
+  },
+  {
+   "type": "item",
+   "text": "İade ve garanti taleplerine ilişkin açıklamalar"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, yalnızca hizmetin niteliği ve ilgili işleme amacı bakımından gerekli olan kişisel verileri işlemeyi esas alır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 4 – KİŞİSEL VERİLERİN İŞLENME AMAÇLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Toplanan kişisel veriler, aşağıdaki amaçlarla işlenebilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "4.1. İnternet sitesi üyelik işlemlerinin gerçekleştirilmesi ve kullanıcı hesaplarının yönetilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.2. Ürün siparişlerinin alınması, değerlendirilmesi ve sonuçlandırılması."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.3. Ödeme, faturalandırma ve muhasebe işlemlerinin yürütülmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.4. Satın alınan ürünlerin hazırlanması, kargolanması ve teslim edilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.5. Sipariş durumu ve teslimat hakkında müşterilerin bilgilendirilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.6. Ürün iptali, iade, değişim ve garanti işlemlerinin gerçekleştirilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.7. Müşteri hizmetleri, teknik destek, talep ve şikâyet süreçlerinin yürütülmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.8. İnternet sitesi ve kullanıcı hesaplarının güvenliğinin sağlanması."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.9. Yetkisiz erişimlerin, kötüye kullanımın ve dolandırıcılık girişimlerinin önlenmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.10. Mevzuattan kaynaklanan saklama, bildirim, muhasebe ve diğer yasal yükümlülüklerin yerine getirilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.11. Kullanıcı deneyiminin ve internet sitesi hizmetlerinin geliştirilmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.12. Gerekli hukuki şartların sağlanması halinde kampanya, tanıtım ve pazarlama faaliyetlerinin yürütülmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "4.13. Hukuki uyuşmazlıklarda hakların tesisi, kullanılması veya korunması."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler, toplandıkları amaçlarla bağlantılı, sınırlı ve ölçülü şekilde işlenir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 5 – KİŞİSEL VERİLERİN İŞLENMESİNİN HUKUKİ SEBEPLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler, KVKK'nın 5. maddesinde düzenlenen hukuki sebeplerden ilgili işleme faaliyetine uygun olanlara dayanılarak işlenir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bunlar özellikle aşağıdaki hukuki sebepleri kapsar:"
+  },
+  {
+   "type": "field",
+   "label": "Sözleşmenin kurulması veya ifası için gerekli olması",
+   "text": "Üyelik oluşturma, sipariş alma, ödeme, teslimat ve satış sonrası hizmet işlemleri."
+  },
+  {
+   "type": "field",
+   "label": "Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi",
+   "text": "Fatura düzenleme, muhasebe kayıtları, tüketici mevzuatı ve diğer yasal yükümlülükler."
+  },
+  {
+   "type": "field",
+   "label": "Bir hakkın tesisi, kullanılması veya korunması",
+   "text": "Uyuşmazlıkların çözümü, hukuki taleplerin değerlendirilmesi ve kanuni hakların korunması."
+  },
+  {
+   "type": "field",
+   "label": "Meşru menfaat",
+   "text": "İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla sistem güvenliği, kötüye kullanımın önlenmesi ve uygun iş süreçlerinin yürütülmesi."
+  },
+  {
+   "type": "field",
+   "label": "İlgili kişinin açık rızası",
+   "text": "Kanunen açık rıza gerektiren belirli pazarlama, çerez veya diğer veri işleme faaliyetleri."
+  },
+  {
+   "type": "paragraph",
+   "text": "Açık rıza gerekmeyen işlemler için gereksiz açık rıza talep edilmez."
+  },
+  {
+   "type": "paragraph",
+   "text": "Üyelik Sözleşmesi'nin veya Mesafeli Satış Sözleşmesi'nin kabul edilmesi, ayrı açık rıza gerektiren işlemlere onay verildiği anlamına gelmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 6 – KİŞİSEL VERİLERİN TOPLANMA YÖNTEMLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler, aşağıdaki yöntemlerle elektronik veya gerektiğinde fiziki ortamda toplanabilir:"
+  },
+  {
+   "type": "item",
+   "text": "Üyelik ve kayıt formları"
+  },
+  {
+   "type": "item",
+   "text": "Sipariş ve ödeme sayfaları"
+  },
+  {
+   "type": "item",
+   "text": "İletişim ve destek formları"
+  },
+  {
+   "type": "item",
+   "text": "İptal ve iade başvuruları"
+  },
+  {
+   "type": "item",
+   "text": "E-posta ve telefon görüşmeleri"
+  },
+  {
+   "type": "item",
+   "text": "Çerezler ve benzeri teknolojiler"
+  },
+  {
+   "type": "item",
+   "text": "İnternet sitesi işlem ve güvenlik kayıtları"
+  },
+  {
+   "type": "item",
+   "text": "Ödeme, kargo ve teknik hizmet sağlayıcılarından gelen işlem kayıtları"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin toplanması ve işlenmesi, ilgili hukuki sebeplerle sınırlı olarak gerçekleştirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 7 – KİŞİSEL VERİLERİN AKTARILMASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler, hizmetlerin yürütülmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla, gerekli olduğu ölçüde aşağıdaki alıcı gruplarına aktarılabilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "7.1. Siparişlerin teslim edilmesi amacıyla kargo ve lojistik firmaları."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.2. Ödeme işlemlerinin gerçekleştirilmesi amacıyla bankalar ve yetkili ödeme hizmeti sağlayıcıları."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.3. Faturalandırma ve muhasebe süreçleri için ilgili hizmet sağlayıcılar."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.4. İnternet sitesi, sunucu, barındırma, güvenlik ve teknik destek hizmeti sağlayıcıları."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.5. Hukuken gerekli olması halinde yetkili kamu kurum ve kuruluşları."
+  },
+  {
+   "type": "paragraph",
+   "text": "7.6. Hukuki ve mali yükümlülüklerin yerine getirilmesi amacıyla yetkili danışmanlar ve hizmet sağlayıcılar."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin aktarılmasında KVKK'nın 8. ve 9. maddeleri ile ilgili mevzuat hükümleri dikkate alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Veriler, gerekli hukuki şartlar sağlanmadan üçüncü kişilere pazarlama amacıyla aktarılmaz."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 8 – YURT DIŞINA VERİ AKTARIMI"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitesi kapsamında kullanılan sunucu, bulut altyapısı, e-posta, analiz, güvenlik veya diğer teknoloji hizmetlerinin yurt dışında bulunması halinde kişisel verilerin yurt dışına aktarılması söz konusu olabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Böyle bir aktarımın gerçekleşmesi durumunda KVKK'nın 9. maddesinde düzenlenen şartlar ve yürürlükteki ilgili düzenlemeler uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Yurt dışına veri aktarımında, ilgili mevzuatta öngörülen yeterlilik kararları, uygun güvenceler veya kanuni istisnalar çerçevesinde hareket edilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Yurt dışına veri aktarımı gerçekleştirilen sistemler, veri kategorileri ve aktarım mekanizmaları, kullanılan teknik altyapı doğrultusunda ayrıca değerlendirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 9 – ÇEREZLER VE BENZERİ TEKNOLOJİLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemizde kullanıcı deneyiminin geliştirilmesi, alışveriş sepetinin çalışması, oturum yönetimi, güvenlik ve istatistiksel analiz gibi amaçlarla çerezler kullanılabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezler genel olarak aşağıdaki kategorilerde değerlendirilebilir:"
+  },
+  {
+   "type": "field",
+   "label": "Zorunlu Çerezler",
+   "text": "İnternet sitesinin temel işlevlerinin çalışması, güvenlik ve alışveriş işlemlerinin yürütülmesi için kullanılan çerezler."
+  },
+  {
+   "type": "field",
+   "label": "Performans ve Analitik Çerezleri",
+   "text": "İnternet sitesinin kullanımını analiz etmek ve hizmet kalitesini geliştirmek için kullanılan çerezler."
+  },
+  {
+   "type": "field",
+   "label": "İşlevsel Çerezler",
+   "text": "Kullanıcı tercihlerinin hatırlanması ve belirli kişiselleştirme özelliklerinin sunulması amacıyla kullanılan çerezler."
+  },
+  {
+   "type": "field",
+   "label": "Reklam ve Pazarlama Çerezleri",
+   "text": "Kullanıcıların ilgi alanlarına uygun reklam ve pazarlama faaliyetlerinin yürütülmesi amacıyla kullanılabilen çerezler."
+  },
+  {
+   "type": "paragraph",
+   "text": "Zorunlu olmayan çerezler, gerekli hukuki şartlar sağlanarak ve gerektiğinde kullanıcı onayı alınarak çalıştırılır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Çerezlerin ayrıntılı listesi, sağlayıcıları, kullanım amaçları ve saklama süreleri internet sitesinde yayımlanan Çerez Politikası'nda açıklanır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 10 – KİŞİSEL VERİLERİN GÜVENLİĞİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kişisel verilerin hukuka aykırı işlenmesini ve erişilmesini önlemek, verilerin güvenliğini sağlamak amacıyla uygun teknik ve idari tedbirleri alır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Bu kapsamda, kullanılan altyapıya uygun olarak aşağıdaki güvenlik uygulamalarından yararlanılabilir:"
+  },
+  {
+   "type": "item",
+   "text": "SSL/TLS bağlantı güvenliği"
+  },
+  {
+   "type": "item",
+   "text": "Yetkilendirme ve erişim kontrolleri"
+  },
+  {
+   "type": "item",
+   "text": "Güçlü parola ve hesap güvenliği mekanizmaları"
+  },
+  {
+   "type": "item",
+   "text": "Güvenlik güncellemeleri"
+  },
+  {
+   "type": "item",
+   "text": "Yetkisiz erişimlerin önlenmesine yönelik kontroller"
+  },
+  {
+   "type": "item",
+   "text": "Güvenlik kayıtlarının tutulması"
+  },
+  {
+   "type": "item",
+   "text": "Veri yedekleme ve kurtarma süreçleri"
+  },
+  {
+   "type": "item",
+   "text": "Gerektiğinde veri şifreleme"
+  },
+  {
+   "type": "item",
+   "text": "Yetkili personel ve hizmet sağlayıcılar için gizlilik yükümlülükleri"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kişisel verilerin güvenliğine ilişkin tedbirlerini riskler ve teknolojik gelişmeler doğrultusunda değerlendirir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 11 – KİŞİSEL VERİLERİN SAKLANMASI VE İMHASI"
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel veriler, işlendikleri amaç için gerekli süre boyunca ve ilgili mevzuatta öngörülen saklama yükümlülüklerine uygun olarak muhafaza edilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Saklama süresinin belirlenmesinde aşağıdaki hususlar dikkate alınır:"
+  },
+  {
+   "type": "paragraph",
+   "text": "11.1. İlgili kanunlarda öngörülen saklama süreleri."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.2. Sözleşmesel yükümlülüklerin devam etmesi."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.3. Vergi, muhasebe ve ticari kayıt yükümlülükleri."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.4. Hukuki uyuşmazlıklara ilişkin zamanaşımı süreleri."
+  },
+  {
+   "type": "paragraph",
+   "text": "11.5. İşleme amacının devam edip etmediği."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin işlenmesini gerektiren sebeplerin ortadan kalkması ve saklama yükümlülüğünün bulunmaması halinde veriler, ilgili mevzuata uygun olarak silinir, yok edilir veya anonim hale getirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Üyeliğin sona ermesi, yasal olarak saklanması gereken fatura ve sipariş kayıtlarının derhal silinmesini gerektirmez."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 12 – İLGİLİ KİŞİNİN HAKLARI"
+  },
+  {
+   "type": "paragraph",
+   "text": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi uyarınca ilgili kişiler, ŞİRKET'e başvurarak aşağıdaki haklarını kullanabilir:"
+  },
+  {
+   "type": "paragraph",
+   "text": "12.1. Kişisel verilerinin işlenip işlenmediğini öğrenme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.2. Kişisel verileri işlenmişse buna ilişkin bilgi talep etme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.3. Kişisel verilerinin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.4. Yurt içinde veya yurt dışında kişisel verilerinin aktarıldığı üçüncü kişileri bilme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.5. Kişisel verilerinin eksik veya yanlış işlenmiş olması halinde düzeltilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.6. KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinin silinmesini veya yok edilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.7. Düzeltme, silme veya yok etme işlemlerinin kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.8. İşlenen verilerin münhasıran otomatik sistemler aracılığıyla analiz edilmesi sonucunda kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme."
+  },
+  {
+   "type": "paragraph",
+   "text": "12.9. Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması halinde zararın giderilmesini talep etme."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 13 – KVKK BAŞVURU YÖNTEMLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "İlgili kişiler, KVKK kapsamındaki taleplerini Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun şekilde ŞİRKET'e iletebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Posta Adresi:",
+   "strong": true
+  },
+  {
+   "type": "paragraph",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "Caferağa Mahallesi, General Asım Gündüz Caddesi, No: 62, İç Kapı No: 5, Kadıköy / İstanbul"
+  },
+  {
+   "type": "field",
+   "label": "KEP Adresi",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "E-posta",
+   "text": "info@msoteknoloji.com.tr"
+  },
+  {
+   "type": "paragraph",
+   "text": "Başvurular, ilgili mevzuatta öngörülen kimlik doğrulama ve başvuru şartlarına uygun olarak yapılmalıdır. Normal e-posta üzerinden başvurularda, mevzuatın öngördüğü kayıtlı adres ve doğrulama şartları uygulanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, usulüne uygun başvuruları talebin niteliğine göre en kısa sürede ve en geç 30 gün içerisinde sonuçlandırır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Başvurular kural olarak ücretsizdir. İşlemin ayrıca maliyet gerektirmesi halinde Kişisel Verileri Koruma Kurulu tarafından belirlenen tarifeye uygun ücret talep edilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "İlgili kişiler, kanuni şartların oluşması halinde Kişisel Verileri Koruma Kurumuna şikâyette bulunabilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 14 – TİCARİ ELEKTRONİK İLETİLER"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kampanya, indirim, ürün tanıtımı ve pazarlama faaliyetlerine ilişkin ticari elektronik iletileri, 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ve ilgili mevzuat kapsamında gönderir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Gerekli olduğu durumlarda ilgili kişinin önceden onayı alınır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Ticari elektronik ileti onayı, üyelik ve alışveriş işlemlerinden ayrı olarak değerlendirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kullanıcılar, ticari elektronik ileti tercihlerini ilgili mevzuata uygun şekilde değiştirebilir ve verdikleri onayları geri çekebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Sipariş, ödeme, teslimat ve hesap güvenliğine ilişkin zorunlu işlem bildirimleri, pazarlama amaçlı ticari iletilerden ayrı değerlendirilir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 15 – ÜÇÜNCÜ TARAF İNTERNET SİTELERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemizde üçüncü taraf internet sitelerine veya hizmet sağlayıcılara yönlendiren bağlantılar bulunabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Üçüncü taraf internet sitelerinin kişisel veri işleme uygulamaları, kendi gizlilik politikaları ve ilgili mevzuat çerçevesinde değerlendirilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kendi kontrolü dışındaki üçüncü taraf internet sitelerinin uygulamalarından doğan sorumluluk bakımından ilgili mevzuat hükümlerine tabidir."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 16 – ÇOCUKLARIN KİŞİSEL VERİLERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "İnternet sitemiz genel e-ticaret faaliyetleri amacıyla hizmet vermektedir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Fiil ehliyeti bulunmayan kişilerin üyelik ve alışveriş işlemleri, ilgili mevzuat kapsamında yasal temsilcileri aracılığıyla gerçekleştirilebilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, çocuklara ait kişisel verilerin işlenmesinde ilgili mevzuatın gerektirdiği koruma tedbirlerini uygular."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 17 – POLİTİKA GÜNCELLEMELERİ"
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, yasal düzenlemeler, teknolojik gelişmeler, hizmet kapsamındaki değişiklikler veya kişisel veri işleme faaliyetlerinin güncellenmesi nedeniyle işbu metinde değişiklik yapabilir."
+  },
+  {
+   "type": "paragraph",
+   "text": "Güncel metin https://msoteknoloji.com.tr internet sitesinde yayımlanır."
+  },
+  {
+   "type": "paragraph",
+   "text": "Kişisel verilerin işlenmesine ilişkin esaslı değişiklikler olması halinde ilgili kişilere mevzuatın gerektirdiği şekilde bilgilendirme yapılır ve gerekli olduğu durumlarda ayrıca açık rıza alınır."
+  },
+  {
+   "type": "heading",
+   "text": "MADDE 18 – YÜRÜRLÜK"
+  },
+  {
+   "type": "paragraph",
+   "text": "İşbu Gizlilik Politikası ve KVKK Aydınlatma Metni, internet sitesinde yayımlandığı tarihte yürürlüğe girer."
+  },
+  {
+   "type": "paragraph",
+   "text": "ŞİRKET, kişisel verilerin korunmasına ilişkin yükümlülüklerini yürürlükteki mevzuat çerçevesinde yerine getirmeyi esas alır."
+  },
+  {
+   "type": "heading",
+   "text": "VERİ SORUMLUSU"
+  },
+  {
+   "type": "heading",
+   "text": "MSO TEKNOLOJİ TİCARET ANONİM ŞİRKETİ"
+  },
+  {
+   "type": "field",
+   "label": "Web Sitesi",
+   "text": "https://msoteknoloji.com.tr"
+  },
+  {
+   "type": "field",
+   "label": "KEP",
+   "text": "msoteknoloji@hs01.kep.tr"
+  },
+  {
+   "type": "field",
+   "label": "Son Güncelleme",
+   "text": "22.10.2026"
+  }
+ ]
+}
