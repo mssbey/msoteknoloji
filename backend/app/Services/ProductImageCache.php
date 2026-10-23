@@ -19,8 +19,15 @@ class ProductImageCache
         return parse_url($url, PHP_URL_SCHEME) === 'https' && in_array(parse_url($url, PHP_URL_HOST), $hosts, true);
     }
 
+    // Sentos bazı sunuculara görsel adresini http ile döndürüyor; aynı kaynak https ile de sunuluyor.
+    private function secure(string $url): string
+    {
+        return preg_replace('#^http://#i', 'https://', $url);
+    }
+
     public function prefetch(array $urls, bool $refresh = false): void
     {
+        $urls = array_map(fn ($url) => $url ? $this->secure($url) : $url, $urls);
         $urls = array_values(array_unique(array_filter($urls, fn ($url) => $url && $this->allowed($url) && !isset($this->resolved[$url]))));
         foreach (array_chunk($urls, 30) as $chunk) {
             $pending = [];
@@ -61,6 +68,7 @@ class ProductImageCache
     public function localize(?string $url, bool $refresh = false): ?string
     {
         if (!$url || str_contains($url, '/media/products/') || str_ends_with($url, '/images/product-unavailable.svg')) return $url;
+        $url = $this->secure($url);
         if (isset($this->resolved[$url])) return $this->resolved[$url];
         if (!$this->allowed($url)) {
             throw new \RuntimeException('Ürün görselinin kaynak adresine izin verilmiyor.');
