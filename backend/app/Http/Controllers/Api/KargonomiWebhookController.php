@@ -8,6 +8,7 @@ use App\Models\Order;
 use App\Services\Integrations\Kargonomi\KargonomiShipmentService;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /** Kargonomi shipment.updated bildirimleri */
 class KargonomiWebhookController extends Controller
@@ -37,13 +38,14 @@ class KargonomiWebhookController extends Controller
                 ? Order::where('order_number', $shipment['ecommerce_provider_order_no'])->first() : null);
 
         try {
-            $event = IntegrationEvent::create([
+            // Savepoint: PostgreSQL'de benzersizlik hatası dış transaction'ı bozmasın.
+            $event = DB::transaction(fn () => IntegrationEvent::create([
                 'provider' => 'kargonomi',
                 'event' => $payload['meta']['webhook']['event_type'] ?? 'shipment.updated',
                 'idempotency_key' => $key ? "kargonomi:{$key}" : null,
                 'order_id' => $order?->id,
                 'payload' => $payload,
-            ]);
+            ]));
         } catch (UniqueConstraintViolationException) {
             $previous = IntegrationEvent::where('idempotency_key', "kargonomi:{$key}")->first();
             if ($previous?->status !== 'failed') {

@@ -22,7 +22,7 @@ class CheckoutTest extends TestCase
         $headers = ['Authorization' => 'Bearer '.$login->json('data.token')];
         $this->getJson('/api/auth/me', $headers)->assertOk()->assertJsonPath('data.email', $credentials['email']);
         $address = ['first_name' => 'Deneme', 'last_name' => 'Müşteri', 'phone' => '05550000000', 'city' => 'İstanbul', 'district' => 'Kadıköy', 'address' => 'Deneme Mahallesi Test Sokak No 1'];
-        $payload = ['billing_address' => $address, 'shipping_address' => $address, 'payment_method' => 'bank_transfer', 'legal_accepted' => true, 'items' => [['product_id' => Product::first()->id, 'quantity' => 999]]];
+        $payload = ['billing_address' => $address, 'shipping_address' => $address, 'payment_method' => 'bank_transfer', 'legal_accepted' => true, 'items' => [['product_id' => Product::orderBy('id')->first()->id, 'quantity' => 999]]];
         $this->postJson('/api/orders', $payload, $headers)->assertUnprocessable();
         $this->assertDatabaseCount('orders', 0);
         $payload['items'][0]['quantity'] = 1;
@@ -34,17 +34,17 @@ class CheckoutTest extends TestCase
         $number = $order->json('data.order_number');
         $this->assertSame($number, $order->json('data.bank_transfer.reference'));
         $this->assertEquals(278.90, $order->json('data.total'));
-        $this->assertSame(46, Product::first()->stock);
-        $this->getJson('/api/orders/'.$number, $headers)->assertOk()->assertJsonPath('data.items.0.name', Product::first()->name);
+        $this->assertSame(46, Product::orderBy('id')->first()->stock);
+        $this->getJson('/api/orders/'.$number, $headers)->assertOk()->assertJsonPath('data.items.0.name', Product::orderBy('id')->first()->name);
         $this->getJson('/api/orders', $headers)->assertOk()->assertJsonPath('data.data.0.order_number', $number);
         $other = User::factory()->create();
         app('auth')->forgetGuards();
         $this->getJson('/api/orders/'.$number, ['Authorization' => 'Bearer '.$other->createToken('other')->plainTextToken])->assertNotFound();
         app('auth')->forgetGuards();
         $this->postJson('/api/orders/'.$order->json('data.id').'/cancel', [], $headers)->assertOk();
-        $this->assertSame(47, Product::first()->stock);
+        $this->assertSame(47, Product::orderBy('id')->first()->stock);
         $this->postJson('/api/orders/'.$order->json('data.id').'/cancel', [], $headers)->assertUnprocessable();
-        $this->assertSame(47, Product::first()->stock);
+        $this->assertSame(47, Product::orderBy('id')->first()->stock);
         $this->postJson('/api/auth/logout', [], $headers)->assertOk();
         $this->assertDatabaseMissing('personal_access_tokens', ['id' => explode('|', $login->json('data.token'))[0]]);
     }

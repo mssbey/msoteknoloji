@@ -21,7 +21,7 @@ class OrderStatusFlowTest extends TestCase
         $address = ['first_name' => 'Deneme', 'last_name' => 'Müşteri', 'phone' => '05550000000', 'city' => 'İstanbul', 'district' => 'Kadıköy', 'address' => 'Deneme Mahallesi Test Sokak No 1'];
         $number = $this->postJson('/api/orders', [
             'billing_address' => $address, 'shipping_address' => $address, 'payment_method' => 'bank_transfer', 'legal_accepted' => true,
-            'items' => [['product_id' => Product::first()->id, 'quantity' => 1]],
+            'items' => [['product_id' => Product::orderBy('id')->first()->id, 'quantity' => 1]],
         ])->assertCreated()->json('data.order_number');
 
         return Order::where('order_number', $number)->firstOrFail();
@@ -105,11 +105,11 @@ class OrderStatusFlowTest extends TestCase
         $this->seed();
         Mail::fake();
         $user = User::factory()->create();
-        $stock = Product::first()->stock;
+        $stock = Product::orderBy('id')->first()->stock;
         $order = $this->placeOrder($user);
 
         $this->postJson("/api/orders/{$order->id}/cancel")->assertOk()->assertJsonPath('data.status', 'cancelled');
-        $this->assertSame($stock, Product::first()->stock);
+        $this->assertSame($stock, Product::orderBy('id')->first()->stock);
         $this->assertSame(['pending', 'cancelled'], $order->statusHistories()->pluck('status')->all());
         $this->assertSame('customer', $order->statusHistories()->latest('id')->first()->actor_type);
         $this->postJson("/api/orders/{$order->id}/cancel")->assertUnprocessable();
@@ -160,7 +160,7 @@ class OrderStatusFlowTest extends TestCase
         Mail::fake();
         $user = User::factory()->create(['email' => 'sozlesme@example.test']);
         Sanctum::actingAs($user);
-        $product = Product::first();
+        $product = Product::orderBy('id')->first();
         $address = ['first_name' => 'Ayşe', 'last_name' => 'Yılmaz', 'phone' => '05550000000', 'city' => 'İzmir', 'district' => 'Konak', 'address' => 'Alsancak Mahallesi Kıbrıs Şehitleri Caddesi No 5'];
         $payload = ['billing_address' => $address, 'shipping_address' => $address, 'payment_method' => 'bank_transfer',
             'items' => [['product_id' => $product->id, 'quantity' => 2]]];

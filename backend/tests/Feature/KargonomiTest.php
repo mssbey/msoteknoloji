@@ -38,7 +38,7 @@ class KargonomiTest extends TestCase
         $address = ['first_name' => 'Deneme', 'last_name' => 'Müşteri', 'phone' => '+90 555 000 00 00', 'city' => 'İSTANBUL', 'district' => 'Kadıköy', 'address' => 'Deneme Mahallesi Test Sokak No 1'];
         $number = $this->postJson('/api/orders', [
             'billing_address' => $address, 'shipping_address' => $address, 'payment_method' => 'bank_transfer', 'legal_accepted' => true,
-            'items' => [['product_id' => Product::first()->id, 'quantity' => 2]],
+            'items' => [['product_id' => Product::orderBy('id')->first()->id, 'quantity' => 2]],
         ])->assertCreated()->json('data.order_number');
         $order = Order::where('order_number', $number)->firstOrFail();
         $order->markAsPaid('REF', 'bank_transfer');

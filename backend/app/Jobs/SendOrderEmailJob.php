@@ -13,6 +13,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 /**
@@ -76,7 +77,8 @@ class SendOrderEmailJob implements ShouldQueue
             'payload' => ['order_id' => $order->id, 'return_id' => $this->returnId],
         ];
         try {
-            $log = NotificationLog::firstOrCreate(['dedupe_key' => $this->dedupeKey], $attributes);
+            // Savepoint: PostgreSQL'de benzersizlik hatası dış transaction'ı bozmasın.
+            $log = DB::transaction(fn () => NotificationLog::firstOrCreate(['dedupe_key' => $this->dedupeKey], $attributes));
         } catch (UniqueConstraintViolationException) {
             $log = NotificationLog::where('dedupe_key', $this->dedupeKey)->first();
         }
