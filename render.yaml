@@ -84,7 +84,12 @@ services:
       - key: MAIL_FROM_NAME
         value: MSO Teknoloji
       - key: FRONTEND_URL
-        value: https://msoteknoloji.com.tr
+        value: https://www.msoteknoloji.com
+      # Yönetim paneli girişi; Render panelinden girilir, repoya yazılmaz.
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
       - key: KARGONOMI_ENABLED
         value: "true"
       - key: KARGONOMI_API_TOKEN

@@ -21,9 +21,10 @@ class SendOrderPlacedNotifications implements ShouldQueue
         if (!$phone) return;
 
         $smsText = sprintf(
-            'Siparişiniz alındı! Sipariş No: %s, Tutar: %s TL. Detay: msoteknoloji.com.tr/siparisler/%s',
+            'Siparişiniz alındı! Sipariş No: %s, Tutar: %s TL. Detay: %s/hesabim/siparislerim/%s',
             $order->order_number,
             number_format((float) $order->total, 2, ',', '.'),
+            rtrim(config('app.frontend_url'), '/'),
             $order->order_number,
         );
 

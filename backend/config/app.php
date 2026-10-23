@@ -56,6 +56,13 @@ return [
 
     'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
+    // Canlı yönetici hesabı (php artisan admin:ensure, açılışta çalışır)
+    'admin' => [
+        'email' => env('ADMIN_EMAIL'),
+        'password' => env('ADMIN_PASSWORD'),
+        'name' => env('ADMIN_NAME'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone

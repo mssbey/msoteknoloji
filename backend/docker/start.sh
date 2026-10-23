@@ -3,6 +3,8 @@ set -e
 
 php artisan config:cache
 php artisan migrate --force
+# ADMIN_EMAIL / ADMIN_PASSWORD tanimliysa yonetici hesabini olusturur veya gunceller.
+php artisan admin:ensure || true
 php artisan storage:link || true
 php artisan products:export-images
 
