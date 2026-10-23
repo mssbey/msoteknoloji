@@ -4,7 +4,8 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CouponResource\Pages;
 use App\Models\Coupon;
-use Filament\Forms\Components\{TextInput, Select, Toggle, DateTimePicker, Section};
+use Filament\Forms\Components\{TextInput, Select, Toggle, DateTimePicker};
+use Filament\Schemas\Components\Section;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Actions\{BulkActionGroup, DeleteBulkAction, EditAction};

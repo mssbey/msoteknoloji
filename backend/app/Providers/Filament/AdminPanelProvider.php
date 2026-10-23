@@ -6,6 +6,8 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
+use Filament\Support\Facades\FilamentTimezone;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -28,7 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('MSO Teknoloji Admin')
+            ->brandName('MSO Teknoloji Yönetim')
             ->brandLogo(null)
             ->favicon(null)
             ->colors([
@@ -36,6 +38,17 @@ class AdminPanelProvider extends PanelProvider
                 'gray' => Color::Zinc,
             ])
             ->darkMode(true)
+            ->bootUsing(function () {
+                // Yönetim paneli her zaman Türkçe; tarihler İstanbul saatiyle gösterilir (veritabanı UTC kalır).
+                app()->setLocale('tr');
+                FilamentTimezone::set('Europe/Istanbul');
+            })
+            ->navigationGroups(['Sipariş', 'Katalog', 'Müşteriler', 'Pazarlama', 'Pazar Yeri'])
+            ->navigationItems([
+                NavigationItem::make('Siteye git')->icon('heroicon-o-globe-alt')->sort(100)
+                    ->url(fn () => (string) config('app.frontend_url'), shouldOpenInNewTab: true),
+            ])
+            ->globalSearchKeyBindings(['ctrl+k', 'command+k'])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([

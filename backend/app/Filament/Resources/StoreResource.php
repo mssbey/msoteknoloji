@@ -4,7 +4,8 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\StoreResource\Pages;
 use App\Models\Store;
-use Filament\Forms\Components\{TextInput, Textarea, Toggle, ColorPicker, Section};
+use Filament\Forms\Components\{TextInput, Textarea, Toggle, ColorPicker};
+use Filament\Schemas\Components\Section;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Actions\{BulkActionGroup, DeleteBulkAction, EditAction};

@@ -91,7 +91,7 @@ class SentosImport extends Command
                     );
                     $wasCreated ? $created++ : $updated++;
 
-                    if ($this->option('images')) {
+                    if ($this->option('images') && !$product->admin_locked) {
                         $images = $remote['images'] ?? [];
                         // Gorsel sadece varyantlara yuklendiyse urun seviyesi bos gelir; varyant gorsellerini kullan.
                         if (empty($images)) {
@@ -254,6 +254,12 @@ class SentosImport extends Command
         $existing = Product::where('seller_id', $sellerId)->where('sku', $sku)->first();
         $wasCreated = !$existing;
 
+        // Panelden düzenlenen ürünün içeriği korunur; stok Sentos'tan gelmeye devam eder.
+        if ($existing?->admin_locked) {
+            $existing->update(['stock' => $stock, 'sentos_id' => $r['id'] ?? $existing->sentos_id, 'last_synced_at' => now()]);
+            return [$existing, false];
+        }
+
         $shortDesc = Str::limit(strip_tags((string) ($r['description'] ?? '')), 250, '');
 
         $data = [
@@ -342,6 +348,12 @@ class SentosImport extends Command
         foreach (array_values($variants) as $i => $v) {
             $vsku = $v['sku'] ?? null;
             if (!$vsku) {
+                continue;
+            }
+            $match = ['product_id' => $product->id, 'sku' => $vsku];
+            if ($product->admin_locked && DB::table('product_variants')->where($match)->exists()) {
+                DB::table('product_variants')->where($match)->update(['stock' => $this->sumStock($v['stocks'] ?? []), 'updated_at' => now()]);
+                $count++;
                 continue;
             }
             $variantImage = $v['images'][0] ?? null;
