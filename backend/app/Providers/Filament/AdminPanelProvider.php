@@ -11,7 +11,9 @@ use Filament\Support\Facades\FilamentTimezone;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\Support\Assets\Css;
 use Filament\Support\Colors\Color;
+use Filament\Enums\ThemeMode;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
@@ -30,14 +32,29 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            // Vitrinle aynı kimlik: MSO moru (#373071), antrasit, Saira başlık + Manrope gövde.
             ->brandName('MSO Teknoloji Yönetim')
-            ->brandLogo(null)
-            ->favicon(null)
+            ->brandLogo(fn () => asset('images/brand/logo.png'))
+            ->darkModeBrandLogo(fn () => asset('images/brand/logo-white.png'))
+            ->brandLogoHeight('2.75rem')
+            ->favicon(fn () => asset('images/brand/favicon.png'))
             ->colors([
-                'primary' => Color::Blue,
-                'gray' => Color::Zinc,
+                // Otomatik üretilen palet butonlarda açık lila tonu seçiyordu; tonlar vitrinin mor skalasından.
+                'primary' => [
+                    50 => '#f4f3fa', 100 => '#edebf7', 200 => '#dcd9ef', 300 => '#bfbae0', 400 => '#9a93cb',
+                    500 => '#6f67ad', 600 => '#4a4590', 700 => '#373071', 800 => '#2c2660', 900 => '#241e52', 950 => '#171236',
+                ],
+                'gray' => Color::Slate,
+                'success' => Color::hex('#2F7A4E'),
+                'danger' => Color::hex('#B0463C'),
+                'warning' => Color::hex('#9C7226'),
+                'info' => Color::hex('#4A4590'),
             ])
+            ->font('Manrope')
+            ->assets([Css::make('mso-admin', resource_path('css/mso-admin.css'))])
             ->darkMode(true)
+            ->defaultThemeMode(ThemeMode::Light)
+            ->sidebarCollapsibleOnDesktop()
             ->bootUsing(function () {
                 // Yönetim paneli her zaman Türkçe; tarihler İstanbul saatiyle gösterilir (veritabanı UTC kalır).
                 app()->setLocale('tr');
