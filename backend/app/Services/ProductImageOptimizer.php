@@ -9,6 +9,9 @@ class ProductImageOptimizer
         if (!function_exists('imagewebp') || $mime === 'image/gif') return [$body, $mime];
         $size = @getimagesizefromstring($body);
         if (!$size || $size[0] * $size[1] > 40000000) return [$body, $mime];
+        // GD her pikseli belleğe açar; 40 MP görsel ~160 MB tutar. Hosting CLI varsayılanı (128 MB) yetmez.
+        $limit = ini_get('memory_limit');
+        if ($limit !== '-1' && ini_parse_quantity($limit) < 1024 * 1024 * 1024) ini_set('memory_limit', '1024M');
         $image = @imagecreatefromstring($body);
         if (!$image) return [$body, $mime];
         $scale = min(1, 1400 / max($size[0], $size[1]));
