@@ -168,7 +168,10 @@ class ProductResource extends Resource
                     ->description(fn (Product $record) => $record->sku),
                 TextColumn::make('sku')->label('SKU')->searchable()->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('barcode')->label('Barkod')->searchable()->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('category.name')->label('Kategori')->sortable()->toggleable(),
+                // Sentos kategori adını tam yol olarak verir ("A > B > C"); listede son halka yeterli.
+                TextColumn::make('category.name')->label('Kategori')->sortable()->toggleable()
+                    ->formatStateUsing(fn (?string $state) => trim((string) \Illuminate\Support\Str::afterLast((string) $state, '>')))
+                    ->tooltip(fn (Product $record) => $record->category?->name),
                 TextColumn::make('brand.name')->label('Marka')->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('price')->label('Fiyat')->money('TRY')->sortable()
                     ->description(fn (Product $record) => $record->sale_price ? 'İndirimli: ₺' . number_format((float) $record->sale_price, 2, ',', '.') : null),
