@@ -184,9 +184,9 @@ export function CartDrawer() {
                       {ship === 0 ? 'Ücretsiz 🎉' : formatPrice(ship)}
                     </span>
                   </div>
-                  {sub < 199 && (
+                  {sub < 1000 && (
                     <p className="text-xs text-amber-400/80">
-                      {formatPrice(199 - sub)} daha ekleyin, kargo bedava!
+                      {formatPrice(1000 - sub)} daha ekleyin, kargo bedava!
                     </p>
                   )}
                   <div className="divider my-2" />

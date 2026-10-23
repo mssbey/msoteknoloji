@@ -106,7 +106,7 @@ export const useCartStore = create<CartStore>()(
           (sum, i) => sum + (i.salePrice ?? i.price) * i.quantity, 0
         ),
 
-      shippingCost: () => (get().subtotal() >= 199 ? 0 : 29.90),
+      shippingCost: () => (get().subtotal() >= 1000 ? 0 : 29.90),
 
       total: () => {
         const sub = get().subtotal()

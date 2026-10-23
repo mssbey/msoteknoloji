@@ -28,7 +28,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
     <Link href={`/urun/${product.slug}`} className="catalog-product-image" aria-label={product.name}>
       {image ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={image} alt={product.name} loading={index < 4 ? 'eager' : 'lazy'} onError={() => setBroken(true)} />
+        <img src={image} alt={product.name} decoding="async" loading={index < 4 ? 'eager' : 'lazy'} onError={() => setBroken(true)} />
       ) : <div className="product-no-image"><Package size={30} strokeWidth={1.4} /><span>Görsel yakında</span></div>}
       {discount > 0 && <span className="product-discount">%{discount}</span>}
     </Link>

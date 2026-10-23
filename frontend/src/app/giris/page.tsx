@@ -32,7 +32,7 @@ export default function LoginPage() {
     try {
       await login(data.email, data.password)
       toast.success('Hoş geldiniz!')
-      router.push('/')
+      router.push(new URLSearchParams(window.location.search).get('next') === '/odeme' ? '/odeme' : '/')
     } catch (e: unknown) {
       const err = e as { response?: { data?: { message?: string } } }
       setError(err.response?.data?.message || 'E-posta veya şifre hatalı')
@@ -43,7 +43,7 @@ export default function LoginPage() {
     <AuthShell
       title="Tekrar hoş geldin"
       subtitle="Siparişlerine ve favorilerine ulaşmak için giriş yap."
-      footer={<>Hesabın yok mu? <Link href="/kayit">Hemen üye ol</Link></>}
+      footer={<>Hesabın yok mu? <Link href="/kayit?next=/odeme">Hemen üye ol</Link></>}
     >
       <AuthError message={error} />
       <form onSubmit={handleSubmit(onSubmit)} className="auth-form" noValidate>

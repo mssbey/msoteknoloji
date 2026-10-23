@@ -43,9 +43,7 @@ class SentosClient
             'size' => $size,
         ]);
 
-        if (!$response->successful()) {
-            return [];
-        }
+        $response->throw();
 
         $json = $response->json();
 
@@ -71,7 +69,8 @@ class SentosClient
             sleep(31);
             $response = $this->http()->get('/categories');
         }
-        return $response->successful() ? ($response->json() ?? []) : [];
+        $response->throw();
+        return $response->json() ?? [];
     }
 
     /** Ham yanıtı (status + body) döndürür — bağlantı testleri için. */

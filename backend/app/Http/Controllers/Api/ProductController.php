@@ -36,7 +36,11 @@ class ProductController extends Controller
             ->orderByDesc('id')
             ->paginate($request->per_page ?? 20);
 
-        $products->getCollection()->each(fn ($product) => $product->setAttribute('collection_slug', $catalog->group($product)));
+        $products->getCollection()->each(function ($product) use ($catalog) {
+            $product->setAttribute('collection_slug', $catalog->group($product));
+            // Liste kartlarında uzun açıklama HTML'i ve ham Sentos verisi taşınmaz.
+            $product->makeHidden(['description', 'metadata']);
+        });
 
         return response()->json(['success' => true, 'data' => $products]);
     }

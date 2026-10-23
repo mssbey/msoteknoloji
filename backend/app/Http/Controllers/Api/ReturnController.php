@@ -25,7 +25,7 @@ class ReturnController extends Controller
     {
         $data = $request->validate([
             'order_item_id' => 'required|integer|exists:order_items,id',
-            'reason' => 'required|in:defective,wrong_item,not_as_described,changed_mind,damaged,other',
+            'reason' => 'nullable|in:defective,wrong_item,not_as_described,changed_mind,damaged,other',
             'description' => 'nullable|string|max:2000',
             'images' => 'nullable|array|max:5',
             'images.*' => 'string|url',
@@ -46,7 +46,7 @@ class ReturnController extends Controller
             'order_item_id' => $item->id,
             'user_id' => $request->user()->id,
             'seller_id' => $item->seller_id,
-            'reason' => $data['reason'],
+            'reason' => $data['reason'] ?? 'other',
             'description' => $data['description'] ?? null,
             'images' => $data['images'] ?? [],
             'status' => 'approved', // basitlik için otomatik kabul; manuel akış için 'pending' yapılabilir

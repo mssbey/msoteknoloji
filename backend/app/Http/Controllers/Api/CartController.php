@@ -25,10 +25,21 @@ class CartController extends Controller
         ]);
 
         $product = Product::active()->findOrFail($data['product_id']);
+        $variant = isset($data['variant_id']) ? $product->variants()->find($data['variant_id']) : null;
+        if (isset($data['variant_id']) && (!$variant || !$variant->is_active)) {
+            throw \Illuminate\Validation\ValidationException::withMessages(['variant_id' => 'Geçerli bir ürün seçeneği belirleyiniz.']);
+        }
+        if (!$variant && $product->variants()->exists()) {
+            throw \Illuminate\Validation\ValidationException::withMessages(['variant_id' => 'Lütfen ürün seçeneklerini belirleyiniz.']);
+        }
         $cart = $this->resolveCart($request, createIfMissing: true);
 
         $items = $cart->items ?? [];
         $key = $data['product_id'] . ':' . ($data['variant_id'] ?? '_');
+        $quantity = ($items[$key]['quantity'] ?? 0) + $data['quantity'];
+        if ($product->track_stock && !$product->allow_backorder && ($variant ?? $product)->stock < $quantity) {
+            throw \Illuminate\Validation\ValidationException::withMessages(['quantity' => 'Yeterli stok bulunmuyor.']);
+        }
 
         if (isset($items[$key])) {
             $items[$key]['quantity'] += $data['quantity'];
@@ -38,7 +49,7 @@ class CartController extends Controller
                 'variant_id' => $data['variant_id'] ?? null,
                 'name' => $product->name,
                 'sku' => $product->sku,
-                'price' => (float) $product->current_price,
+                'price' => (float) ($variant?->sale_price ?? $variant?->price ?? $product->current_price),
                 'quantity' => $data['quantity'],
             ];
         }

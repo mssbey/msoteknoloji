@@ -20,7 +20,7 @@ import {
 } from '@/lib/product'
 import { toast } from 'sonner'
 
-const FREE_SHIPPING_LIMIT = 199
+const FREE_SHIPPING_LIMIT = 1000
 
 export default function ProductDetailPage() {
   const params = useParams()
@@ -61,12 +61,7 @@ export default function ProductDetailPage() {
   const description = useMemo(() => sanitizeDescription(product?.description), [product?.description])
   const specs = useMemo(() => (product ? buildSpecs(product) : []), [product])
 
-  // Varsayılan seçim: stokta olan ilk seçenek, hiçbiri yoksa ilki.
-  const defaultVariantId = useMemo(() => {
-    const options = variantGroups.flatMap((group) => group.options)
-    return (options.find((option) => option.stock > 0) ?? options[0])?.id ?? null
-  }, [variantGroups])
-  const activeVariantId = variantId ?? defaultVariantId
+  const activeVariantId = variantId
 
   if (isLoading) return <ProductDetailSkeleton />
   if (isError || !product) return notFound()
@@ -100,6 +95,10 @@ export default function ProductDetailPage() {
     setActiveImage((i) => (i + direction + gallery.length) % gallery.length)
 
   const handleAddToCart = () => {
+    if (hasVariantChoice && !selected) {
+      toast.error('Lütfen devam etmek için ürün seçeneklerini belirleyiniz.')
+      return
+    }
     if (!inStock) return
     addItem({
       productId: product.id,
@@ -158,7 +157,7 @@ export default function ProductDetailPage() {
             <div className="pd-main-image">
               {mainImage ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={mainImage} alt={`${product.name} — görsel ${activeImage + 1}`} />
+                <img src={mainImage} alt={`${product.name} — görsel ${activeImage + 1}`} decoding="async" fetchPriority="high" />
               ) : (
                 <div className="product-no-image"><Package size={34} /><span>Görsel hazırlanıyor</span></div>
               )}
@@ -198,7 +197,7 @@ export default function ProductDetailPage() {
                     aria-current={i === activeImage}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={img} alt="" />
+                    <img src={img} alt="" loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>

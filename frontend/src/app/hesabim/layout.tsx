@@ -3,9 +3,10 @@
 import { useAuthStore } from '@/stores/authStore'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+import { useClientReady } from '@/lib/useClientReady'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { User, Package, Heart, MapPin, Settings, CreditCard, Bell, LogOut, Star } from 'lucide-react'
+import { User, Package, Heart, MapPin, Settings, Bell, LogOut, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 
@@ -23,12 +24,13 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
   const router = useRouter()
   const pathname = usePathname()
   const { isAuthenticated, user, logout } = useAuthStore()
+  const ready = useClientReady()
 
   useEffect(() => {
-    if (!isAuthenticated) router.push('/giris')
-  }, [isAuthenticated, router])
+    if (ready && !isAuthenticated) router.push('/giris')
+  }, [ready, isAuthenticated, router])
 
-  if (!isAuthenticated) return null
+  if (!ready || !isAuthenticated) return null
 
   return (
     <div className="min-h-screen bg-[#f6f5fb]">

@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'bank_transfer' => [
+        'bank_name' => env('BANK_TRANSFER_BANK_NAME', 'Deneme Bankası'),
+        'account_name' => env('BANK_TRANSFER_ACCOUNT_NAME', 'MSO Teknoloji — Deneme Hesabı'),
+        'iban' => env('BANK_TRANSFER_IBAN', 'DENEME IBAN — gerçek hesap bilgisi eklenecek'),
+        'is_test' => env('BANK_TRANSFER_IS_TEST', true),
+    ],
 
     /*
     |--------------------------------------------------------------------------

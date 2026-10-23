@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 
 class SentosImport extends Command
 {
+    private \App\Services\ProductImageCache $imageCache;
     protected $signature = 'sentos:import
         {--base= : API URL (varsayilan config integrations.sentos.base_url)}
         {--key= : API Anahtar (varsayilan .env SENTOS_API_KEY)}
@@ -28,6 +29,7 @@ class SentosImport extends Command
 
     public function handle(): int
     {
+        $this->imageCache = new \App\Services\ProductImageCache();
         $base   = $this->option('base')   ?: config('integrations.sentos.base_url');
         $key    = $this->option('key')    ?: config('integrations.sentos.api_key');
         $secret = $this->option('secret') ?: config('integrations.sentos.api_secret');
@@ -135,6 +137,7 @@ class SentosImport extends Command
             foreach (array_slice($errors, 0, 10) as $e) {
                 $this->line('  - ' . $e);
             }
+            return self::FAILURE;
         }
 
         return self::SUCCESS;
@@ -260,7 +263,7 @@ class SentosImport extends Command
             'brand_id'          => $brandId,
             'name'              => $name,
             'barcode'           => $r['barcode'] ?? null,
-            'description'       => $r['description_detail'] ?? ($r['description'] ?? null),
+            'description'       => $this->imageCache->localizeHtml($r['description_detail'] ?? ($r['description'] ?? null), refresh: true),
             'short_description' => $shortDesc !== '' ? $shortDesc : null,
             'price'             => $salePrice ?? 0,
             'cost_price'        => $costPrice,
@@ -297,11 +300,14 @@ class SentosImport extends Command
         }
         $count = 0;
         $primaryUrl = null;
+        $localUrls = [];
         foreach (array_values($images) as $i => $img) {
             $url = is_array($img) ? ($img['url'] ?? null) : (is_string($img) ? $img : null);
             if (!$url) {
                 continue;
             }
+            $url = $this->imageCache->localize($url, refresh: true);
+            $localUrls[] = $url;
             if ($primaryUrl === null) {
                 $primaryUrl = $url;
             }
@@ -323,6 +329,7 @@ class SentosImport extends Command
             $product->og_image = $primaryUrl;
             $product->save();
         }
+        if ($localUrls) DB::table('product_images')->where('product_id', $product->id)->whereNotIn('url', $localUrls)->delete();
         return $count;
     }
 
@@ -337,10 +344,13 @@ class SentosImport extends Command
             if (!$vsku) {
                 continue;
             }
+            $variantImage = $v['images'][0] ?? null;
+            $variantImage = is_array($variantImage) ? ($variantImage['url'] ?? null) : $variantImage;
             DB::table('product_variants')->updateOrInsert(
                 ['product_id' => $product->id, 'sku' => $vsku],
                 [
                     'barcode'    => $v['barcode'] ?? null,
+                    'image'      => $this->imageCache->localize($variantImage, refresh: true),
                     'price'      => $product->price ?? 0,
                     'sale_price' => $product->sale_price,
                     'cost_price' => $this->num($v['purchase_price'] ?? null),
