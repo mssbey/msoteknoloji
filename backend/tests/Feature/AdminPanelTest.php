@@ -108,11 +108,12 @@ class AdminPanelTest extends TestCase
         $this->assertTrue($product->admin_locked);
 
         Livewire::test(VariantsRelationManager::class, ['ownerRecord' => $product, 'pageClass' => EditProduct::class])
-            ->callTableAction('create', data: ['sku' => 'PANEL-1-BRD', 'price' => 99.9, 'stock' => 2, 'attributes' => ['model' => ['name' => 'Renk', 'value' => 'Bordo']]])
+            ->callTableAction('create', data: ['sku' => 'PANEL-1-BRD', 'price' => 99.9, 'stock' => 2, 'image' => 'https://cdn.example.test/a.jpg', 'attributes' => ['model' => ['name' => 'Renk', 'value' => 'Bordo']]])
             ->assertHasNoTableActionErrors();
 
         $variant = ProductVariant::where('sku', 'PANEL-1-BRD')->firstOrFail();
         $this->assertSame('Bordo', VariantsRelationManager::optionLabel($variant));
+        $this->assertSame('https://cdn.example.test/a.jpg', $variant->image);
     }
 
     public function test_customers_cannot_open_the_panel(): void

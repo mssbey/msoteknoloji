@@ -83,6 +83,8 @@ export default function ProductDetailPage() {
     ...((product.images?.map((im: { url?: string; path?: string }) => im.url || im.path).filter(Boolean) as string[]) ?? []),
   ]
   if (product.og_image && !gallery.includes(product.og_image)) gallery.unshift(product.og_image)
+  // Galeride olmayan varyant görselleri de seçilebilsin diye sona eklenir.
+  for (const v of variants) if (v.image && !gallery.includes(v.image)) gallery.push(v.image)
   const mainImage = gallery[Math.min(activeImage, gallery.length - 1)]
 
   const wishlisted = isWishlisted(product.id)
@@ -93,6 +95,13 @@ export default function ProductDetailPage() {
 
   const stepImage = (direction: 1 | -1) =>
     setActiveImage((i) => (i + direction + gallery.length) % gallery.length)
+
+  const selectVariant = (option: VariantOption) => {
+    setVariantId(option.id)
+    setQuantity(1)
+    const index = option.image ? gallery.indexOf(option.image) : -1
+    if (index >= 0) setActiveImage(index)
+  }
 
   const handleAddToCart = () => {
     if (hasVariantChoice && !selected) {
@@ -253,7 +262,7 @@ export default function ProductDetailPage() {
                   {group.options.map((option) => (
                     <button
                       key={option.id}
-                      onClick={() => { setVariantId(option.id); setQuantity(1) }}
+                      onClick={() => selectVariant(option)}
                       className={cn(
                         'pd-variant',
                         option.id === activeVariantId && 'active',
