@@ -27,7 +27,8 @@ class AuthController extends Controller
             'membership_agreement_version' => app(\App\Services\Legal\LegalDocumentService::class)->version('uyelik-sozlesmesi'),
             'kvkk_informed_at' => now(),
         ])->save();
-        $user->assignRole('customer');
+        // Canlı veritabanı seed edilmedi; rol yoksa ilk kayıtta oluşur.
+        $user->assignRole(\Spatie\Permission\Models\Role::firstOrCreate(['name' => 'customer', 'guard_name' => 'web']));
 
         $token = $user->createToken('auth_token')->plainTextToken;
         $user->load('seller');
